@@ -1,0 +1,12 @@
+{
+  "src/main.rs": {
+    "mtime": 1784228051.2901266,
+    "ast_hash": "b64abcb167a8b9dd4f282813c31ad0da",
+    "semantic_hash": "b64abcb167a8b9dd4f282813c31ad0da"
+  },
+  "README.md": {
+    "mtime": 1784378304.0,
+    "ast_hash": "6d1202f41ad5b9f2a442e2154bd68731",
+    "semantic_hash": ""
+  }
+}
