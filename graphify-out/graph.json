@@ -4,83 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "2026-07-18-yy1-bootstrap-design.md",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "2026-07-18-yy1-bootstrap-design.md"
-    },
-    {
-      "label": "YY-1 Bootstrap \u2014 module skeleton",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "yy-1 bootstrap \u2014 module skeleton"
-    },
-    {
-      "label": "Goal",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_goal",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "goal"
-    },
-    {
-      "label": "Scope",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_scope",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "scope"
-    },
-    {
-      "label": "Out of scope",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_out_of_scope",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "out of scope"
-    },
-    {
-      "label": "Done when",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_done_when",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "done when"
-    },
-    {
-      "label": "Testing",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "testing"
-    },
-    {
       "label": "setup-worktree.sh",
       "file_type": "code",
       "source_file": "scripts/setup-worktree.sh",
@@ -325,10 +248,10 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "readme",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "readme.md",
-      "id": "readme"
+      "norm_label": "readme.md"
     },
     {
       "label": "yy",
@@ -336,10 +259,10 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "readme_yy",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "yy",
-      "id": "readme_yy"
+      "norm_label": "yy"
     },
     {
       "label": "Why",
@@ -347,10 +270,10 @@
       "source_file": "README.md",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "readme_why",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "why",
-      "id": "readme_why"
+      "norm_label": "why"
     },
     {
       "label": "Features",
@@ -358,10 +281,10 @@
       "source_file": "README.md",
       "source_location": "L27",
       "_origin": "ast",
+      "id": "readme_features",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "features",
-      "id": "readme_features"
+      "norm_label": "features"
     },
     {
       "label": "Install",
@@ -369,10 +292,10 @@
       "source_file": "README.md",
       "source_location": "L41",
       "_origin": "ast",
+      "id": "readme_install",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "install",
-      "id": "readme_install"
+      "norm_label": "install"
     },
     {
       "label": "Quick start",
@@ -380,10 +303,10 @@
       "source_file": "README.md",
       "source_location": "L51",
       "_origin": "ast",
+      "id": "readme_quick_start",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "quick start",
-      "id": "readme_quick_start"
+      "norm_label": "quick start"
     },
     {
       "label": "How it works",
@@ -391,10 +314,10 @@
       "source_file": "README.md",
       "source_location": "L67",
       "_origin": "ast",
+      "id": "readme_how_it_works",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "how it works",
-      "id": "readme_how_it_works"
+      "norm_label": "how it works"
     },
     {
       "label": "Data & config",
@@ -402,10 +325,10 @@
       "source_file": "README.md",
       "source_location": "L74",
       "_origin": "ast",
+      "id": "readme_data_config",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "data & config",
-      "id": "readme_data_config"
+      "norm_label": "data & config"
     },
     {
       "label": "Editing",
@@ -413,10 +336,10 @@
       "source_file": "README.md",
       "source_location": "L88",
       "_origin": "ast",
+      "id": "readme_editing",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "editing",
-      "id": "readme_editing"
+      "norm_label": "editing"
     },
     {
       "label": "Acknowledgments",
@@ -424,10 +347,10 @@
       "source_file": "README.md",
       "source_location": "L93",
       "_origin": "ast",
+      "id": "readme_acknowledgments",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "acknowledgments",
-      "id": "readme_acknowledgments"
+      "norm_label": "acknowledgments"
     },
     {
       "label": "License",
@@ -435,13 +358,299 @@
       "source_file": "README.md",
       "source_location": "L104",
       "_origin": "ast",
+      "id": "readme_license",
       "community": 1,
       "community_name": "yy",
-      "norm_label": "license",
-      "id": "readme_license"
+      "norm_label": "license"
+    },
+    {
+      "label": "2026-07-18-yy1-bootstrap.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap",
+      "community": 21,
+      "community_name": "Global Constraints",
+      "norm_label": "2026-07-18-yy1-bootstrap.md"
+    },
+    {
+      "label": "YY-1 Bootstrap Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_yy_1_bootstrap_implementation_plan",
+      "community": 21,
+      "community_name": "Global Constraints",
+      "norm_label": "yy-1 bootstrap implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_global_constraints",
+      "community": 21,
+      "community_name": "Global Constraints",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "Task 1: Module skeleton",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_task_1_module_skeleton",
+      "community": 21,
+      "community_name": "Global Constraints",
+      "norm_label": "task 1: module skeleton"
+    },
+    {
+      "label": "2026-07-18-yy1-bootstrap-design.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "2026-07-18-yy1-bootstrap-design.md"
+    },
+    {
+      "label": "YY-1 Bootstrap \u2014 module skeleton",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "yy-1 bootstrap \u2014 module skeleton"
+    },
+    {
+      "label": "Goal",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_goal",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "goal"
+    },
+    {
+      "label": "Scope",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_scope",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "scope"
+    },
+    {
+      "label": "Out of scope",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_out_of_scope",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "out of scope"
+    },
+    {
+      "label": "Done when",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_done_when",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "done when"
+    },
+    {
+      "label": "Testing",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing",
+      "community": 2,
+      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
+      "norm_label": "testing"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/setup-worktree.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "scripts_setup_worktree",
+      "target": "scripts_setup_worktree_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.rs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_main",
+      "target": "src_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_yy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_acknowledgments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_data_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_editing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_how_it_works",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_install",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_why",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_18_yy1_bootstrap",
+      "target": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_yy_1_bootstrap_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_yy_1_bootstrap_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_global_constraints",
+      "target": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_task_1_module_skeleton",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -507,140 +716,8 @@
       "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
       "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/setup-worktree.sh",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "scripts_setup_worktree",
-      "target": "scripts_setup_worktree_sh__entry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main.rs",
-      "source_location": "L11",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_main",
-      "target": "src_main_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "readme_yy"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L93",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_acknowledgments"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L74",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_data_config"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_editing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_features"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_how_it_works"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_install"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L104",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_license"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_quick_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_yy",
-      "target": "readme_why"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6a3bc595c1c80bffcca4e694a01213d41c6261e4"
+  "built_at_commit": "1d702a2ecf3187a96447b1d02ca819631fdef478"
 }

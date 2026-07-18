@@ -1,6 +1,6 @@
 {
   "src/main.rs": {
-    "mtime": 1784404178.4081092,
+    "mtime": 1784454602.3661163,
     "ast_hash": "16576db09a656dccedfdfa83d4769503",
     "semantic_hash": ""
   },
@@ -15,12 +15,12 @@
     "semantic_hash": ""
   },
   "src/cli/mod.rs": {
-    "mtime": 1784404178.407559,
+    "mtime": 1784454602.3661163,
     "ast_hash": "e9618384b7e8d3751e59503b5360a79b",
     "semantic_hash": ""
   },
   "src/core/mod.rs": {
-    "mtime": 1784404178.407559,
+    "mtime": 1784454602.3661163,
     "ast_hash": "20c9733a802b2a9a93d9a93bf555b68b",
     "semantic_hash": ""
   },
@@ -35,7 +35,7 @@
     "semantic_hash": ""
   },
   "src/model.rs": {
-    "mtime": 1784404178.4081092,
+    "mtime": 1784454602.3669844,
     "ast_hash": "97a560293611d1878ed7980d5729367c",
     "semantic_hash": ""
   },
@@ -45,22 +45,22 @@
     "semantic_hash": ""
   },
   "src/store/active.rs": {
-    "mtime": 1784404178.4082897,
+    "mtime": 1784454602.3669844,
     "ast_hash": "f6ccbf220d9b213a183d60e76bb65402",
     "semantic_hash": ""
   },
   "src/store/entries.rs": {
-    "mtime": 1784404178.4083848,
+    "mtime": 1784454602.367215,
     "ast_hash": "ea6983c3dcfebe4b778aab7bb848044c",
     "semantic_hash": ""
   },
   "src/store/issues.rs": {
-    "mtime": 1784404178.4083848,
+    "mtime": 1784454602.3672998,
     "ast_hash": "909d594b20eddd6d2fcace905129139d",
     "semantic_hash": ""
   },
   "src/store/jsonl.rs": {
-    "mtime": 1784404178.4085124,
+    "mtime": 1784454602.3673859,
     "ast_hash": "c3e354bc543d94e2e2a566fdce31a61e",
     "semantic_hash": ""
   },
@@ -102,6 +102,11 @@
   "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md": {
     "mtime": 1784404178.406754,
     "ast_hash": "b4213427d2d24ddce7cecbd7010b8f02",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md": {
+    "mtime": 1784404310.368853,
+    "ast_hash": "c7dcb4d517c07d6b2ebe6c8005210630",
     "semantic_hash": ""
   }
 }
