@@ -89,3 +89,11 @@ Rules:
 
 - Don't manually modify files inside `graphify-out/`
 - Don't re-read the entire codebase if the graph already has the information
+
+## Git conventions
+
+- Branch naming: feat/short-description, fix/issue-number-description
+- Commit format: conventional commits (feat:, fix:, refactor:, chore:, docs:)
+- Use git workflows for every feature/fix/refactor/etc
+- Never commit directly to main
+- Squash feature branches before merging
