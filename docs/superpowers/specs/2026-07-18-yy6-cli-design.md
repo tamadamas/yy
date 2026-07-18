@@ -60,6 +60,10 @@ Hardcoded `$HOME/.yy_logs` for this issue. No `--work-folder` flag, no
 `yy status` shows current task, worked-today total, remaining vs a hardcoded
 8h/day target (matches the external system's 8h/day requirement). No config.
 
+## Subcommand aliases
+
+`start`→`st`, `stop`→`x`, `status`→`s` (clap `#[command(alias = "…")]`).
+
 ## CLI structure (`cli/mod.rs`)
 
 Single `clap::Parser`, derive-based:
@@ -73,8 +77,11 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    #[command(alias = "st")]
     Start { desc: Option<String>, #[command(flatten)] spec: EntrySpec },
+    #[command(alias = "x")]
     Stop { at: Option<String> },
+    #[command(alias = "s")]
     Status { #[arg(long)] yesterday: bool },
 }
 
