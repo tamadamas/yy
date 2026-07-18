@@ -14,6 +14,8 @@ use crate::store::{active, entries};
 pub fn start(
     work_folder: &Path,
     issue_id: Option<Id>,
+    note: Option<String>,
+    tags: Vec<String>,
     at: Option<DateTime<Utc>>,
 ) -> anyhow::Result<Entry> {
     let mut current = active::read(work_folder)?;
@@ -22,6 +24,8 @@ pub fn start(
     }
 
     let mut entry = Entry::start_now(issue_id);
+    entry.note = note;
+    entry.tags = tags;
     if let Some(at) = at {
         entry.start = at;
     }
@@ -119,7 +123,7 @@ mod tests {
         let start_at = Utc.with_ymd_and_hms(2026, 3, 7, 9, 0, 0).unwrap();
         let stop_at = Utc.with_ymd_and_hms(2026, 3, 7, 10, 0, 0).unwrap();
 
-        let started = start(&work_folder, None, Some(start_at)).unwrap();
+        let started = start(&work_folder, None, None, Vec::new(), Some(start_at)).unwrap();
         assert_eq!(
             active::read(&work_folder).unwrap().entry,
             Some(started.clone())
@@ -145,8 +149,8 @@ mod tests {
         let t1 = Utc.with_ymd_and_hms(2026, 3, 7, 9, 0, 0).unwrap();
         let t2 = Utc.with_ymd_and_hms(2026, 3, 7, 9, 30, 0).unwrap();
 
-        let first = start(&work_folder, None, Some(t1)).unwrap();
-        let second = start(&work_folder, None, Some(t2)).unwrap();
+        let first = start(&work_folder, None, None, Vec::new(), Some(t1)).unwrap();
+        let second = start(&work_folder, None, None, Vec::new(), Some(t2)).unwrap();
 
         let archived = entries::read_month(&work_folder, t1.date_naive()).unwrap();
         assert_eq!(archived.len(), 1);
@@ -174,11 +178,25 @@ mod tests {
 
         let closed_start = Utc.with_ymd_and_hms(2026, 3, 7, 9, 0, 0).unwrap();
         let closed_stop = Utc.with_ymd_and_hms(2026, 3, 7, 9, 30, 0).unwrap();
-        start(&work_folder, Some(issue), Some(closed_start)).unwrap();
+        start(
+            &work_folder,
+            Some(issue),
+            None,
+            Vec::new(),
+            Some(closed_start),
+        )
+        .unwrap();
         stop(&work_folder, Some(closed_stop)).unwrap();
 
         let running_start = Utc.with_ymd_and_hms(2026, 3, 7, 10, 0, 0).unwrap();
-        start(&work_folder, Some(issue), Some(running_start)).unwrap();
+        start(
+            &work_folder,
+            Some(issue),
+            None,
+            Vec::new(),
+            Some(running_start),
+        )
+        .unwrap();
 
         let view = today(&work_folder, date).unwrap();
         assert_eq!(view.entries.len(), 2);
@@ -198,7 +216,7 @@ mod tests {
         let date = NaiveDate::from_ymd_opt(2026, 3, 7).unwrap();
 
         let other_day = Utc.with_ymd_and_hms(2026, 3, 6, 9, 0, 0).unwrap();
-        start(&work_folder, None, Some(other_day)).unwrap();
+        start(&work_folder, None, None, Vec::new(), Some(other_day)).unwrap();
         stop(
             &work_folder,
             Some(Utc.with_ymd_and_hms(2026, 3, 6, 9, 30, 0).unwrap()),
@@ -208,6 +226,24 @@ mod tests {
         let view = today(&work_folder, date).unwrap();
         assert_eq!(view.entries, Vec::new());
         assert_eq!(view.totals, Vec::new());
+
+        std::fs::remove_dir_all(&work_folder).unwrap();
+    }
+
+    #[test]
+    fn start_sets_note_and_tags() {
+        let work_folder = tmp_dir("note-tags");
+        let started = start(
+            &work_folder,
+            None,
+            Some("Implement JSONL".to_string()),
+            vec!["backend".to_string()],
+            Some(Utc.with_ymd_and_hms(2026, 3, 7, 9, 0, 0).unwrap()),
+        )
+        .unwrap();
+
+        assert_eq!(started.note, Some("Implement JSONL".to_string()));
+        assert_eq!(started.tags, vec!["backend".to_string()]);
 
         std::fs::remove_dir_all(&work_folder).unwrap();
     }
