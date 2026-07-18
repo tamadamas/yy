@@ -1,4 +1,23 @@
 {
   "0": "main.rs",
-  "1": "yy"
+  "1": "yy",
+  "2": "YY-1 Bootstrap — module skeleton",
+  "3": "setup-worktree.sh",
+  "4": "mod.rs",
+  "5": "mod.rs",
+  "6": "mod.rs",
+  "7": "mod.rs",
+  "8": "model.rs",
+  "9": "pipeline.rs",
+  "10": "active.rs",
+  "11": "entries.rs",
+  "12": "issues.rs",
+  "13": "jsonl.rs",
+  "14": "mod.rs",
+  "15": "state.rs",
+  "16": "app.rs",
+  "17": "keymap.rs",
+  "18": "mod.rs",
+  "19": "mod.rs",
+  "20": "mod.rs"
 }
