@@ -1,0 +1,19 @@
+docs/superpowers/plans/2026-07-18-yy1-bootstrap.md
+  s_93ac8974491906::t_036677f9682b99 1-224
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "7cc80b66ac876a926a0b6319575d9448507889b0",
+  "prompts": {},
+  "sessions": {
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
