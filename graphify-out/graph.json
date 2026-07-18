@@ -9,10 +9,10 @@
       "source_file": "src/main.rs",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "main.rs",
       "id": "src_main",
-      "community_name": "main.rs"
+      "community": 0,
+      "community_name": "main.rs",
+      "norm_label": "main.rs"
     },
     {
       "label": "main()",
@@ -20,10 +20,131 @@
       "source_file": "src/main.rs",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "main()",
       "id": "src_main_main",
-      "community_name": "main.rs"
+      "community": 0,
+      "community_name": "main.rs",
+      "norm_label": "main()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "yy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_yy",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "yy"
+    },
+    {
+      "label": "Why",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "readme_why",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "why"
+    },
+    {
+      "label": "Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "readme_features",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "features"
+    },
+    {
+      "label": "Install",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "readme_install",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "install"
+    },
+    {
+      "label": "Quick start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "readme_quick_start",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "quick start"
+    },
+    {
+      "label": "How it works",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "readme_how_it_works",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "how it works"
+    },
+    {
+      "label": "Data & config",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "readme_data_config",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "data & config"
+    },
+    {
+      "label": "Editing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "readme_editing",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "editing"
+    },
+    {
+      "label": "Acknowledgments",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "readme_acknowledgments",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "acknowledgments"
+    },
+    {
+      "label": "License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "readme_license",
+      "community": 1,
+      "community_name": "yy",
+      "norm_label": "license"
     }
   ],
   "links": [
@@ -34,11 +155,121 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_main_main"
+      "target": "src_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_yy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_acknowledgments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_data_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_editing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_how_it_works",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_install",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_yy",
+      "target": "readme_why",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a8aefbaec09a822bf044a7759a3728f9f95f4b35"
+  "built_at_commit": "a714913f19c3c8055460e65a39c29ff95d038fe0"
 }

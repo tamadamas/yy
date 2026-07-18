@@ -1,0 +1,44 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "main.rs",
+      "file_type": "code",
+      "source_file": "src/main.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "main.rs",
+      "id": "src_main",
+      "community_name": "main.rs"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/main.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "main()",
+      "id": "src_main_main",
+      "community_name": "main.rs"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.rs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_main",
+      "target": "src_main_main"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "a8aefbaec09a822bf044a7759a3728f9f95f4b35"
+}
