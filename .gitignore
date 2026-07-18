@@ -1,4 +1,5 @@
 /target
 .local
+.cargo/
 graphify-out/cache/
 .rebuild.lock
