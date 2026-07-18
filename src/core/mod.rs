@@ -4,7 +4,7 @@
 use std::collections::BTreeMap;
 use std::path::Path;
 
-use chrono::{DateTime, NaiveDate, TimeDelta, Utc};
+use chrono::{DateTime, Datelike, NaiveDate, TimeDelta, Utc, Weekday};
 
 use crate::model::{Entry, Id};
 use crate::store::{active, entries};
@@ -76,6 +76,17 @@ pub struct IssueTotal {
 pub struct TodayView {
     pub entries: Vec<Entry>,
     pub totals: Vec<IssueTotal>,
+}
+
+/// The last working day before `date`: Monday resolves to the preceding
+/// Friday; Saturday/Sunday resolve to the preceding Friday; any other day
+/// resolves to `date - 1 day`.
+pub fn last_working_day(date: NaiveDate) -> NaiveDate {
+    match date.weekday() {
+        Weekday::Mon => date - TimeDelta::days(3),
+        Weekday::Sun => date - TimeDelta::days(2),
+        _ => date - TimeDelta::days(1),
+    }
 }
 
 /// Aggregate `date`'s entries: closed entries from the monthly file plus the active
@@ -246,5 +257,41 @@ mod tests {
         assert_eq!(started.tags, vec!["backend".to_string()]);
 
         std::fs::remove_dir_all(&work_folder).unwrap();
+    }
+
+    #[test]
+    fn last_working_day_from_monday_is_friday() {
+        let monday = NaiveDate::from_ymd_opt(2026, 3, 9).unwrap(); // a Monday
+        assert_eq!(
+            last_working_day(monday),
+            NaiveDate::from_ymd_opt(2026, 3, 6).unwrap() // the preceding Friday
+        );
+    }
+
+    #[test]
+    fn last_working_day_from_tuesday_is_monday() {
+        let tuesday = NaiveDate::from_ymd_opt(2026, 3, 10).unwrap();
+        assert_eq!(
+            last_working_day(tuesday),
+            NaiveDate::from_ymd_opt(2026, 3, 9).unwrap()
+        );
+    }
+
+    #[test]
+    fn last_working_day_from_sunday_is_friday() {
+        let sunday = NaiveDate::from_ymd_opt(2026, 3, 8).unwrap();
+        assert_eq!(
+            last_working_day(sunday),
+            NaiveDate::from_ymd_opt(2026, 3, 6).unwrap()
+        );
+    }
+
+    #[test]
+    fn last_working_day_from_saturday_is_friday() {
+        let saturday = NaiveDate::from_ymd_opt(2026, 3, 7).unwrap();
+        assert_eq!(
+            last_working_day(saturday),
+            NaiveDate::from_ymd_opt(2026, 3, 6).unwrap()
+        );
     }
 }
