@@ -1,0 +1,37 @@
+CLAUDE.md
+  h_e62fa2aaa022a7 1-14,16,19-35,37-52,54-57,59-69,70-91
+  s_092cd959493f02::t_19750631b6ae37 53,58
+  s_092cd959493f02::t_2f7e2098ef5a5c 36
+  s_092cd959493f02::t_f12b32b033bfbd 15,17-18
+.graphifyignore
+  h_e62fa2aaa022a7 1-10,11,12-18,19-21
+.claudeignore
+  h_e62fa2aaa022a7 1-2
+justfile
+  h_e62fa2aaa022a7 1-2
+.gitignore
+  h_e62fa2aaa022a7 3-4
+.claude/settings.json
+  h_e62fa2aaa022a7 9,18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "321db51103232778ae657c8c52086d5d157e9333",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_092cd959493f02": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d06290fd-5043-410f-bef5-2adae0f29461",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}
