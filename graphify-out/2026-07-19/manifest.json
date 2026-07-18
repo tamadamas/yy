@@ -1,0 +1,157 @@
+{
+  "scripts/setup-worktree.sh": {
+    "mtime": 1784404178.4073598,
+    "ast_hash": "4ddeedcb19f26a548bee0a5cd497a15f",
+    "semantic_hash": ""
+  },
+  "src/cli/mod.rs": {
+    "mtime": 1784454667.9285085,
+    "ast_hash": "e9618384b7e8d3751e59503b5360a79b",
+    "semantic_hash": ""
+  },
+  "src/core/mod.rs": {
+<<<<<<< HEAD
+    "mtime": 1784454668.0402877,
+=======
+    "mtime": 1784412194.162198,
+>>>>>>> 195853b (Add coverage tool)
+    "ast_hash": "2116025a99c71265cbba5a681c9afc9b",
+    "semantic_hash": ""
+  },
+  "src/export/mod.rs": {
+    "mtime": 1784404178.407856,
+    "ast_hash": "b20798a88878383b95b2d9c23969b059",
+    "semantic_hash": ""
+  },
+  "src/import/mod.rs": {
+    "mtime": 1784404178.40796,
+    "ast_hash": "c1c40c1b6e71e9e6c3b87d24a0b2acd7",
+    "semantic_hash": ""
+  },
+  "src/main.rs": {
+    "mtime": 1784454667.9285085,
+    "ast_hash": "16576db09a656dccedfdfa83d4769503",
+    "semantic_hash": ""
+  },
+  "src/model.rs": {
+<<<<<<< HEAD
+    "mtime": 1784454667.9522846,
+=======
+    "mtime": 1784412194.162438,
+>>>>>>> 195853b (Add coverage tool)
+    "ast_hash": "295aba593bc6dc741947bcde1f68845e",
+    "semantic_hash": ""
+  },
+  "src/pipeline.rs": {
+    "mtime": 1784404178.4081092,
+    "ast_hash": "ded56ed3dad69e3344fee4ac1a03f1da",
+    "semantic_hash": ""
+  },
+  "src/store/active.rs": {
+<<<<<<< HEAD
+    "mtime": 1784454667.9652848,
+=======
+    "mtime": 1784412194.1627111,
+>>>>>>> 195853b (Add coverage tool)
+    "ast_hash": "927e8a37a69011c73461af3a6564f6fb",
+    "semantic_hash": ""
+  },
+  "src/store/entries.rs": {
+<<<<<<< HEAD
+    "mtime": 1784454667.9782853,
+=======
+    "mtime": 1784412194.1628242,
+>>>>>>> 195853b (Add coverage tool)
+    "ast_hash": "c60b13b0b9a91981534aa6eec5e1e400",
+    "semantic_hash": ""
+  },
+  "src/store/issues.rs": {
+<<<<<<< HEAD
+    "mtime": 1784454668.050288,
+=======
+    "mtime": 1784412194.163016,
+>>>>>>> 195853b (Add coverage tool)
+    "ast_hash": "2e47bb0b4984e949c523bd8063d235a8",
+    "semantic_hash": ""
+  },
+  "src/store/jsonl.rs": {
+<<<<<<< HEAD
+    "mtime": 1784454667.9522846,
+=======
+    "mtime": 1784412194.1632512,
+>>>>>>> 195853b (Add coverage tool)
+    "ast_hash": "7496db7f9be400fb69f80fde1d33db64",
+    "semantic_hash": ""
+  },
+  "src/store/mod.rs": {
+    "mtime": 1784404178.4088378,
+    "ast_hash": "1c1a524a7bb1bf9d335416df912d8726",
+    "semantic_hash": ""
+  },
+  "src/store/state.rs": {
+    "mtime": 1784404178.4088378,
+    "ast_hash": "41ab4ce306ea1308fbadc3ce411de69f",
+    "semantic_hash": ""
+  },
+  "src/tui/app.rs": {
+    "mtime": 1784404178.4088378,
+    "ast_hash": "aaf60ef77cd6ee0659b0dcbce077d7ca",
+    "semantic_hash": ""
+  },
+  "src/tui/keymap.rs": {
+    "mtime": 1784404178.4090984,
+    "ast_hash": "419895c95c195cfd97baa3aaa34942f3",
+    "semantic_hash": ""
+  },
+  "src/tui/mod.rs": {
+    "mtime": 1784404178.4091742,
+    "ast_hash": "d5be4db7b089a7c29a7ed2f14f44d3bb",
+    "semantic_hash": ""
+  },
+  "src/tui/panes/mod.rs": {
+    "mtime": 1784404178.4091742,
+    "ast_hash": "8f287487a7d9d2d50bd2037c825d415e",
+    "semantic_hash": ""
+  },
+  "src/watch/mod.rs": {
+    "mtime": 1784404178.4093962,
+    "ast_hash": "048e81cdcb81eefdc51cf9909b1566fd",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1784378304.0,
+    "ast_hash": "6d1202f41ad5b9f2a442e2154bd68731",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md": {
+    "mtime": 1784404310.368853,
+    "ast_hash": "c7dcb4d517c07d6b2ebe6c8005210630",
+    "semantic_hash": ""
+  },
+<<<<<<< HEAD
+  "docs/superpowers/plans/2026-07-18-yy6-cli.md": {
+    "mtime": 1784454668.0172868,
+    "ast_hash": "d924de4811aa2c0c8c5f95b5a312f848",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md": {
+    "mtime": 1784404178.406754,
+    "ast_hash": "b4213427d2d24ddce7cecbd7010b8f02",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-07-18-yy6-cli-design.md": {
+    "mtime": 1784454668.0042863,
+    "ast_hash": "ed5e76ec8db5ef5b2b4f5fd56a884559",
+=======
+  "docs/superpowers/specs/2026-07-18-yy6-cli-design.md": {
+    "mtime": 1784412194.1578295,
+    "ast_hash": "ed5e76ec8db5ef5b2b4f5fd56a884559",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-07-18-yy6-cli.md": {
+    "mtime": 1784412194.1575458,
+    "ast_hash": "d924de4811aa2c0c8c5f95b5a312f848",
+>>>>>>> 195853b (Add coverage tool)
+    "semantic_hash": ""
+  }
+}

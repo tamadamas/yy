@@ -44,6 +44,7 @@ cargo run -- <args>         # e.g. cargo run -- start "task" --issue YY-1
 cargo test                  # unit tests (must not require a terminal)
 cargo clippy --all-targets  # lint — keep warning-free
 cargo fmt --all             # format
+just coverage               # cargo llvm-cov coverage
 ```
 
 Run the tool as `yy …` once installed (`cargo install --path .`).
@@ -54,6 +55,7 @@ Run the tool as `yy …` once installed (`cargo install --path .`).
 - `cargo check`, `cargo test`, `cargo clippy`, `cargo fmt --all --check` all pass.
 - New logic in `store/` and `core/` has tests that don't need a terminal.
 - JSONL round-trips: comments and malformed lines are preserved; writes are atomic.
+- Check `just coverage` before git commit (command fails below 80%)
 
 Current sprint, backlog, and workflow notes: see `.local/CLAUDE.md`.
 

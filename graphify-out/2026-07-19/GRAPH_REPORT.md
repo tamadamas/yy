@@ -10,7 +10,11 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9f50077a`
+<<<<<<< HEAD
+- Built from commit: `d7a583d2`
+=======
+- Built from commit: `a084715f`
+>>>>>>> 195853b (Add coverage tool)
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -69,7 +73,11 @@ Nodes (6): Done when, Goal, Out of scope, Scope, Testing, YY-1 Bootstrap — mod
 Cohesion: 0.16
 Nodes (24): close_and_archive(), IssueTotal, last_working_day(), DateTime, NaiveDate, Option, Path, PathBuf (+16 more)
 
+<<<<<<< HEAD
 ### Community 8 - "Entry"
+=======
+### Community 8 - "model.rs"
+>>>>>>> 195853b (Add coverage tool)
 Cohesion: 0.13
 Nodes (21): Default, Display, EntryTag, Formatter, Into, IssueTag, Self, custom_issue_kind_round_trips() (+13 more)
 
@@ -109,6 +117,7 @@ Nodes (10): Global Constraints, Self-Review Notes, Task 1: `core::start` accepts
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+<<<<<<< HEAD
 - **Why does `Entry` connect `Entry` to `jsonl.rs`, `active.rs`, `entries.rs`, `mod.rs`?**
   _High betweenness centrality (0.203) - this node is a cross-community bridge._
 - **Why does `Id` connect `Entry` to `issues.rs`, `mod.rs`?**
@@ -118,4 +127,15 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `setup-worktree.sh script`, `Why`, `Features` to the rest of the system?**
   _32 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Entry` be split into smaller, more focused modules?**
+=======
+- **Why does `Entry` connect `model.rs` to `jsonl.rs`, `active.rs`, `entries.rs`, `mod.rs`?**
+  _High betweenness centrality (0.203) - this node is a cross-community bridge._
+- **Why does `Id` connect `model.rs` to `issues.rs`, `mod.rs`?**
+  _High betweenness centrality (0.091) - this node is a cross-community bridge._
+- **Why does `start()` connect `mod.rs` to `model.rs`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+- **What connects `setup-worktree.sh script`, `Why`, `Features` to the rest of the system?**
+  _32 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `model.rs` be split into smaller, more focused modules?**
+>>>>>>> 195853b (Add coverage tool)
   _Cohesion score 0.12962962962962962 - nodes in this community are weakly interconnected._
