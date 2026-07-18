@@ -27,6 +27,15 @@ pub fn read_month(work_folder: &Path, date: NaiveDate) -> anyhow::Result<Vec<Ent
         .collect())
 }
 
+/// Append `entry` as a new line to the monthly file for its `start` date, preserving
+/// whatever comments, malformed lines, and other records are already there.
+pub fn append(work_folder: &Path, entry: &Entry) -> anyhow::Result<()> {
+    let path = month_path(work_folder, entry.start.date_naive());
+    let mut lines = jsonl::read(&path)?;
+    lines.push(Line::Record(Record::Entry(entry.clone())));
+    jsonl::write(&path, &lines)
+}
+
 /// Read all entries whose `start` falls within `[from, to]` inclusive, spanning
 /// however many monthly files that covers.
 pub fn entries_in_range(
@@ -110,6 +119,25 @@ mod tests {
 
         let read_back = read_month(&work_folder, date).unwrap();
         assert_eq!(read_back, vec![entry]);
+
+        std::fs::remove_dir_all(&work_folder).unwrap();
+    }
+
+    #[test]
+    fn append_preserves_existing_comments_and_lines() {
+        let work_folder = tmp_dir("append");
+        let date = NaiveDate::from_ymd_opt(2026, 3, 7).unwrap();
+        let path = month_path(&work_folder, date);
+
+        jsonl::write(&path, &[Line::Comment("# march notes".to_string())]).unwrap();
+
+        let entry = entry_at(2026, 3, 7);
+        append(&work_folder, &entry).unwrap();
+
+        let lines = jsonl::read(&path).unwrap();
+        assert_eq!(lines.len(), 2);
+        assert!(matches!(&lines[0], Line::Comment(c) if c == "# march notes"));
+        assert!(matches!(&lines[1], Line::Record(Record::Entry(e)) if *e == entry));
 
         std::fs::remove_dir_all(&work_folder).unwrap();
     }
