@@ -71,7 +71,7 @@ macro_rules! record_tag {
 record_tag!(IssueTag, "issue");
 record_tag!(EntryTag, "entry");
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Issue {
     pub t: IssueTag,
     pub id: Id,
@@ -95,7 +95,7 @@ impl Issue {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Entry {
     pub t: EntryTag,
     pub id: Id,
