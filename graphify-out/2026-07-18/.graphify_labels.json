@@ -19,9 +19,6 @@
   "17": "keymap.rs",
   "18": "mod.rs",
   "19": "mod.rs",
-<<<<<<< HEAD
-  "20": "mod.rs"
-=======
   "20": "mod.rs",
   "21": "Global Constraints",
   "22": "NaiveDate",
@@ -32,5 +29,4 @@
   "27": "String",
   "28": "Result",
   "29": "Vec"
->>>>>>> a084715 (Update graphify)
 }

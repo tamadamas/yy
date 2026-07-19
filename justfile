@@ -1,8 +1,8 @@
 run:
-    RUSTFLAGS="-Awarnings" rtk cargo run
+    rtk cargo run
 
 build:
-    RUSTFLAGS="-Awarnings" rtk cargo build
+    rtk cargo build
 
 git_list:
     git worktree list
@@ -22,10 +22,13 @@ format-check:
     rtk cargo fmt --all --check
 
 check: format-check clippy test
-    RUSTFLAGS="-Awarnings" rtk cargo check
+    rtk cargo check
 
 clippy:
     rtk cargo clippy --all-targets
 
 test:
     rtk cargo test
+
+graph_update:
+    graphify update .

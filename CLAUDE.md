@@ -37,6 +37,8 @@ Out-of-scope list and full stack/conventions detail: see `.local/CLAUDE.md`.
 
 ## Commands
 
+ALWAYS USE just commands oder rtk <command> like rtk cargo test
+
 ```bash
 just check                 # check code without building
 just build                 # build

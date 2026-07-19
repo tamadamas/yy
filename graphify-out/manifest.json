@@ -5,8 +5,13 @@
     "semantic_hash": ""
   },
   "src/cli/mod.rs": {
-    "mtime": 1784454667.9285085,
-    "ast_hash": "e9618384b7e8d3751e59503b5360a79b",
+    "mtime": 1784454776.4811263,
+    "ast_hash": "d0ea701b76fe325b0e213b2e7ce8b915",
+    "semantic_hash": ""
+  },
+  "src/cli/time.rs": {
+    "mtime": 1784454776.4581256,
+    "ast_hash": "79fbfcc2451fc1f97f87735ffa6c46a8",
     "semantic_hash": ""
   },
   "src/core/mod.rs": {
@@ -24,9 +29,14 @@
     "ast_hash": "c1c40c1b6e71e9e6c3b87d24a0b2acd7",
     "semantic_hash": ""
   },
+  "src/lib.rs": {
+    "mtime": 1784454776.4811263,
+    "ast_hash": "dc18e1b9e40457c8850c582f5dbb481d",
+    "semantic_hash": ""
+  },
   "src/main.rs": {
-    "mtime": 1784454667.9285085,
-    "ast_hash": "16576db09a656dccedfdfa83d4769503",
+    "mtime": 1784454776.4811263,
+    "ast_hash": "38d566a32738b0db206fc62594f5586d",
     "semantic_hash": ""
   },
   "src/model.rs": {
@@ -94,9 +104,19 @@
     "ast_hash": "048e81cdcb81eefdc51cf9909b1566fd",
     "semantic_hash": ""
   },
+  "tests/cli.rs": {
+    "mtime": 1784454776.4821265,
+    "ast_hash": "b4e87ddbfe41ba2be2eaeaafab4be3f5",
+    "semantic_hash": ""
+  },
   "README.md": {
     "mtime": 1784378304.0,
     "ast_hash": "6d1202f41ad5b9f2a442e2154bd68731",
+    "semantic_hash": ""
+  },
+  "REFACTOR_PLAN.md": {
+    "mtime": 1784454776.8601398,
+    "ast_hash": "97903e5eb80fcce9afd8377964749b54",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-18-yy1-bootstrap.md": {

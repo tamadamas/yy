@@ -14,7 +14,7 @@
       },
       "_origin": "ast",
       "id": "scripts_setup_worktree",
-      "community": 3,
+      "community": 15,
       "community_name": "setup-worktree.sh",
       "norm_label": "setup-worktree.sh"
     },
@@ -29,7 +29,7 @@
       },
       "_origin": "ast",
       "id": "scripts_setup_worktree_sh__entry",
-      "community": 3,
+      "community": 15,
       "community_name": "setup-worktree.sh",
       "norm_label": "setup-worktree.sh script"
     },
@@ -40,9 +40,460 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_cli_mod",
-      "community": 4,
+      "community": 0,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
+    },
+    {
+      "label": "parse_issue_key()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_cli_mod_parse_issue_key",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "parse_issue_key()"
+    },
+    {
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_result",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "result"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_string",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "string"
+    },
+    {
+      "label": "Cli",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "src_cli_mod_cli",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "cli"
+    },
+    {
+      "label": "Option",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_option",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "option"
+    },
+    {
+      "label": "Commands",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "src_cli_mod_commands",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "commands"
+    },
+    {
+      "label": "EntrySpec",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "src_cli_mod_entryspec",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "entryspec"
+    },
+    {
+      "label": "Vec",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_vec",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "vec"
+    },
+    {
+      "label": "resolve_target_date()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "src_cli_mod_resolve_target_date",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "resolve_target_date()"
+    },
+    {
+      "label": "NaiveDate",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_naivedate",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "naivedate"
+    },
+    {
+      "label": "format_duration()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "src_cli_mod_format_duration",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "format_duration()"
+    },
+    {
+      "label": "TimeDelta",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_timedelta",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "timedelta"
+    },
+    {
+      "label": "render_today()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "src_cli_mod_render_today",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "render_today()"
+    },
+    {
+      "label": "render_status()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "src_cli_mod_render_status",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "render_status()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "src_cli_mod_run",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "run()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_mod_rs_path",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "path"
+    },
+    {
+      "label": "issue_labels()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "src_cli_mod_issue_labels",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "issue_labels()"
+    },
+    {
+      "label": "sample_entry()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L232",
+      "_origin": "ast",
+      "id": "src_cli_mod_sample_entry",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "sample_entry()"
+    },
+    {
+      "label": "resolve_target_date_without_yesterday_is_today()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L239",
+      "_origin": "ast",
+      "id": "src_cli_mod_resolve_target_date_without_yesterday_is_today",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "resolve_target_date_without_yesterday_is_today()"
+    },
+    {
+      "label": "resolve_target_date_with_yesterday_uses_last_working_day()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L245",
+      "_origin": "ast",
+      "id": "src_cli_mod_resolve_target_date_with_yesterday_uses_last_working_day",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "resolve_target_date_with_yesterday_uses_last_working_day()"
+    },
+    {
+      "label": "render_today_shows_entries_and_totals()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L254",
+      "_origin": "ast",
+      "id": "src_cli_mod_render_today_shows_entries_and_totals",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "render_today_shows_entries_and_totals()"
+    },
+    {
+      "label": "render_today_handles_empty_day()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "src_cli_mod_render_today_handles_empty_day",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "render_today_handles_empty_day()"
+    },
+    {
+      "label": "render_status_shows_active_note_and_remaining()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L279",
+      "_origin": "ast",
+      "id": "src_cli_mod_render_status_shows_active_note_and_remaining",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "render_status_shows_active_note_and_remaining()"
+    },
+    {
+      "label": "render_status_handles_nothing_running()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L288",
+      "_origin": "ast",
+      "id": "src_cli_mod_render_status_handles_nothing_running",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "render_status_handles_nothing_running()"
+    },
+    {
+      "label": "accepts_valid_keys()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L294",
+      "_origin": "ast",
+      "id": "src_cli_mod_accepts_valid_keys",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "accepts_valid_keys()"
+    },
+    {
+      "label": "rejects_single_letter_prefix()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L301",
+      "_origin": "ast",
+      "id": "src_cli_mod_rejects_single_letter_prefix",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "rejects_single_letter_prefix()"
+    },
+    {
+      "label": "rejects_lowercase()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L306",
+      "_origin": "ast",
+      "id": "src_cli_mod_rejects_lowercase",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "rejects_lowercase()"
+    },
+    {
+      "label": "rejects_missing_number()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L311",
+      "_origin": "ast",
+      "id": "src_cli_mod_rejects_missing_number",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "rejects_missing_number()"
+    },
+    {
+      "label": "rejects_non_numeric_suffix()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L317",
+      "_origin": "ast",
+      "id": "src_cli_mod_rejects_non_numeric_suffix",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "rejects_non_numeric_suffix()"
+    },
+    {
+      "label": "error_message_includes_hint()",
+      "file_type": "code",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L322",
+      "_origin": "ast",
+      "id": "src_cli_mod_error_message_includes_hint",
+      "community": 0,
+      "community_name": "mod.rs",
+      "norm_label": "error_message_includes_hint()"
+    },
+    {
+      "label": "time.rs",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_cli_time",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "time.rs"
+    },
+    {
+      "label": "parse_time()",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_cli_time_parse_time",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "parse_time()"
+    },
+    {
+      "label": "NaiveDate",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_time_rs_naivedate",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "naivedate"
+    },
+    {
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_time_rs_result",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "result"
+    },
+    {
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_time_rs_datetime",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "datetime"
+    },
+    {
+      "label": "Utc",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_cli_time_rs_utc",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "utc"
+    },
+    {
+      "label": "a_date()",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_cli_time_a_date",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "a_date()"
+    },
+    {
+      "label": "parses_hh_mm_on_reference_date_as_local_then_converts_to_utc()",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "src_cli_time_parses_hh_mm_on_reference_date_as_local_then_converts_to_utc",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "parses_hh_mm_on_reference_date_as_local_then_converts_to_utc()"
+    },
+    {
+      "label": "parses_full_rfc3339_timestamp()",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "src_cli_time_parses_full_rfc3339_timestamp",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "parses_full_rfc3339_timestamp()"
+    },
+    {
+      "label": "rejects_garbage()",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "src_cli_time_rejects_garbage",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "rejects_garbage()"
+    },
+    {
+      "label": "rejects_invalid_hh_mm()",
+      "file_type": "code",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "src_cli_time_rejects_invalid_hh_mm",
+      "community": 9,
+      "community_name": "parse_time",
+      "norm_label": "rejects_invalid_hh_mm()"
     },
     {
       "label": "mod.rs",
@@ -51,7 +502,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_core_mod",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
     },
@@ -62,7 +513,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_core_mod_start",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "start()"
     },
@@ -73,7 +524,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_path",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "path"
     },
@@ -84,7 +535,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_option",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "option"
     },
@@ -95,7 +546,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_string",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "string"
     },
@@ -106,7 +557,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_vec",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "vec"
     },
@@ -117,7 +568,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_datetime",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "datetime"
     },
@@ -128,7 +579,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_utc",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "utc"
     },
@@ -139,7 +590,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_result",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "result"
     },
@@ -150,7 +601,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_core_mod_stop",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "stop()"
     },
@@ -161,7 +612,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_core_mod_close_and_archive",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "close_and_archive()"
     },
@@ -172,7 +623,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_core_mod_issuetotal",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "issuetotal"
     },
@@ -183,7 +634,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_timedelta",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "timedelta"
     },
@@ -194,7 +645,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "src_core_mod_todayview",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "todayview"
     },
@@ -205,7 +656,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "src_core_mod_last_working_day",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "last_working_day()"
     },
@@ -216,7 +667,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_naivedate",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "naivedate"
     },
@@ -227,7 +678,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "src_core_mod_today",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "today()"
     },
@@ -238,7 +689,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "src_core_mod_tmp_dir",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "tmp_dir()"
     },
@@ -249,7 +700,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_mod_rs_pathbuf",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "pathbuf"
     },
@@ -260,7 +711,7 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "src_core_mod_start_then_stop_produces_closed_interval",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "start_then_stop_produces_closed_interval()"
     },
@@ -271,7 +722,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "src_core_mod_starting_again_stops_the_previous_entry",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "starting_again_stops_the_previous_entry()"
     },
@@ -282,7 +733,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "src_core_mod_stop_with_nothing_running_returns_none",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "stop_with_nothing_running_returns_none()"
     },
@@ -293,7 +744,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "src_core_mod_today_combines_closed_entries_and_running_entry",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "today_combines_closed_entries_and_running_entry()"
     },
@@ -304,7 +755,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "src_core_mod_today_ignores_entries_from_other_days",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "today_ignores_entries_from_other_days()"
     },
@@ -315,7 +766,7 @@
       "source_location": "L245",
       "_origin": "ast",
       "id": "src_core_mod_start_sets_note_and_tags",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "start_sets_note_and_tags()"
     },
@@ -326,7 +777,7 @@
       "source_location": "L263",
       "_origin": "ast",
       "id": "src_core_mod_last_working_day_from_monday_is_friday",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "last_working_day_from_monday_is_friday()"
     },
@@ -337,7 +788,7 @@
       "source_location": "L272",
       "_origin": "ast",
       "id": "src_core_mod_last_working_day_from_tuesday_is_monday",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "last_working_day_from_tuesday_is_monday()"
     },
@@ -348,7 +799,7 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "src_core_mod_last_working_day_from_sunday_is_friday",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "last_working_day_from_sunday_is_friday()"
     },
@@ -359,7 +810,7 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "src_core_mod_last_working_day_from_saturday_is_friday",
-      "community": 5,
+      "community": 1,
       "community_name": "mod.rs",
       "norm_label": "last_working_day_from_saturday_is_friday()"
     },
@@ -370,7 +821,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_export_mod",
-      "community": 6,
+      "community": 23,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
     },
@@ -381,9 +832,42 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_import_mod",
-      "community": 7,
+      "community": 24,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
+    },
+    {
+      "label": "lib.rs",
+      "file_type": "code",
+      "source_file": "src/lib.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib",
+      "community": 13,
+      "community_name": "work_folder",
+      "norm_label": "lib.rs"
+    },
+    {
+      "label": "work_folder()",
+      "file_type": "code",
+      "source_file": "src/lib.rs",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_lib_work_folder",
+      "community": 13,
+      "community_name": "work_folder",
+      "norm_label": "work_folder()"
+    },
+    {
+      "label": "PathBuf",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_lib_rs_pathbuf",
+      "community": 13,
+      "community_name": "work_folder",
+      "norm_label": "pathbuf"
     },
     {
       "label": "main.rs",
@@ -392,19 +876,19 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main",
-      "community": 0,
-      "community_name": "main.rs",
+      "community": 13,
+      "community_name": "work_folder",
       "norm_label": "main.rs"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "src/main.rs",
-      "source_location": "L11",
+      "source_location": "L4",
       "_origin": "ast",
       "id": "src_main_main",
-      "community": 0,
-      "community_name": "main.rs",
+      "community": 13,
+      "community_name": "work_folder",
       "norm_label": "main()"
     },
     {
@@ -414,7 +898,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_model",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "model.rs"
     },
@@ -425,7 +909,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_model_id",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "id"
     },
@@ -436,7 +920,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ulid",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "ulid"
     },
@@ -447,7 +931,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_model_id_new",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": ".new()"
     },
@@ -458,7 +942,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "self",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "self"
     },
@@ -469,7 +953,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "default",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "default"
     },
@@ -480,7 +964,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_model_id_default",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": ".default()"
     },
@@ -491,7 +975,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "display",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "display"
     },
@@ -502,7 +986,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_model_id_fmt",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": ".fmt()"
     },
@@ -513,7 +997,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "formatter",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "formatter"
     },
@@ -524,7 +1008,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_model_rs_result",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "result"
     },
@@ -535,7 +1019,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_model_issuekind",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "issuekind"
     },
@@ -546,7 +1030,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_model_rs_string",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "string"
     },
@@ -557,7 +1041,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_model_issue",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "issue"
     },
@@ -568,7 +1052,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "issuetag",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "issuetag"
     },
@@ -579,7 +1063,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_model_rs_option",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "option"
     },
@@ -590,7 +1074,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_model_rs_datetime",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "datetime"
     },
@@ -601,7 +1085,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_model_rs_utc",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "utc"
     },
@@ -612,7 +1096,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "src_model_issue_new",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": ".new()"
     },
@@ -623,7 +1107,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "into",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "into"
     },
@@ -634,7 +1118,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "src_model_entry",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "entry"
     },
@@ -645,7 +1129,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entrytag",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "entrytag"
     },
@@ -656,7 +1140,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_model_rs_vec",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "vec"
     },
@@ -667,7 +1151,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "src_model_entry_start_now",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": ".start_now()"
     },
@@ -678,7 +1162,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "src_model_issue_round_trips_with_t_discriminator",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "issue_round_trips_with_t_discriminator()"
     },
@@ -689,7 +1173,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "src_model_entry_round_trips_running_and_closed",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "entry_round_trips_running_and_closed()"
     },
@@ -700,7 +1184,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "src_model_custom_issue_kind_round_trips",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "custom_issue_kind_round_trips()"
     },
@@ -711,7 +1195,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "src_model_wrong_t_value_is_rejected",
-      "community": 8,
+      "community": 2,
       "community_name": "Entry",
       "norm_label": "wrong_t_value_is_rejected()"
     },
@@ -722,7 +1206,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_pipeline",
-      "community": 9,
+      "community": 25,
       "community_name": "pipeline.rs",
       "norm_label": "pipeline.rs"
     },
@@ -733,7 +1217,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_active",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "active.rs"
     },
@@ -744,7 +1228,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_store_active_active",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "active"
     },
@@ -755,7 +1239,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_active_rs_option",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "option"
     },
@@ -766,7 +1250,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_store_active_elapsed",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "elapsed()"
     },
@@ -777,7 +1261,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_active_rs_timedelta",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "timedelta"
     },
@@ -788,7 +1272,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_store_active_path",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "path()"
     },
@@ -799,7 +1283,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_active_rs_pathbuf",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "pathbuf"
     },
@@ -810,7 +1294,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_store_active_read",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "read()"
     },
@@ -821,7 +1305,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_active_rs_result",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "result"
     },
@@ -832,7 +1316,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_store_active_write",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "write()"
     },
@@ -843,7 +1327,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_store_active_tmp_dir",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "tmp_dir()"
     },
@@ -854,7 +1338,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_store_active_missing_file_reads_as_no_active_entry",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "missing_file_reads_as_no_active_entry()"
     },
@@ -865,7 +1349,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "src_store_active_write_then_read_round_trips",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "write_then_read_round_trips()"
     },
@@ -876,7 +1360,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "src_store_active_elapsed_of_running_entry_is_derived_from_now",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "elapsed_of_running_entry_is_derived_from_now()"
     },
@@ -887,7 +1371,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "src_store_active_elapsed_of_closed_entry_is_end_minus_start",
-      "community": 10,
+      "community": 5,
       "community_name": "active.rs",
       "norm_label": "elapsed_of_closed_entry_is_end_minus_start()"
     },
@@ -898,7 +1382,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_entries",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "entries.rs"
     },
@@ -909,7 +1393,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_store_entries_month_path",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "month_path()"
     },
@@ -920,7 +1404,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_entries_rs_path",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "path"
     },
@@ -931,7 +1415,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_entries_rs_naivedate",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "naivedate"
     },
@@ -942,7 +1426,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_entries_rs_pathbuf",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "pathbuf"
     },
@@ -953,7 +1437,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_store_entries_read_month",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "read_month()"
     },
@@ -964,7 +1448,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_entries_rs_result",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "result"
     },
@@ -975,7 +1459,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_entries_rs_vec",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "vec"
     },
@@ -986,7 +1470,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_store_entries_append",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "append()"
     },
@@ -997,7 +1481,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_store_entries_entries_in_range",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "entries_in_range()"
     },
@@ -1008,7 +1492,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_store_entries_tmp_dir",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "tmp_dir()"
     },
@@ -1019,7 +1503,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "src_store_entries_entry_at",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "entry_at()"
     },
@@ -1030,7 +1514,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "src_store_entries_month_path_formats_year_month",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "month_path_formats_year_month()"
     },
@@ -1041,7 +1525,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "src_store_entries_missing_month_file_reads_no_entries",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "missing_month_file_reads_no_entries()"
     },
@@ -1052,7 +1536,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "src_store_entries_read_month_ignores_non_entry_records",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "read_month_ignores_non_entry_records()"
     },
@@ -1063,7 +1547,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "src_store_entries_append_preserves_existing_comments_and_lines",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "append_preserves_existing_comments_and_lines()"
     },
@@ -1074,7 +1558,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "src_store_entries_entries_in_range_spans_multiple_months",
-      "community": 11,
+      "community": 3,
       "community_name": "entries.rs",
       "norm_label": "entries_in_range_spans_multiple_months()"
     },
@@ -1085,7 +1569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_issues",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "issues.rs"
     },
@@ -1096,7 +1580,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_store_issues_path",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "path()"
     },
@@ -1107,7 +1591,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_issues_rs_pathbuf",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "pathbuf"
     },
@@ -1118,7 +1602,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_store_issues_read_all",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "read_all()"
     },
@@ -1129,7 +1613,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_issues_rs_result",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "result"
     },
@@ -1140,7 +1624,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_issues_rs_vec",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "vec"
     },
@@ -1151,7 +1635,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_store_issues_find_by_id",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "find_by_id()"
     },
@@ -1162,7 +1646,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_issues_rs_option",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "option"
     },
@@ -1173,7 +1657,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_store_issues_resolve_or_create",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "resolve_or_create()"
     },
@@ -1184,7 +1668,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_store_issues_tmp_dir",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "tmp_dir()"
     },
@@ -1195,7 +1679,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_store_issues_resolve_or_create_creates_on_first_use",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "resolve_or_create_creates_on_first_use()"
     },
@@ -1206,7 +1690,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_store_issues_resolve_or_create_reuses_existing_key",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "resolve_or_create_reuses_existing_key()"
     },
@@ -1217,7 +1701,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "src_store_issues_resolve_or_create_falls_back_to_key_as_title_when_no_desc",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "resolve_or_create_falls_back_to_key_as_title_when_no_desc()"
     },
@@ -1228,7 +1712,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "src_store_issues_find_by_id_returns_none_when_missing",
-      "community": 12,
+      "community": 6,
       "community_name": "issues.rs",
       "norm_label": "find_by_id_returns_none_when_missing()"
     },
@@ -1239,7 +1723,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_jsonl",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "jsonl.rs"
     },
@@ -1250,7 +1734,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_store_jsonl_line",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "line"
     },
@@ -1261,7 +1745,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_jsonl_rs_string",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "string"
     },
@@ -1272,7 +1756,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_store_jsonl_record",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "record"
     },
@@ -1283,7 +1767,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "value",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "value"
     },
@@ -1294,7 +1778,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_store_jsonl_record_to_json",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": ".to_json()"
     },
@@ -1305,7 +1789,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_jsonl_rs_result",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "result"
     },
@@ -1316,7 +1800,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_store_jsonl_parse_record",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "parse_record()"
     },
@@ -1327,7 +1811,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "src_store_jsonl_parse",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "parse()"
     },
@@ -1338,7 +1822,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_jsonl_rs_vec",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "vec"
     },
@@ -1349,7 +1833,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "src_store_jsonl_read",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "read()"
     },
@@ -1360,7 +1844,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_store_jsonl_rs_path",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "path"
     },
@@ -1371,7 +1855,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "src_store_jsonl_render",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "render()"
     },
@@ -1382,7 +1866,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "src_store_jsonl_write",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "write()"
     },
@@ -1393,7 +1877,7 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "src_store_jsonl_round_trips_comments_and_malformed_lines",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "round_trips_comments_and_malformed_lines()"
     },
@@ -1404,7 +1888,7 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "src_store_jsonl_write_then_read_is_atomic_and_lossless",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "write_then_read_is_atomic_and_lossless()"
     },
@@ -1415,7 +1899,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "src_store_jsonl_missing_file_reads_as_empty",
-      "community": 13,
+      "community": 4,
       "community_name": "jsonl.rs",
       "norm_label": "missing_file_reads_as_empty()"
     },
@@ -1426,7 +1910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_mod",
-      "community": 14,
+      "community": 26,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
     },
@@ -1437,7 +1921,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_state",
-      "community": 15,
+      "community": 27,
       "community_name": "state.rs",
       "norm_label": "state.rs"
     },
@@ -1448,7 +1932,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_tui_app",
-      "community": 16,
+      "community": 28,
       "community_name": "app.rs",
       "norm_label": "app.rs"
     },
@@ -1459,7 +1943,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_tui_keymap",
-      "community": 17,
+      "community": 29,
       "community_name": "keymap.rs",
       "norm_label": "keymap.rs"
     },
@@ -1470,7 +1954,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_tui_mod",
-      "community": 18,
+      "community": 30,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
     },
@@ -1481,7 +1965,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_tui_panes_mod",
-      "community": 19,
+      "community": 31,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
     },
@@ -1492,9 +1976,75 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_watch_mod",
-      "community": 20,
+      "community": 32,
       "community_name": "mod.rs",
       "norm_label": "mod.rs"
+    },
+    {
+      "label": "cli.rs",
+      "file_type": "code",
+      "source_file": "tests/cli.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_cli",
+      "community": 12,
+      "community_name": "yy",
+      "norm_label": "cli.rs"
+    },
+    {
+      "label": "yy()",
+      "file_type": "code",
+      "source_file": "tests/cli.rs",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "tests_cli_yy",
+      "community": 12,
+      "community_name": "yy",
+      "norm_label": "yy()"
+    },
+    {
+      "label": "TempDir",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "tempdir",
+      "community": 12,
+      "community_name": "yy",
+      "norm_label": "tempdir"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "tests_cli_rs_string",
+      "community": 12,
+      "community_name": "yy",
+      "norm_label": "string"
+    },
+    {
+      "label": "start_status_today_stop_end_to_end()",
+      "file_type": "code",
+      "source_file": "tests/cli.rs",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "tests_cli_start_status_today_stop_end_to_end",
+      "community": 12,
+      "community_name": "yy",
+      "norm_label": "start_status_today_stop_end_to_end()"
+    },
+    {
+      "label": "status_with_nothing_running_reports_no_active_entry()",
+      "file_type": "code",
+      "source_file": "tests/cli.rs",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "tests_cli_status_with_nothing_running_reports_no_active_entry",
+      "community": 12,
+      "community_name": "yy",
+      "norm_label": "status_with_nothing_running_reports_no_active_entry()"
     },
     {
       "label": "README.md",
@@ -1503,7 +2053,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "readme.md"
     },
@@ -1514,7 +2064,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme_yy",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "yy"
     },
@@ -1525,7 +2075,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "readme_why",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "why"
     },
@@ -1536,7 +2086,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "readme_features",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "features"
     },
@@ -1547,7 +2097,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "readme_install",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "install"
     },
@@ -1558,7 +2108,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "readme_quick_start",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "quick start"
     },
@@ -1569,7 +2119,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "readme_how_it_works",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "how it works"
     },
@@ -1580,7 +2130,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "readme_data_config",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "data & config"
     },
@@ -1591,7 +2141,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "readme_editing",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "editing"
     },
@@ -1602,7 +2152,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "readme_acknowledgments",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "acknowledgments"
     },
@@ -1613,9 +2163,141 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "readme_license",
-      "community": 1,
+      "community": 8,
       "community_name": "yy",
       "norm_label": "license"
+    },
+    {
+      "label": "REFACTOR_PLAN.md",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "refactor_plan",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "refactor_plan.md"
+    },
+    {
+      "label": "Pre-Sprint-1 Refactor Implementation Plan",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "refactor_plan_pre_sprint_1_refactor_implementation_plan",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "pre-sprint-1 refactor implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "refactor_plan_global_constraints",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "Architecture Conformance & SOLID / God-Structure Audit",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "architecture conformance & solid / god-structure audit"
+    },
+    {
+      "label": "architecture.md vs. actual code \u2014 deltas found (and handled)",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "refactor_plan_architecture_md_vs_actual_code_deltas_found_and_handled",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "architecture.md vs. actual code \u2014 deltas found (and handled)"
+    },
+    {
+      "label": "SOLID assessment",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "refactor_plan_solid_assessment",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "solid assessment"
+    },
+    {
+      "label": "God structures vs. god modules \u2014 the distinction that matters here",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "refactor_plan_god_structures_vs_god_modules_the_distinction_that_matters_here",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "god structures vs. god modules \u2014 the distinction that matters here"
+    },
+    {
+      "label": "Task 1: Extract `cli/parse.rs` (issue-key validation) and DRY the error string",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "refactor_plan_task_1_extract_cli_parse_rs_issue_key_validation_and_dry_the_error_string",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "task 1: extract `cli/parse.rs` (issue-key validation) and dry the error string"
+    },
+    {
+      "label": "Task 2: Extract `cli/render.rs` (duration + today/status rendering)",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "refactor_plan_task_2_extract_cli_render_rs_duration_today_status_rendering",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "task 2: extract `cli/render.rs` (duration + today/status rendering)"
+    },
+    {
+      "label": "Task 3: Extract `core/query.rs` (the DTO/query layer)",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L339",
+      "_origin": "ast",
+      "id": "refactor_plan_task_3_extract_core_query_rs_the_dto_query_layer",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "task 3: extract `core/query.rs` (the dto/query layer)"
+    },
+    {
+      "label": "Task 4: Refresh the graph and record the refactor",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L576",
+      "_origin": "ast",
+      "id": "refactor_plan_task_4_refresh_the_graph_and_record_the_refactor",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "task 4: refresh the graph and record the refactor"
+    },
+    {
+      "label": "Self-Review Notes",
+      "file_type": "document",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L614",
+      "_origin": "ast",
+      "id": "refactor_plan_self_review_notes",
+      "community": 38,
+      "community_name": "Architecture Conformance & SOLID / God-Structure Audit",
+      "norm_label": "self-review notes"
     },
     {
       "label": "2026-07-18-yy1-bootstrap.md",
@@ -1624,7 +2306,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap",
-      "community": 21,
+      "community": 14,
       "community_name": "Global Constraints",
       "norm_label": "2026-07-18-yy1-bootstrap.md"
     },
@@ -1635,7 +2317,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_yy_1_bootstrap_implementation_plan",
-      "community": 21,
+      "community": 14,
       "community_name": "Global Constraints",
       "norm_label": "yy-1 bootstrap implementation plan"
     },
@@ -1646,7 +2328,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_global_constraints",
-      "community": 21,
+      "community": 14,
       "community_name": "Global Constraints",
       "norm_label": "global constraints"
     },
@@ -1657,7 +2339,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy1_bootstrap_task_1_module_skeleton",
-      "community": 21,
+      "community": 14,
       "community_name": "Global Constraints",
       "norm_label": "task 1: module skeleton"
     },
@@ -1668,7 +2350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "2026-07-18-yy6-cli.md"
     },
@@ -1679,7 +2361,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_yy_6_cli_implementation_plan",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "yy-6 cli implementation plan"
     },
@@ -1690,7 +2372,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_global_constraints",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "global constraints"
     },
@@ -1701,7 +2383,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_1_core_start_accepts_note_and_tags",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 1: `core::start` accepts `note` and `tags`"
     },
@@ -1712,7 +2394,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_2_core_last_working_day",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 2: `core::last_working_day`"
     },
@@ -1723,7 +2405,7 @@
       "source_location": "L255",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_3_store_issues_rs_resolve_or_create_by_key",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 3: `store/issues.rs` \u2014 resolve-or-create by key"
     },
@@ -1734,7 +2416,7 @@
       "source_location": "L416",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_4_cli_issue_key_validation",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 4: cli issue key validation"
     },
@@ -1745,7 +2427,7 @@
       "source_location": "L518",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_5_cli_time_parsing",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 5: cli time parsing"
     },
@@ -1756,7 +2438,7 @@
       "source_location": "L625",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_6_cli_commands_rendering_and_run",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 6: cli commands, rendering, and `run()`"
     },
@@ -1767,7 +2449,7 @@
       "source_location": "L945",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_task_7_wire_main_rs_and_manual_end_to_end_verification",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "task 7: wire `main.rs` and manual end-to-end verification"
     },
@@ -1778,7 +2460,7 @@
       "source_location": "L1048",
       "_origin": "ast",
       "id": "docs_superpowers_plans_2026_07_18_yy6_cli_self_review_notes",
-      "community": 25,
+      "community": 7,
       "community_name": "Global Constraints",
       "norm_label": "self-review notes"
     },
@@ -1789,7 +2471,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "2026-07-18-yy1-bootstrap-design.md"
     },
@@ -1800,7 +2482,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "yy-1 bootstrap \u2014 module skeleton"
     },
@@ -1811,7 +2493,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_goal",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "goal"
     },
@@ -1822,7 +2504,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_scope",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "scope"
     },
@@ -1833,7 +2515,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_out_of_scope",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "out of scope"
     },
@@ -1844,7 +2526,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_done_when",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "done when"
     },
@@ -1855,7 +2537,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing",
-      "community": 2,
+      "community": 11,
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "testing"
     },
@@ -1866,7 +2548,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "2026-07-18-yy6-cli-design.md"
     },
@@ -1877,7 +2559,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_yy_6_cli_design",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "yy-6 cli \u2014 design"
     },
@@ -1888,7 +2570,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_scope",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "scope"
     },
@@ -1899,7 +2581,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_issue_key_format_resolution",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "issue key format & resolution"
     },
@@ -1910,7 +2592,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_time_parsing",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "time parsing"
     },
@@ -1921,7 +2603,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_work_folder",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "work folder"
     },
@@ -1932,7 +2614,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_status_target",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "status target"
     },
@@ -1943,7 +2625,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_subcommand_aliases",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "subcommand aliases"
     },
@@ -1954,7 +2636,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_cli_structure_cli_mod_rs",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "cli structure (`cli/mod.rs`)"
     },
@@ -1965,7 +2647,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "docs_superpowers_specs_2026_07_18_yy6_cli_design_testing",
-      "community": 24,
+      "community": 10,
       "community_name": "YY-6 CLI \u2014 design",
       "norm_label": "testing"
     }
@@ -1980,6 +2662,997 @@
       "_origin": "ast",
       "source": "scripts_setup_worktree",
       "target": "scripts_setup_worktree_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L294",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_accepts_valid_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_entryspec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L322",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_error_message_includes_hint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_format_duration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_issue_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_parse_issue_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L306",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_rejects_lowercase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L311",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_rejects_missing_number",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L317",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_rejects_non_numeric_suffix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L301",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_rejects_single_letter_prefix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_render_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L288",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_render_status_handles_nothing_running",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L279",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_render_status_shows_active_note_and_remaining",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_render_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L269",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_render_today_handles_empty_day",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L254",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_render_today_shows_entries_and_totals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_resolve_target_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L245",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_resolve_target_date_with_yesterday_uses_last_working_day",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L239",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_resolve_target_date_without_yesterday_is_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_rs_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_sample_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L323",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_error_message_includes_hint",
+      "target": "src_cli_mod_parse_issue_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_parse_issue_key",
+      "target": "src_cli_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_parse_issue_key",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_cli_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L59",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_commands",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_entryspec",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L87",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_format_duration",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L136",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_today",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_cli",
+      "target": "src_cli_mod_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "src_cli_mod_cli",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L59",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "src_cli_mod_commands",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "src_cli_mod_entryspec",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L136",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_today",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_sample_entry",
+      "target": "src_cli_mod_rs_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L53",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "src_cli_mod_commands",
+      "target": "src_cli_mod_entryspec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "src_cli_mod_entryspec",
+      "target": "src_cli_mod_rs_vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_cli_mod_rs_vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_resolve_target_date",
+      "target": "src_cli_mod_rs_naivedate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_resolve_target_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L87",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_format_duration",
+      "target": "src_cli_mod_rs_timedelta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L136",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status",
+      "target": "src_cli_mod_rs_timedelta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_today",
+      "target": "src_core_mod_todayview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_today",
+      "target": "src_model_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L274",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_render_today_handles_empty_day",
+      "target": "src_cli_mod_render_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L263",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_render_today_shows_entries_and_totals",
+      "target": "src_cli_mod_render_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L159",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_render_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L136",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status",
+      "target": "src_model_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L289",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status_handles_nothing_running",
+      "target": "src_cli_mod_render_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L281",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status_shows_active_note_and_remaining",
+      "target": "src_cli_mod_render_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L207",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_render_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_issue_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_run",
+      "target": "src_cli_mod_rs_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_cli_mod_rs_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_core_mod_todayview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L212",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_issue_labels",
+      "target": "src_model_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L280",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_mod_render_status_shows_active_note_and_remaining",
+      "target": "src_cli_mod_sample_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_mod_sample_entry",
+      "target": "src_model_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_mod_sample_entry",
+      "target": "src_model_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time",
+      "target": "src_cli_time_a_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time",
+      "target": "src_cli_time_parse_time",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time",
+      "target": "src_cli_time_parses_full_rfc3339_timestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time",
+      "target": "src_cli_time_parses_hh_mm_on_reference_date_as_local_then_converts_to_utc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time",
+      "target": "src_cli_time_rejects_garbage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time",
+      "target": "src_cli_time_rejects_invalid_hh_mm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_time_parse_time",
+      "target": "src_cli_time_rs_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "src_cli_time_parse_time",
+      "target": "src_cli_time_rs_naivedate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_time_parse_time",
+      "target": "src_cli_time_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "src_cli_time_parse_time",
+      "target": "src_cli_time_rs_utc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time_parses_full_rfc3339_timestamp",
+      "target": "src_cli_time_parse_time",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time_parses_hh_mm_on_reference_date_as_local_then_converts_to_utc",
+      "target": "src_cli_time_parse_time",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_cli_time_a_date",
+      "target": "src_cli_time_rs_naivedate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time_parses_full_rfc3339_timestamp",
+      "target": "src_cli_time_a_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli/time.rs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_cli_time_parses_hh_mm_on_reference_date_as_local_then_converts_to_utc",
+      "target": "src_cli_time_a_date",
       "confidence_score": 1.0
     },
     {
@@ -2819,8 +4492,43 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib",
+      "target": "src_lib_work_folder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "src_lib_work_folder",
+      "target": "src_lib_rs_pathbuf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/main.rs",
-      "source_location": "L11",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_main_main",
+      "target": "src_lib_work_folder"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.rs",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_main",
@@ -5293,6 +7001,99 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "tests_cli",
+      "target": "tempdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_cli",
+      "target": "tests_cli_start_status_today_stop_end_to_end",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_cli",
+      "target": "tests_cli_status_with_nothing_running_reports_no_active_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_cli",
+      "target": "tests_cli_yy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_cli_start_status_today_stop_end_to_end",
+      "target": "tests_cli_yy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_cli_status_with_nothing_running_reports_no_active_entry",
+      "target": "tests_cli_yy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "tests_cli_yy",
+      "target": "tempdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/cli.rs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "tests_cli_yy",
+      "target": "tests_cli_rs_string",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
@@ -5400,6 +7201,127 @@
       "_origin": "ast",
       "source": "readme_yy",
       "target": "readme_why",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan",
+      "target": "refactor_plan_pre_sprint_1_refactor_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_pre_sprint_1_refactor_implementation_plan",
+      "target": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_pre_sprint_1_refactor_implementation_plan",
+      "target": "refactor_plan_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L614",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_pre_sprint_1_refactor_implementation_plan",
+      "target": "refactor_plan_self_review_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_architecture_md_vs_actual_code_deltas_found_and_handled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_god_structures_vs_god_modules_the_distinction_that_matters_here",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_solid_assessment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_task_1_extract_cli_parse_rs_issue_key_validation_and_dry_the_error_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_task_2_extract_cli_render_rs_duration_today_status_rendering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L339",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_task_3_extract_core_query_rs_the_dto_query_layer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "REFACTOR_PLAN.md",
+      "source_location": "L576",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "refactor_plan_architecture_conformance_solid_god_structure_audit",
+      "target": "refactor_plan_task_4_refresh_the_graph_and_record_the_refactor",
       "confidence_score": 1.0
     },
     {
@@ -5712,5 +7634,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9f50077ad24bacf117a3b0ca3ef8e60f00f6f51c"
+  "built_at_commit": "3a5a4abf9aaa43e790e499ddfad837647c6bbbde"
 }

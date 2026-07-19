@@ -4,127 +4,6 @@
   "graph": {},
   "nodes": [
     {
-<<<<<<< HEAD
-      "label": "2026-07-18-yy1-bootstrap-design.md",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "2026-07-18-yy1-bootstrap-design.md"
-    },
-    {
-      "label": "YY-1 Bootstrap \u2014 module skeleton",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "yy-1 bootstrap \u2014 module skeleton"
-    },
-    {
-      "label": "Goal",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_goal",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "goal"
-    },
-    {
-      "label": "Scope",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_scope",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "scope"
-    },
-    {
-      "label": "Out of scope",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_out_of_scope",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "out of scope"
-    },
-    {
-      "label": "Done when",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_done_when",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "done when"
-    },
-    {
-      "label": "Testing",
-      "file_type": "document",
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing",
-      "community": 2,
-      "community_name": "YY-1 Bootstrap \u2014 module skeleton",
-      "norm_label": "testing"
-    },
-    {
-      "label": "setup-worktree.sh",
-      "file_type": "code",
-      "source_file": "scripts/setup-worktree.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "_origin": "ast",
-      "id": "scripts_setup_worktree",
-      "community": 3,
-      "community_name": "setup-worktree.sh",
-      "norm_label": "setup-worktree.sh"
-    },
-    {
-      "label": "setup-worktree.sh script",
-      "file_type": "code",
-      "source_file": "scripts/setup-worktree.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "_origin": "ast",
-      "id": "scripts_setup_worktree_sh__entry",
-      "community": 3,
-      "community_name": "setup-worktree.sh",
-      "norm_label": "setup-worktree.sh script"
-    },
-    {
-      "label": "mod.rs",
-      "file_type": "code",
-      "source_file": "src/cli/mod.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_cli_mod",
-      "community": 4,
-      "community_name": "mod.rs",
-      "norm_label": "mod.rs"
-    },
-    {
-=======
->>>>>>> a084715 (Update graphify)
       "label": "mod.rs",
       "file_type": "code",
       "source_file": "src/core/mod.rs",
@@ -136,8 +15,6 @@
       "norm_label": "mod.rs"
     },
     {
-<<<<<<< HEAD
-=======
       "label": "start()",
       "file_type": "code",
       "source_file": "src/core/mod.rs",
@@ -1609,23 +1486,15 @@
       "id": "src_cli_mod"
     },
     {
->>>>>>> a084715 (Update graphify)
       "label": "mod.rs",
       "file_type": "code",
       "source_file": "src/export/mod.rs",
       "source_location": "L1",
       "_origin": "ast",
-<<<<<<< HEAD
-      "id": "src_export_mod",
-      "community": 6,
-      "community_name": "mod.rs",
-      "norm_label": "mod.rs"
-=======
       "community": 6,
       "community_name": "mod.rs",
       "norm_label": "mod.rs",
       "id": "src_export_mod"
->>>>>>> a084715 (Update graphify)
     },
     {
       "label": "mod.rs",
@@ -1633,17 +1502,10 @@
       "source_file": "src/import/mod.rs",
       "source_location": "L1",
       "_origin": "ast",
-<<<<<<< HEAD
-      "id": "src_import_mod",
-      "community": 7,
-      "community_name": "mod.rs",
-      "norm_label": "mod.rs"
-=======
       "community": 7,
       "community_name": "mod.rs",
       "norm_label": "mod.rs",
       "id": "src_import_mod"
->>>>>>> a084715 (Update graphify)
     },
     {
       "label": "main.rs",
@@ -2029,8 +1891,6 @@
       "community_name": "yy",
       "norm_label": "license",
       "id": "readme_license"
-<<<<<<< HEAD
-=======
     },
     {
       "label": "2026-07-18-yy1-bootstrap.md",
@@ -2152,7 +2012,6 @@
       "community_name": "YY-1 Bootstrap \u2014 module skeleton",
       "norm_label": "testing",
       "id": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing"
->>>>>>> a084715 (Update graphify)
     }
   ],
   "links": [
@@ -2183,15 +2042,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-<<<<<<< HEAD
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design",
-      "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "confidence_score": 1.0
-=======
       "source_file": "src/core/mod.rs",
       "source_location": "L57",
       "weight": 1.0,
@@ -3165,20 +3015,10 @@
       "confidence_score": 1.0,
       "source": "docs_superpowers_plans_2026_07_18_yy6_cli",
       "target": "docs_superpowers_plans_2026_07_18_yy6_cli_yy_6_cli_implementation_plan"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-<<<<<<< HEAD
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_done_when",
-      "confidence_score": 1.0
-=======
       "source_file": "docs/superpowers/plans/2026-07-18-yy6-cli.md",
       "source_location": "L20",
       "weight": 1.0,
@@ -3186,20 +3026,10 @@
       "confidence_score": 1.0,
       "source": "docs_superpowers_plans_2026_07_18_yy6_cli_yy_6_cli_implementation_plan",
       "target": "docs_superpowers_plans_2026_07_18_yy6_cli_global_constraints"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-<<<<<<< HEAD
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_goal",
-      "confidence_score": 1.0
-=======
       "source_file": "docs/superpowers/plans/2026-07-18-yy6-cli.md",
       "source_location": "L1048",
       "weight": 1.0,
@@ -3207,20 +3037,10 @@
       "confidence_score": 1.0,
       "source": "docs_superpowers_plans_2026_07_18_yy6_cli_yy_6_cli_implementation_plan",
       "target": "docs_superpowers_plans_2026_07_18_yy6_cli_self_review_notes"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-<<<<<<< HEAD
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_out_of_scope",
-      "confidence_score": 1.0
-=======
       "source_file": "docs/superpowers/plans/2026-07-18-yy6-cli.md",
       "source_location": "L46",
       "weight": 1.0,
@@ -3228,20 +3048,10 @@
       "confidence_score": 1.0,
       "source": "docs_superpowers_plans_2026_07_18_yy6_cli_global_constraints",
       "target": "docs_superpowers_plans_2026_07_18_yy6_cli_task_1_core_start_accepts_note_and_tags"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-<<<<<<< HEAD
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_scope",
-      "confidence_score": 1.0
-=======
       "source_file": "docs/superpowers/plans/2026-07-18-yy6-cli.md",
       "source_location": "L161",
       "weight": 1.0,
@@ -3492,20 +3302,10 @@
       "confidence_score": 1.0,
       "source": "src_store_entries",
       "target": "src_store_entries_month_path"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-<<<<<<< HEAD
-      "source_file": "docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md",
-      "source_location": "L55",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_yy_1_bootstrap_module_skeleton",
-      "target": "docs_superpowers_specs_2026_07_18_yy1_bootstrap_design_testing",
-      "confidence_score": 1.0
-=======
       "source_file": "src/store/entries.rs",
       "source_location": "L90",
       "weight": 1.0,
@@ -5275,7 +5075,6 @@
       "confidence_score": 1.0,
       "source": "src_store_jsonl_write_then_read_is_atomic_and_lossless",
       "target": "src_store_jsonl_write"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
@@ -5284,15 +5083,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-<<<<<<< HEAD
-      "source": "scripts_setup_worktree",
-      "target": "scripts_setup_worktree_sh__entry",
-      "confidence_score": 1.0
-=======
       "confidence_score": 1.0,
       "source": "scripts_setup_worktree",
       "target": "scripts_setup_worktree_sh__entry"
->>>>>>> a084715 (Update graphify)
     },
     {
       "relation": "contains",
@@ -5301,10 +5094,7 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-<<<<<<< HEAD
-=======
       "confidence_score": 1.0,
->>>>>>> a084715 (Update graphify)
       "source": "src_main",
       "target": "src_main_main"
     },
@@ -5417,12 +5207,6 @@
       "confidence_score": 1.0,
       "source": "readme_yy",
       "target": "readme_why"
-<<<<<<< HEAD
-    }
-  ],
-  "hyperedges": [],
-  "built_at_commit": "6a3bc595c1c80bffcca4e694a01213d41c6261e4"
-=======
     },
     {
       "relation": "contains",
@@ -5526,5 +5310,4 @@
   ],
   "hyperedges": [],
   "built_at_commit": "3e488f2ca8f6419adbe575dde2948d68030509dc"
->>>>>>> a084715 (Update graphify)
 }
