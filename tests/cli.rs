@@ -18,7 +18,7 @@ fn start_status_today_stop_end_to_end() {
     let home = TempDir::new().unwrap();
 
     let started = yy(&home, &["start", "manual smoke test", "--issue", "YY-6"]);
-    assert_starts_with!(started, "started ");
+    assert_eq!(started, "started YY-6");
 
     let status = yy(&home, &["status"]);
     assert_contains!(status, "manual smoke test");
@@ -28,7 +28,7 @@ fn start_status_today_stop_end_to_end() {
     assert_contains!(today, "manual smoke test");
 
     let stopped = yy(&home, &["stop"]);
-    assert_starts_with!(stopped, "stopped ");
+    assert_eq!(stopped, "stopped YY-6");
 
     let status_after = yy(&home, &["status"]);
     assert_contains!(status_after, "no active entry");
@@ -51,4 +51,16 @@ fn status_with_nothing_running_reports_no_active_entry() {
     let home = TempDir::new().unwrap();
     let status = yy(&home, &["status"]);
     assert_contains!(status, "no active entry");
+}
+
+#[test]
+fn start_stop_without_issue_prints_raw_id() {
+    let home = TempDir::new().unwrap();
+
+    let started = yy(&home, &["start", "no issue task"]);
+    assert_starts_with!(started, "started ");
+    assert!(!started.contains("no issue task"));
+
+    let stopped = yy(&home, &["stop"]);
+    assert_starts_with!(stopped, "stopped ");
 }

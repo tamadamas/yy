@@ -185,7 +185,13 @@ pub fn run(work_folder: &Path, cli: Cli) -> anyhow::Result<String> {
                 core::stop(work_folder, Some(to))?;
             }
 
-            Ok(format!("started {}\n", entry.id))
+            let label = match issue_id {
+                Some(id) => issues::find_by_id(work_folder, id)?
+                    .and_then(|i| i.key)
+                    .unwrap_or_else(|| entry.id.to_string()),
+                None => entry.id.to_string(),
+            };
+            Ok(format!("started {label}\n"))
         }
         Some(Commands::Stop { at }) => {
             let at = at
@@ -193,7 +199,15 @@ pub fn run(work_folder: &Path, cli: Cli) -> anyhow::Result<String> {
                 .map(|s| time::parse_time(s, target_date))
                 .transpose()?;
             match core::stop(work_folder, at)? {
-                Some(entry) => Ok(format!("stopped {}\n", entry.id)),
+                Some(entry) => {
+                    let label = match entry.issue_id {
+                        Some(id) => issues::find_by_id(work_folder, id)?
+                            .and_then(|i| i.key)
+                            .unwrap_or_else(|| entry.id.to_string()),
+                        None => entry.id.to_string(),
+                    };
+                    Ok(format!("stopped {label}\n"))
+                }
                 None => Ok("nothing running\n".to_string()),
             }
         }
