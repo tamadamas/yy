@@ -1,0 +1,23 @@
+src/store/jsonl.rs
+  s_2b358b5e0ad75a::t_fc46aa20999d3d 2-193,197-207
+  s_2b358b5e0ad75a::t_2b5a55caf96b17 194-196
+src/model.rs
+  s_2b358b5e0ad75a::t_5b68bbf11d900e 74
+  s_2b358b5e0ad75a::t_194b54a5fe5948 98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "8680b4dd6e804ba583da9a302ed24f362f4c824f",
+  "prompts": {},
+  "sessions": {
+    "s_2b358b5e0ad75a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3f3c47c7-5ce1-41bc-a117-2cfa30797d89",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
