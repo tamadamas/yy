@@ -38,12 +38,12 @@ Out-of-scope list and full stack/conventions detail: see `.local/CLAUDE.md`.
 ## Commands
 
 ```bash
-cargo check                 # check code without building
-cargo build                 # build
+just check                 # check code without building
+just build                 # build
 cargo run -- <args>         # e.g. cargo run -- start "task" --issue YY-1
-cargo test                  # unit tests (must not require a terminal)
-cargo clippy --all-targets  # lint — keep warning-free
-cargo fmt --all             # format
+just test                   # unit tests (must not require a terminal)
+just clippy                 # lint — keep warning-free
+just format                 # format
 just coverage               # cargo llvm-cov coverage
 ```
 
@@ -52,7 +52,7 @@ Run the tool as `yy …` once installed (`cargo install --path .`).
 ## Definition of done (every issue)
 
 - Behavior matches the architecture spec (`.local/CLAUDE.md`); invariants above hold.
-- `cargo check`, `cargo test`, `cargo clippy`, `cargo fmt --all --check` all pass.
+- `just check` pass.
 - New logic in `store/` and `core/` has tests that don't need a terminal.
 - JSONL round-trips: comments and malformed lines are preserved; writes are atomic.
 - Check `just coverage` before git commit (command fails below 80%)
@@ -96,6 +96,6 @@ Rules:
 
 - Branch naming: feat/short-description, fix/issue-number-description
 - Commit format: conventional commits (feat:, fix:, refactor:, chore:, docs:)
-- Use git workflows for every feature/fix/refactor/etc
+- Use git worktree for large features
 - Never commit directly to main
 - Squash feature branches before merging
