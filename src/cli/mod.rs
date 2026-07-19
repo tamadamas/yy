@@ -86,7 +86,10 @@ pub fn resolve_target_date(today: NaiveDate, yesterday: bool) -> NaiveDate {
 
 fn format_duration(d: TimeDelta) -> String {
     let total_minutes = d.num_minutes();
-    format!("{}h{:02}m", total_minutes / 60, (total_minutes % 60).abs())
+    let sign = if total_minutes < 0 { "-" } else { "" };
+    let hours = total_minutes.abs() / 60;
+    let minutes = total_minutes.abs() % 60;
+    format!("{sign}{hours:02}:{minutes:02}")
 }
 
 /// Render the today/yesterday combined view. `issue_keys` maps each entry's
@@ -265,6 +268,26 @@ mod tests {
     }
 
     #[test]
+    fn format_duration_zero_pads_sub_hour() {
+        assert_eq!(format_duration(TD::minutes(6)), "00:06");
+    }
+
+    #[test]
+    fn format_duration_zero_pads_multi_hour() {
+        assert_eq!(format_duration(TD::hours(8) + TD::minutes(15)), "08:15");
+    }
+
+    #[test]
+    fn format_duration_handles_zero() {
+        assert_eq!(format_duration(TD::zero()), "00:00");
+    }
+
+    #[test]
+    fn format_duration_sign_prefixes_negative() {
+        assert_eq!(format_duration(-TD::minutes(15)), "-00:15");
+    }
+
+    #[test]
     fn render_today_shows_entries_and_totals() {
         let issue = Id::new();
         let view = TodayView {
@@ -276,7 +299,7 @@ mod tests {
         };
         let out = render_today(&view, &[]);
         assert!(out.contains("wrote tests"));
-        assert!(out.contains("45m") || out.contains("0h45m"));
+        assert!(out.contains("00:45"));
     }
 
     #[test]
