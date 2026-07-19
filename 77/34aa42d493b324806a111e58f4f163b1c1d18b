@@ -1,0 +1,28 @@
+src/cli/mod.rs
+  s_5093b79d80ae56::t_2c9e162dc1d829 188-194,202-210
+tests/cli.rs
+  s_5093b79d80ae56::t_aefd4dd1b06ab2 31
+  s_5093b79d80ae56::t_f3f60f8e59d097 55-66
+  s_5093b79d80ae56::t_33f0c43b3cdf69 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "7734aa42d493b324806a111e58f4f163b1c1d18b",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_5093b79d80ae56": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fe4dd612-f6bd-4364-b766-751e98038fc2",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
