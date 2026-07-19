@@ -1,0 +1,27 @@
+graphify-out/2026-07-18/manifest.json
+  s_93ac8974491906::t_f6308b4222ae88 122
+graphify-out/2026-07-18/GRAPH_REPORT.md
+  h_e62fa2aaa022a7 9,15,21,41,54,61,67,72,77,82,87,92,97,102,107,112,117-118,123,130
+  s_93ac8974491906::t_c3fcf7601d2134 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "048da5a01df64247e693557a3115f511f7ea8c82",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "unknown"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
