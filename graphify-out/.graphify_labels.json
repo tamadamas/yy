@@ -7,7 +7,7 @@
   "5": "mod.rs",
   "6": "mod.rs",
   "7": "mod.rs",
-  "8": "model.rs",
+  "8": "Entry",
   "9": "pipeline.rs",
   "10": "active.rs",
   "11": "entries.rs",
@@ -20,5 +20,7 @@
   "18": "mod.rs",
   "19": "mod.rs",
   "20": "mod.rs",
-  "21": "Global Constraints"
+  "21": "Global Constraints",
+  "24": "YY-6 CLI — design",
+  "25": "Global Constraints"
 }
