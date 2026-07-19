@@ -135,17 +135,38 @@ pub fn render_today(view: &TodayView, issue_labels: &[(Option<Id>, String)]) -> 
 
 const DAILY_TARGET: TimeDelta = TimeDelta::hours(8);
 
-/// Render `yy status`: current task, worked so far, remaining vs an 8h target.
-pub fn render_status(active_entry: &Option<Entry>, worked_today: TimeDelta) -> String {
-    let current = match active_entry {
-        Some(entry) => entry.note.as_deref().unwrap_or("(no desc)").to_string(),
+/// Render `yy status`: active task (with issue label, already bracketed by
+/// the caller), worked so far, remaining vs an 8h target (parenthesized
+/// overtime diff on `worked` when negative).
+pub fn render_status(
+    active_entry: &Option<Entry>,
+    current_label: Option<&str>,
+    worked_today: TimeDelta,
+) -> String {
+    let active = match active_entry {
+        Some(entry) => {
+            let desc = entry.note.as_deref().unwrap_or("(no desc)");
+            match current_label {
+                Some(label) => format!("{label} {desc}"),
+                None => desc.to_string(),
+            }
+        }
         None => "no active entry".to_string(),
     };
 
     let remaining = DAILY_TARGET - worked_today;
+    let worked = if remaining < TimeDelta::zero() {
+        format!(
+            "{}({})",
+            format_duration(worked_today),
+            format_duration(remaining)
+        )
+    } else {
+        format_duration(worked_today)
+    };
+
     format!(
-        "current: {current}\nworked: {}\nremaining: {}\n",
-        format_duration(worked_today),
+        "active: {active}\nworked: {worked}\nremaining: {}\n",
         format_duration(remaining)
     )
 }
@@ -221,7 +242,7 @@ pub fn run(work_folder: &Path, cli: Cli) -> anyhow::Result<String> {
                 .iter()
                 .fold(TimeDelta::zero(), |acc, t| acc + t.elapsed);
             let active_entry = active::read(work_folder)?.entry;
-            Ok(render_status(&active_entry, worked_today))
+            Ok(render_status(&active_entry, None, worked_today))
         }
     }
 }
@@ -313,18 +334,33 @@ mod tests {
     }
 
     #[test]
-    fn render_status_shows_active_note_and_remaining() {
+    fn render_status_shows_issue_label_and_remaining() {
         let active = Some(sample_entry(None, Some("deep work")));
-        let out = render_status(&active, TD::hours(2));
-        assert!(out.contains("deep work"));
-        assert!(out.contains("2h") || out.contains("02:00"));
-        assert!(out.contains("6h") || out.contains("06:00")); // 8h target - 2h worked
+        let out = render_status(&active, Some("[YY-6]"), TD::hours(2));
+        assert!(out.contains("active: [YY-6] deep work"));
+        assert!(out.contains("worked: 02:00"));
+        assert!(out.contains("remaining: 06:00"));
+    }
+
+    #[test]
+    fn render_status_shows_no_issue_placeholder() {
+        let active = Some(sample_entry(None, Some("deep work")));
+        let out = render_status(&active, Some("(no issue)"), TD::hours(2));
+        assert!(out.contains("active: (no issue) deep work"));
     }
 
     #[test]
     fn render_status_handles_nothing_running() {
-        let out = render_status(&None, TD::zero());
-        assert!(out.contains("no active entry") || out.contains("nothing running"));
+        let out = render_status(&None, None, TD::zero());
+        assert!(out.contains("active: no active entry"));
+    }
+
+    #[test]
+    fn render_status_shows_overtime_parens() {
+        let active = Some(sample_entry(None, Some("deep work")));
+        let out = render_status(&active, Some("[YY-6]"), TD::hours(8) + TD::minutes(15));
+        assert!(out.contains("worked: 08:15(-00:15)"));
+        assert!(out.contains("remaining: -00:15"));
     }
 
     #[test]
