@@ -1,5 +1,7 @@
 //! clap parsing; thin wrapper around `core`; shared entry-spec flags.
 
+mod time;
+
 /// Validates an issue key: two or more uppercase letters, a dash, then one
 /// or more digits (e.g. `YY-1`, `DFG-1234`, `KJJ-2`).
 pub fn parse_issue_key(s: &str) -> Result<String, String> {
