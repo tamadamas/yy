@@ -160,7 +160,11 @@ pub fn run(work_folder: &Path, cli: Cli) -> anyhow::Result<String> {
         }
         Some(Commands::Start { desc, spec }) => {
             let issue_id = match &spec.issue {
-                Some(key) => Some(issues::resolve_or_create(work_folder, key, desc.as_deref())?),
+                Some(key) => Some(issues::resolve_or_create(
+                    work_folder,
+                    key,
+                    desc.as_deref(),
+                )?),
                 None => None,
             };
 
@@ -205,10 +209,7 @@ pub fn run(work_folder: &Path, cli: Cli) -> anyhow::Result<String> {
     }
 }
 
-fn issue_labels(
-    work_folder: &Path,
-    view: &TodayView,
-) -> anyhow::Result<Vec<(Option<Id>, String)>> {
+fn issue_labels(work_folder: &Path, view: &TodayView) -> anyhow::Result<Vec<(Option<Id>, String)>> {
     let mut labels = Vec::new();
     for entry in &view.entries {
         if let Some(issue_id) = entry.issue_id

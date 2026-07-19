@@ -1,13 +1,14 @@
-mod cli;
-mod core;
-mod export;
-mod import;
-mod model;
-mod pipeline;
-mod store;
-mod tui;
-mod watch;
+use clap::Parser;
+use yy::{cli, work_folder};
 
 fn main() {
-    println!("Hello, world!");
+    let cli = cli::Cli::parse();
+
+    match cli::run(&work_folder(), cli) {
+        Ok(output) => print!("{output}"),
+        Err(e) => {
+            eprintln!("error: {e}");
+            std::process::exit(1);
+        }
+    }
 }
