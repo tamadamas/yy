@@ -1,0 +1,19 @@
+src/cli/render.rs
+  s_580a41393c3cb7::t_b50b746611f472 13-16,62-64,82-91,93,109-128,141,155,158-167,173-181
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "d03c08f7f91d86d1d848cf9d925f973e36245f2f",
+  "prompts": {},
+  "sessions": {
+    "s_580a41393c3cb7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12391e11-e7a7-4147-9aee-c64f845fddf9",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
