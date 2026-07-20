@@ -242,7 +242,23 @@ pub fn run(work_folder: &Path, cli: Cli) -> anyhow::Result<String> {
                 .iter()
                 .fold(TimeDelta::zero(), |acc, t| acc + t.elapsed);
             let active_entry = active::read(work_folder)?.entry;
-            Ok(render_status(&active_entry, None, worked_today))
+            let current_label = match &active_entry {
+                Some(entry) => Some(match entry.issue_id {
+                    Some(id) => {
+                        let key = issues::find_by_id(work_folder, id)?
+                            .and_then(|i| i.key)
+                            .unwrap_or_else(|| entry.id.to_string());
+                        format!("[{key}]")
+                    }
+                    None => "(no issue)".to_string(),
+                }),
+                None => None,
+            };
+            Ok(render_status(
+                &active_entry,
+                current_label.as_deref(),
+                worked_today,
+            ))
         }
     }
 }

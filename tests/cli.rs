@@ -22,6 +22,7 @@ fn start_status_today_stop_end_to_end() {
 
     let status = yy(&home, &["status"]);
     assert_contains!(status, "manual smoke test");
+    assert_contains!(status, "active: [YY-6] manual smoke test");
 
     let today = yy(&home, &[]);
     assert_contains!(today, "YY-6");
