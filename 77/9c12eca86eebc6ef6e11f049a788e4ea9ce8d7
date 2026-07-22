@@ -1,0 +1,22 @@
+src/config/mod.rs
+  s_f77ed69aaac283::t_ca6e0ffae0902f 1-178
+  s_f77ed69aaac283::t_f8e3a928de2cf5 179-209
+src/lib.rs
+  s_f77ed69aaac283::t_4e3efc53212a13 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "779c12eca86eebc6ef6e11f049a788e4ea9ce8d7",
+  "prompts": {},
+  "sessions": {
+    "s_f77ed69aaac283": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9463e3cc-e2d1-4eb0-a962-a761b29c9796",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
