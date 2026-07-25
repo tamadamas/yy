@@ -1,0 +1,30 @@
+src/cli/mod.rs
+  s_a4a99edb68c583::t_75218bfb01840f 101-112,127-131,143-156
+tests/cli.rs
+  s_a4a99edb68c583::t_ae7e24bdd305e1 89,101,103,105,107,115
+  s_a4a99edb68c583::t_22fc3bc6037fb8 68-88,102,104,106,108-114,116-117
+  s_a4a99edb68c583::t_9ec707371d544f 90-100
+src/pipeline.rs
+  s_a4a99edb68c583::t_a352fe9b81f624 2-124,129-131
+  s_a4a99edb68c583::t_9ec707371d544f 125-128
+Cargo.toml
+  s_a4a99edb68c583::t_f2c4fe42695a06 15
+Cargo.lock
+  s_a4a99edb68c583::t_e7ba39ecfdef3d 3309
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "886c00ebe77e09498c08185963eacc50c3c2a4e7",
+  "prompts": {},
+  "sessions": {
+    "s_a4a99edb68c583": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0f1ff221-f652-4065-b5cb-f346e1fc523f",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
