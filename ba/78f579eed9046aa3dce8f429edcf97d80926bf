@@ -1,0 +1,19 @@
+.gitignore
+  s_5054446c0a137c::t_eb47a6ddb5fa03 6-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "ba78f579eed9046aa3dce8f429edcf97d80926bf",
+  "prompts": {},
+  "sessions": {
+    "s_5054446c0a137c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8fede329-6cfe-41b5-b814-025a8718d269",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
