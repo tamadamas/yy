@@ -1,0 +1,20 @@
+docs/superpowers/specs/2026-07-18-yy6-cli-design.md
+  s_3b52f98b5212dd::t_c06786d12c04da 80,82,84
+  s_3b52f98b5212dd::t_319d756f2a38c1 63-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "4f2d1dbfa0fb08297b0c9469b661cf3f2455c172",
+  "prompts": {},
+  "sessions": {
+    "s_3b52f98b5212dd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "02293c97-c562-473a-af79-5e1bceeab5e9",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

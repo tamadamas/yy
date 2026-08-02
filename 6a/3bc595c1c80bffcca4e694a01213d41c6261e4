@@ -1,0 +1,69 @@
+justfile
+  s_93ac8974491906::t_71f4b8bfb8368d 6
+  s_93ac8974491906::t_5d06038b16523e 7-9
+.claude/settings.json
+  s_93ac8974491906::t_017c3a6b2e6ddc 3-13
+.gitignore
+  s_93ac8974491906::t_1645ea130fa9d4 3
+docs/superpowers/specs/2026-07-18-yy1-bootstrap-design.md
+  s_93ac8974491906::t_5d79c5cac38bd5 1-57
+scripts/setup-worktree.sh
+  s_93ac8974491906::t_0f6963bd4ec54e 1-29
+src/cli/mod.rs
+  s_93ac8974491906::t_919887b7bbbcdc 1
+src/core/mod.rs
+  s_93ac8974491906::t_344163b06ad9a4 1-2
+src/export/mod.rs
+  s_93ac8974491906::t_8dbd87b9ebb8fa 1
+src/import/mod.rs
+  s_93ac8974491906::t_eab3e58dde4e3e 1
+src/main.rs
+  s_93ac8974491906::t_2b306f73e43256 1-10
+src/model.rs
+  s_93ac8974491906::t_8bdd594eee572e 1
+src/pipeline.rs
+  s_93ac8974491906::t_bb82e36a9c8a5a 1
+src/store/active.rs
+  s_93ac8974491906::t_7c8059bfc2dc54 1
+src/store/entries.rs
+  s_93ac8974491906::t_40fd6bf73431ff 1
+src/store/issues.rs
+  s_93ac8974491906::t_57098c477213f9 1
+src/store/jsonl.rs
+  s_93ac8974491906::t_7f18bf9c1028b3 1
+src/store/mod.rs
+  s_93ac8974491906::t_a13472444f0d1b 1-7
+src/store/state.rs
+  s_93ac8974491906::t_78c1833fd1464b 1
+src/tui/app.rs
+  s_93ac8974491906::t_e644dc5931c428 1
+src/tui/keymap.rs
+  s_93ac8974491906::t_cf27b1e2bac32b 1
+src/tui/mod.rs
+  s_93ac8974491906::t_adc40b9e904498 1-5
+src/tui/panes/mod.rs
+  s_93ac8974491906::t_23428aef412743 1
+src/watch/mod.rs
+  s_93ac8974491906::t_72bb4f282f3a16 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "6a3bc595c1c80bffcca4e694a01213d41c6261e4",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

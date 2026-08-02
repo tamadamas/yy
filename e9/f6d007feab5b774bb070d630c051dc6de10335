@@ -1,0 +1,16 @@
+CLAUDE.md
+  h_e62fa2aaa022a7 41-42,44-46,55,99
+justfile
+  h_e62fa2aaa022a7 2,4-5,16-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "e9f6d007feab5b774bb070d630c051dc6de10335",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

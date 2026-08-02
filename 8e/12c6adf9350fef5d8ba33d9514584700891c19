@@ -1,0 +1,27 @@
+src/cli/mod.rs
+  s_5a6b525743205a::t_6f6a6e0f179f31 3-4
+src/cli/time.rs
+  s_5a6b525743205a::t_2c1d5999035842 1-10,14-17,21-60
+  s_5a6b525743205a::t_489853d049900d 11-13,18-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "8e12c6adf9350fef5d8ba33d9514584700891c19",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_5a6b525743205a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcd03240-91b8-48b7-8abf-d46f9f1b7058",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

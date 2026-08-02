@@ -1,0 +1,61 @@
+src/core/query.rs
+  s_5054446c0a137c::t_72ca098e1c29f5 46-49
+  s_5054446c0a137c::t_e59dd44e7f692b 128-137
+  s_5054446c0a137c::t_96bd408d01511f 92-93,96,105-106
+  s_5054446c0a137c::t_a89c35671563e8 141
+src/core/mod.rs
+  s_5054446c0a137c::t_a99a1db4496fdd 9
+  s_5054446c0a137c::t_515d5a4c60a712 166
+  s_5054446c0a137c::t_5aef47373e8c58 178-179,188-201
+  s_5054446c0a137c::t_8b50e986b48282 16-18,25-26,29-39,45-47,52-53,58-65,67-76,80,82,204
+  s_5054446c0a137c::t_3412f414a59e9a 127
+  s_5054446c0a137c::t_e59dd44e7f692b 112-121,123-124
+  s_5054446c0a137c::t_1fbcf13a714565 147-148,155-158
+  s_5054446c0a137c::t_5f1a46381ed7e3 202-203
+src/store/active.rs
+  s_5054446c0a137c::t_95f3eff89e082a 76,88-95
+  s_5054446c0a137c::t_7f76faa56a2e11 15,18
+  s_5054446c0a137c::t_b850b052374a08 96-98
+  s_d195136830c3ce::t_d2e31b0f025923 99-101
+src/lib.rs
+  s_5054446c0a137c::t_7487ac52d448ab 3
+src/cli/mod.rs
+  s_5054446c0a137c::t_87dc54c1658e0f 145
+  s_5054446c0a137c::t_eee6fec0a5f4b1 167
+  s_5054446c0a137c::t_b75156eeb64a10 79-81
+  s_5054446c0a137c::t_7abbcc6493ed4e 164-166
+  s_5054446c0a137c::t_f0be79870c8c43 91,101-114,126,129
+  s_5054446c0a137c::t_de9f8a8112bd9c 192-193,195-198
+  s_5054446c0a137c::t_9b90f488fa5485 189-191,194,199-201
+  s_5054446c0a137c::t_01b830e665bb14 42-45
+src/main.rs
+  s_5054446c0a137c::t_66f86268373ba8 16
+src/constants/mod.rs
+  s_5054446c0a137c::t_8afd0c59a7b2c7 1-13
+src/config/mod.rs
+  s_5054446c0a137c::t_c12c25a05f5a0e 104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "f95fc3aad6ac9dac631c330365e820a9420fdd4b",
+  "prompts": {},
+  "sessions": {
+    "s_5054446c0a137c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8fede329-6cfe-41b5-b814-025a8718d269",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    },
+    "s_d195136830c3ce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a2bed9211deb22063",
+        "model": "unknown"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

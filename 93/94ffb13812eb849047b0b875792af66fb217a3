@@ -1,0 +1,25 @@
+src/core/humanize/mod.rs
+  s_e1eeefd766d196::t_16e7f4b2216473 7-26
+src/cli/parse.rs
+  s_e1eeefd766d196::t_95c140c46d9e34 22-29
+src/cli/mod.rs
+  s_e1eeefd766d196::t_9edb6e06475426 16
+  s_e1eeefd766d196::t_f84d954dde6c69 48-52
+  s_e1eeefd766d196::t_36748e78194651 165-167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "9394ffb13812eb849047b0b875792af66fb217a3",
+  "prompts": {},
+  "sessions": {
+    "s_e1eeefd766d196": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7c1bfd0-5126-41f2-8a79-1ceb4fe0abda",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

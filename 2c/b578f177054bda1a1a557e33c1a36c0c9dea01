@@ -1,0 +1,14 @@
+CLAUDE.md
+  h_e62fa2aaa022a7 113,133-154
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "2cb578f177054bda1a1a557e33c1a36c0c9dea01",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

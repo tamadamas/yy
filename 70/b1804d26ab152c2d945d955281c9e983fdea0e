@@ -1,0 +1,14 @@
+.graphifyignore
+  h_e62fa2aaa022a7 11,19-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "70b1804d26ab152c2d945d955281c9e983fdea0e",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

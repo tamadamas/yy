@@ -1,0 +1,53 @@
+src/model.rs
+  s_93ac8974491906::t_39cfb023ec192b 1
+src/pipeline.rs
+  s_93ac8974491906::t_0cead7f9ae7216 1
+src/store/active.rs
+  s_93ac8974491906::t_a78a562e405495 1
+src/import/mod.rs
+  s_93ac8974491906::t_ec185e744ce828 1
+src/export/mod.rs
+  s_93ac8974491906::t_6bea66d85e7149 1
+src/tui/panes/mod.rs
+  s_93ac8974491906::t_d814ff18c5eb0d 1
+src/tui/mod.rs
+  s_93ac8974491906::t_f5d2f19dfd01c7 1-5
+src/store/state.rs
+  s_93ac8974491906::t_de4951c8738860 1
+src/core/mod.rs
+  s_93ac8974491906::t_af36c7b1ac21aa 1-2
+src/main.rs
+  s_93ac8974491906::t_3b939451c18c3d 1-10
+src/cli/mod.rs
+  s_93ac8974491906::t_afd748f637cd4e 1
+src/tui/app.rs
+  s_93ac8974491906::t_a777e6f6a03da2 1
+src/tui/keymap.rs
+  s_93ac8974491906::t_82626e00882c7c 1
+src/store/jsonl.rs
+  s_93ac8974491906::t_2d2e91696f8aa9 1
+src/store/entries.rs
+  s_93ac8974491906::t_0891b469d8bd62 1
+src/store/issues.rs
+  s_93ac8974491906::t_a69f08a743a528 1
+src/watch/mod.rs
+  s_93ac8974491906::t_5188291cfdb366 1
+src/store/mod.rs
+  s_93ac8974491906::t_9624de31de99ad 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "32ad1c86ef3ae3f666c4b333bc1d3ef270f98f8c",
+  "prompts": {},
+  "sessions": {
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

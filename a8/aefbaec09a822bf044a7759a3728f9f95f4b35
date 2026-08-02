@@ -1,0 +1,22 @@
+.graphifyignore
+  h_e62fa2aaa022a7 1-18
+.claudeignore
+  h_e62fa2aaa022a7 1-2
+CLAUDE.md
+  h_e62fa2aaa022a7 112,120-131
+.gitignore
+  h_e62fa2aaa022a7 3
+justfile
+  h_e62fa2aaa022a7 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "a8aefbaec09a822bf044a7759a3728f9f95f4b35",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

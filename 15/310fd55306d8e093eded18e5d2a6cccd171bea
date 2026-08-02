@@ -1,0 +1,24 @@
+justfile
+  h_e62fa2aaa022a7 32-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "15310fd55306d8e093eded18e5d2a6cccd171bea",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "unknown"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

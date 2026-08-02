@@ -1,0 +1,44 @@
+justfile
+  h_e62fa2aaa022a7 3-5
+graphify-out/.graphify_root
+  s_93ac8974491906::t_9713cafa1ff51c 1
+graphify-out/2026-07-18/.graphify_analysis.json
+  s_93ac8974491906::t_ac53608e4297cf 1-20
+graphify-out/2026-07-18/.graphify_labels.json
+  s_93ac8974491906::t_c01a89dc16e700 1
+graphify-out/2026-07-18/GRAPH_REPORT.md
+  s_93ac8974491906::t_9efab7a102f45e 1-27
+graphify-out/2026-07-18/graph.json
+  s_93ac8974491906::t_6727218cfb2ca7 1-44
+graphify-out/2026-07-18/manifest.json
+  s_93ac8974491906::t_f6308b4222ae88 1-12
+graphify-out/.graphify_labels.json
+  s_93ac8974491906::t_d873bf6861c580 1-4
+graphify-out/GRAPH_REPORT.md
+  s_93ac8974491906::t_3889c108d468d7 1,4-5,8,13,17-19,21-30,38-46,49-52
+graphify-out/graph.html
+  s_93ac8974491906::t_3f432e4aa74ef8 5,66,69-71
+graphify-out/graph.json
+  s_93ac8974491906::t_b066e2f0395fea 13-15,24-147,159-270,274
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "e4dfe7fff133c425bbd0b657c706b95d385ab65a",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

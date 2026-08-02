@@ -1,0 +1,80 @@
+src/store/issues.rs
+  s_3b52f98b5212dd::t_94463c0a5e6dcc 33,106-109
+  s_3b52f98b5212dd::t_a2c5111bbbfe73 1-32,34-105,110-111
+graphify-out/2026-07-18/manifest.json
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 3-5,11-22,25-37,40-47,50-52,55-62,65-105
+graphify-out/2026-07-18/.graphify_labels.json
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 3-21
+graphify-out/2026-07-18/graph.json
+  s_3b52f98b5212dd::t_d1fa0a5eba9daf 10-11,16-17,22,27-28,33,38-39,44,49-50,55,60-61,66,71-72,77,82-83,85,92,97-98,121,132,143,154
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 100,107,112-113,115,118,123-124,126-127,129,131,134-135,137,140,145-146,148,151,156-157,159,162,167-168,170,173,178-179,181,184,189-190,192,195,200-201,203,206,211-212,214,217,222-223,225,228,233-234,236,239,244-245,247,250,253,255-256,258,261,266-267,269,272,277-278,280,283,288-289,291,294,297,299-300,302,305,308,310-311,313,315-316,321-322,324,326-327,332-333,338,343-344,354-355,365-366,371,376-377,398-399,404,409-410,415,420,426,437,445,447,450-451,455-456,458,461,462,466-467,469,472,477-478,480,488-489,491,495,499-500,502,505-506,510,518,521-524,527-528
+  s_3b52f98b5212dd::t_5ad35d342e7a91 349
+  s_3b52f98b5212dd::t_7b6df2d5e520da 360
+  s_3b52f98b5212dd::t_bb397511542ee1 421
+  s_3b52f98b5212dd::t_e086a1da578799 431-432
+  s_3b52f98b5212dd::t_1ccd381d8edae2 473
+  s_3b52f98b5212dd::t_a67bdba33e093b 483-484
+  s_3b52f98b5212dd::t_ef58480b3e111c 494
+  s_3b52f98b5212dd::t_ceb6ee05621f6c 525-526
+graphify-out/manifest.json
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 106-110
+graphify-out/.graphify_labels.json
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 22
+graphify-out/graph.json
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 8,20-21,23,30,50,55,66,77,159,162,167-168,170,173,176,178-179,181,184,189-190,192,195,200-201,203,206,211-212,217,222-223,228,233-234,239,244-245,250,255-256,261,266-267,272,277-278,283,288-289,294,299-300,305,420,491,494,502,505,620-627,628,631-638,639,642-649,650,653-660,661,664-671,672,675-682,683,686-693,694,697-704,705,708-715,716
+  s_3b52f98b5212dd::t_bd60ea15e39db7 54
+  s_5a6b525743205a::t_3c59be0f7fa573 87,98,362
+  s_5a6b525743205a::t_926e66a9892f7c 498,509
+  s_5a6b525743205a::t_beca14b7ca989c 340,351
+  s_93ac8974491906::t_b066e2f0395fea 459,464-465,470,475-476,481,489,495,499-500,506,510
+graphify-out/GRAPH_REPORT.md
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 21,42,51-54,54
+  s_5a6b525743205a::t_926e66a9892f7c 18,19,20,44-45,48-50,52-53
+graphify-out/2026-07-18/GRAPH_REPORT.md
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 19-20,46-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "d7a583d29a8cabccaf140400b8add7496391fb42",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_3b52f98b5212dd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "02293c97-c562-473a-af79-5e1bceeab5e9",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    },
+    "s_5a6b525743205a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcd03240-91b8-48b7-8abf-d46f9f1b7058",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    },
+    "s_5a7b1a0b359aaf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d83441a2-ee98-4d32-98ad-75c05dad9849",
+        "model": "unknown"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    },
+    "s_93ac8974491906": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51d5a9d-1798-466e-a74f-fd9ab63b9aa8",
+        "model": "unknown"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}

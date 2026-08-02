@@ -1,0 +1,76 @@
+graphify-out/manifest.json
+  s_5a7b1a0b359aaf::t_e1dd885756d1e7 3,18,23
+graphify-out/2026-07-18/graph.json
+  s_3b52f98b5212dd::t_a27982addeaac0 131
+  s_3b52f98b5212dd::t_3e3f4262e25dd2 142
+  s_3b52f98b5212dd::t_d84ac8406b6b9b 504-505
+  s_3b52f98b5212dd::t_2984a584ed24e9 190-191
+  s_3b52f98b5212dd::t_d43aa38d2580ee 197
+  s_3b52f98b5212dd::t_9cb5d2b12492b6 465-466
+  s_3b52f98b5212dd::t_3cd6a0e1f9cba3 469
+  s_3b52f98b5212dd::t_fddf694963531d 179-180
+  s_3b52f98b5212dd::t_d1fa0a5eba9daf 12-122
+  s_3b52f98b5212dd::t_13e30c30eba919 212-213
+  s_3b52f98b5212dd::t_1979b19cbe6e21 450
+  s_3b52f98b5212dd::t_2b6dfeb8d8823b 472
+  s_3b52f98b5212dd::t_f4887fc776cb59 9-10
+  s_3b52f98b5212dd::t_ce4713dfc18362 454-455
+  s_3b52f98b5212dd::t_b8ea1f2dfbc9d7 139
+  s_3b52f98b5212dd::t_73e08c4583cf38 201-202
+  s_3b52f98b5212dd::t_16bd7f61fde2d7 183
+  s_3b52f98b5212dd::t_7db4c9f0de871e 123-125
+  s_3b52f98b5212dd::t_d3590f8f8ed0ac 458
+  s_3b52f98b5212dd::t_431b3e55a01af1 480
+  s_3b52f98b5212dd::t_862be95a60078f 487-488
+  s_3b52f98b5212dd::t_286e550c59c880 507-510
+  s_3b52f98b5212dd::t_3a287785638b4c 135-136
+  s_3b52f98b5212dd::t_90d17c49746c1a 186
+  s_3b52f98b5212dd::t_24106b45050600 153
+  s_3b52f98b5212dd::t_a8918a4e2a429b 205
+  s_3b52f98b5212dd::t_0cfff5b7a1deb4 513
+  s_3b52f98b5212dd::t_00d2e6b6b8d1f5 6,8,11,126-127,129-130,132-134,137-138,140-141,143-145,148-149,151-152,154-156,172,181-182,184-185,187-189,192-193,195-196,198-200,203-204,206-207,209-211,214-321,330-331,341-342,352-353,363-364,374-375,385-386,396-397,407-408,418-419,429-430,440-441,448-449,451-453,456-457,459-460,462-464,467-468,470-471,473-475,478-479,481-482,484-486,489-490,492-493,495-497,500-501,503,506,511-512,514,522-528
+  s_3b52f98b5212dd::t_c9d01fb81bfd8f 208
+  s_3b52f98b5212dd::t_ded0f6bddd6f81 7
+  s_3b52f98b5212dd::t_97a10c7fbd3359 128
+  s_3b52f98b5212dd::t_c41e3df4b83a39 491
+  s_3b52f98b5212dd::t_1d704415099993 494
+  s_3b52f98b5212dd::t_46b6d6ec15859a 476-477
+  s_3b52f98b5212dd::t_5614a4a36465be 498-499
+  s_3b52f98b5212dd::t_f1a39ead878ac5 502
+  s_3b52f98b5212dd::t_6422834f3beb66 150
+  s_3b52f98b5212dd::t_25a52279dff4e1 519-521
+  s_3b52f98b5212dd::t_278b0984628fad 146-147
+  s_3b52f98b5212dd::t_a21b2137d45834 194
+  s_3b52f98b5212dd::t_715a11507ad92a 483
+  s_3b52f98b5212dd::t_96904dd945c8d4 461
+  s_3b52f98b5212dd::t_34c25d91c57491 518
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "72e5932587409927db570fa574018c8f4b2f8b9e",
+  "prompts": {},
+  "humans": {
+    "h_e62fa2aaa022a7": {
+      "author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_3b52f98b5212dd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "02293c97-c562-473a-af79-5e1bceeab5e9",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    },
+    "s_5a7b1a0b359aaf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d83441a2-ee98-4d32-98ad-75c05dad9849",
+        "model": "unknown"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
