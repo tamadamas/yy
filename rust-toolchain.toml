@@ -1,0 +1,10 @@
+# Pinned exactly, not "stable". Because `build.warnings = "deny"` turns any new
+# lint into a build failure, an auto-updating channel would break the build on a
+# Thursday for reasons no one changed. Bumping this is a deliberate, reviewable
+# commit. See docs/design/repository.md §8.6.
+#
+# Formatting additionally needs nightly (`cargo +nightly fmt`); that toolchain is
+# not pinned here because it is never used to build or test.
+[toolchain]
+channel = "1.97.1"
+components = ["clippy", "rustfmt"]

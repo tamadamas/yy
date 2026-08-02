@@ -1,0 +1,15 @@
+# Formatting is checked with `cargo +nightly fmt`. Every option below the first
+# two is nightly-only; a stable rustfmt ignores them silently, which is why the
+# nightly toolchain is required for formatting (but not for building or testing).
+edition = "2024"
+max_width = 100
+
+comment_width = 100
+wrap_comments = true
+format_code_in_doc_comments = true
+doc_comment_code_block_width = 100
+
+# Imports
+group_imports = "StdExternalCrate"
+imports_granularity = "Crate"
+reorder_imports = true

@@ -1,0 +1,41 @@
+# `cargo deny check`. Run in CI on every pull request; `just deny` locally.
+
+[graph]
+all-features = true
+
+[advisories]
+version = 2
+yanked = "deny"
+
+[licenses]
+version = 2
+# yy is MIT. These are the licences it may depend on: permissive, and all
+# compatible with redistributing a binary. Copyleft is absent deliberately --
+# not for ideology, but because a GPL dependency would change what downstream
+# users may do with a yy binary, and that is a decision to take consciously
+# rather than by transitively acquiring one.
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+    "Zlib",
+    "CC0-1.0",
+    "MPL-2.0",
+]
+confidence-threshold = 0.93
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+# The one dependency tracked from a git branch rather than a release (§8.3).
+# Cargo.lock is what pins it; see RELEASING.md before cutting a release.
+allow-git = ["https://github.com/tokio-rs/topcoat"]
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-git = ["https://github.com/tokio-rs/topcoat"]

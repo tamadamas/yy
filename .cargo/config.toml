@@ -1,0 +1,12 @@
+# Warnings are errors, for local packages only (dependencies are unaffected).
+#
+# Stabilised in Rust 1.97. This replaces the usual `RUSTFLAGS: -D warnings` in
+# CI, and is strictly better: changing RUSTFLAGS invalidates the build cache, so
+# the conventional setup makes the clippy job and the test job recompile the
+# world separately. `build.warnings` does not, so one cache serves every job and
+# a local build matches CI without a rebuild.
+#
+# To silence warnings temporarily while working, without editing this file:
+#     CARGO_BUILD_WARNINGS=allow cargo check
+[build]
+warnings = "deny"

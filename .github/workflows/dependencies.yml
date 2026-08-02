@@ -1,0 +1,31 @@
+# Topcoat is tracked from its `main` branch rather than a crates.io release
+# (§8.3). That is a deliberate bet, and this job is the hedge: it builds against
+# the newest upstream commit on a schedule, so breakage surfaces as a failing
+# Monday run rather than during a release.
+#
+# It does not change the lockfile in the repository. A green run means the
+# upgrade is safe to take; taking it is a reviewed pull request like every other
+# change to main (rule 12).
+name: Dependencies
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  topcoat-main:
+    name: build against topcoat main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo update -p topcoat
+      - run: cargo clippy --workspace --all-targets --all-features
+      - run: cargo test --workspace --all-features

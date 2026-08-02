@@ -1,0 +1,15 @@
+[book]
+title = "yy"
+description = "A time tracker you can trust: guide and specification."
+authors = ["the yy authors"]
+language = "en"
+src = "src"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/tomastamadamas/yy"
+edit-url-template = "https://github.com/tomastamadamas/yy/edit/main/docs/book/{path}"
+
+[output.html.fold]
+enable = true
+level = 1

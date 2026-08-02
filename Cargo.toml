@@ -2,5 +2,48 @@
 name = "yy"
 version = "0.1.0"
 edition = "2024"
+# yy is an application, not a library, so a conservative MSRV buys nothing and
+# costs the newer language and cargo features. It is pinned exactly in
+# rust-toolchain.toml; this is the floor that pin must stay above. Topcoat needs
+# 1.95, cargo's `build.warnings` needs 1.97. See docs/design/repository.md §8.1.
+rust-version = "1.97"
+license = "MIT"
+description = "A time tracker you can trust."
+keywords = ["time-tracking", "cli", "tui", "productivity"]
+categories = ["command-line-utilities"]
+
+# The workspace is currently a single package. Day one splits it into crates/
+# (yy-types, yy-core, yy-store, yy-host, yy-client, yy-tui, yy-cli); the tables
+# below are already workspace-scoped so that split moves files and nothing else.
+[workspace]
+
+[workspace.lints.rust]
+# Nothing in a local time tracker needs it, and a denied lint is a better
+# guarantee than a convention.
+unsafe_code = "deny"
+
+[workspace.lints.rustdoc]
+# The doc comments on yy-types are the source of the protocol reference (§8.4),
+# so a broken link here becomes a broken specification later. Denied in the
+# manifest rather than through RUSTDOCFLAGS in CI, so the rule is visible to
+# whoever is writing the comment.
+broken_intra_doc_links = "deny"
+private_intra_doc_links = "deny"
+invalid_html_tags = "deny"
+
+[workspace.lints.clippy]
+# A warning rather than an error, so it informs without blocking. Individual
+# lints get an `allow` here as they prove noisy -- each one a decision someone
+# made once, in a reviewable line.
+pedantic = { level = "warn", priority = -1 }
+
+# Module layout: always `foo/mod.rs`, never `foo.rs` beside `foo/`. This lint
+# bans the self-named form, so the rule is enforced by the compiler rather than
+# by review. Note it is the opposite of the `mod_module_files` lint, and the two
+# cannot both be enabled.
+self_named_module_files = "deny"
+
+[lints]
+workspace = true
 
 [dependencies]

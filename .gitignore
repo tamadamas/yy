@@ -1,1 +1,6 @@
 /target
+/docs/book/book
+
+# Cargo.lock is committed on purpose: yy ships binaries, and the Topcoat git
+# dependency (§8.3) makes the lockfile the only thing pinning it. Do not add it
+# here.
