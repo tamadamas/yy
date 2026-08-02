@@ -1,0 +1,170 @@
+docs/design/glossary.md
+  s_7bd3ed0c591cab::t_bf08912527bf9b 1-42
+docs/design/prior-art.md
+  s_7bd3ed0c591cab::t_cf88c024f0bd8f 1-53
+docs/jj/tutorial.md
+  s_7bd3ed0c591cab::t_1a646b2395fbd3 1-283
+docs/book/src/SUMMARY.md
+  s_7bd3ed0c591cab::t_e4b623d50414ce 1-22
+docs/design/protocol.md
+  s_7bd3ed0c591cab::t_f166bd39d1a1be 1-19,21-65,74-182
+  s_7bd3ed0c591cab::t_18da5123cb382a 20
+  s_7bd3ed0c591cab::t_6ba6b5bf0bc36f 66-73
+.agents/skills/jj/SKILL.md
+  s_7bd3ed0c591cab::t_750fda5e5addd0 2,40-83,109-112
+  s_7bd3ed0c591cab::t_a6e5a786a13203 11-35
+  s_7bd3ed0c591cab::t_bae9eee604f504 9-10,36-38
+  s_7bd3ed0c591cab::t_4b53fbd0efc119 85-100,103,107
+  s_7bd3ed0c591cab::t_c1bc2d64198f45 1
+  s_7bd3ed0c591cab::t_da6a8ec0f5d345 3-8
+  s_7bd3ed0c591cab::t_f8668cc94ad69d 39
+  s_7bd3ed0c591cab::t_c4c2d7bbaa2d2e 84
+  s_7bd3ed0c591cab::t_cd0c03e4d6797d 101-102
+  s_7bd3ed0c591cab::t_ee90699e2069dc 104-106
+  s_7bd3ed0c591cab::t_65a3abb83b8d1e 108
+docs/jj/github.md
+  s_7bd3ed0c591cab::t_fb3f8ef78e6913 1-269
+TODO.md
+  s_7bd3ed0c591cab::t_f982f6ec1ad905 1-123
+docs/book/src/contributing.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/book/src/guide/tracking-a-day.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/design/verification.md
+  s_7bd3ed0c591cab::t_72cb2055387b4f 1-9,17-19,22-50,64-69
+  s_7bd3ed0c591cab::t_5772c67f4aac07 10-16,20-21
+  s_7bd3ed0c591cab::t_db76fdaf2f2955 51-63
+docs/design/smaller-decisions.md
+  s_7bd3ed0c591cab::t_4c57092b0ce635 1-44
+docs/jj/index.md
+  s_7bd3ed0c591cab::t_52db78308cda16 1-65
+docs/book/src/spec/jsonl.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+CONTRIBUTING.md
+  s_7bd3ed0c591cab::t_d04ee2f7857bf6 1-190
+docs/design/architecture.md
+  s_7bd3ed0c591cab::t_0f17d53fe9b982 1-126
+justfile
+  s_7bd3ed0c591cab::t_58b46163b91ade 1-54
+README.md
+  s_7bd3ed0c591cab::t_645af1ca2a522e 1-91
+.agents/skills/design/SKILL.md
+  s_7bd3ed0c591cab::t_53c21762513015 1-62
+docs/jj/setup.md
+  s_7bd3ed0c591cab::t_ae78b119d1dea9 1-127,163-187
+  s_7bd3ed0c591cab::t_af6798036020c6 128-162
+docs/book/book.toml
+  s_7bd3ed0c591cab::t_ce3bae401de332 1-15
+.github/workflows/semantic-pr.yml
+  s_7bd3ed0c591cab::t_75fc48d975cd38 1-39
+.agents/skills/check/SKILL.md
+  s_7bd3ed0c591cab::t_ef632ff1b246dc 1-55
+.github/workflows/ci.yml
+  s_7bd3ed0c591cab::t_f45fc3b7189548 69-76,81-94
+  s_7bd3ed0c591cab::t_08acebda1e9495 43-45
+  s_7bd3ed0c591cab::t_b0d6b856e7542d 1-3,5,15-42,46-68,77-80,95-110
+  s_7bd3ed0c591cab::t_99451577e80772 4,6-14
+docs/book/src/index.md
+  s_7bd3ed0c591cab::t_a6bd5cfc8e5578 1-41
+docs/design/roadmap.md
+  s_7bd3ed0c591cab::t_be3bcbba827ae2 22-24
+  s_7bd3ed0c591cab::t_e8b9b04ad52905 34
+  s_7bd3ed0c591cab::t_1f16795ddc62c5 1-9,11-21,25-33,35-41
+  s_7bd3ed0c591cab::t_4576c91d4f296f 10
+docs/design/frontends.md
+  s_7bd3ed0c591cab::t_736c08547c0984 1-94
+.gitignore
+  s_7bd3ed0c591cab::t_331a1bd28a597c 2-6
+docs/design/repository.md
+  s_7bd3ed0c591cab::t_7ec6734e0ee5bd 185-198
+  s_7bd3ed0c591cab::t_450dc8481c5383 1-11,29-39,42,44-51,55,57-62,69-74,92-110,112-132,134-141,174-184,199-244,269-309,311,314-317,323-324,326-328,331-333
+  s_7bd3ed0c591cab::t_328356d49193d2 40-41,43,52
+  s_7bd3ed0c591cab::t_f457393e49ee90 12-28
+  s_7bd3ed0c591cab::t_d997f53ad45f3f 111
+  s_7bd3ed0c591cab::t_9d1073c08bcaff 142-173
+  s_7bd3ed0c591cab::t_e810c7c179e021 325,334-345
+  s_7bd3ed0c591cab::t_dbaf11dd7d205d 53-54,56,63,75-91
+  s_7bd3ed0c591cab::t_c801cd738c3049 133
+  s_7bd3ed0c591cab::t_f6f92f3e6b6c89 64-68
+  s_7bd3ed0c591cab::t_24aab2d407780e 245-268
+  s_7bd3ed0c591cab::t_0a2d59e2727b1c 310,312-313,318-322,329-330,346-374
+AGENTS.md
+  s_7bd3ed0c591cab::t_029190571873b9 90-96,98-112
+  s_7bd3ed0c591cab::t_a5478698809033 1-89,97,113-125,128-181,183-189
+  s_7bd3ed0c591cab::t_b505364cd0b9b7 182
+  s_7bd3ed0c591cab::t_030709a8d5dc8e 126-127
+.agents/skills/prose/SKILL.md
+  s_7bd3ed0c591cab::t_9527c674d9d0d8 1-53
+docs/book/src/guide/installing.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+LICENSE
+  s_7bd3ed0c591cab::t_a604d92f96b5e5 1-21
+docs/book/src/spec/errors.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/book/src/spec/protocol.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+rustfmt.toml
+  s_7bd3ed0c591cab::t_acd666b849db2b 1-15
+.agents/skills/style/SKILL.md
+  s_7bd3ed0c591cab::t_1323412b473148 1-62
+.agents/skills/commit/SKILL.md
+  s_7bd3ed0c591cab::t_9f9c7fb071b5a3 1-65
+RELEASING.md
+  s_7bd3ed0c591cab::t_a39fd61dbba20f 1-150
+docs/design/storage.md
+  s_7bd3ed0c591cab::t_bb156a84ae6535 1-257
+docs/design/rules.md
+  s_7bd3ed0c591cab::t_4b1396846b8436 1-22,26-34
+  s_7bd3ed0c591cab::t_b3e87c2ff6e516 23-25
+  s_7bd3ed0c591cab::t_42ebb8d721de89 35-37
+.cargo/config.toml
+  s_7bd3ed0c591cab::t_b9fd62b46287c5 1-12
+.agents/skills/pr/SKILL.md
+  s_7bd3ed0c591cab::t_71888e2fe03da9 1-52,54,56
+  s_7bd3ed0c591cab::t_b5f0985c669bf7 53,55,57-60
+deny.toml
+  s_7bd3ed0c591cab::t_99016c19266745 1-41
+docs/book/src/guide/correcting-a-day.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/book/src/design.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/design/purpose.md
+  s_7bd3ed0c591cab::t_8f0227eba9043e 1-45
+docs/book/src/guide/your-data.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/book/src/guide/shell-prompt.md
+  s_7bd3ed0c591cab::t_7d1c83e3cb3506 1-7
+docs/DESIGN.md
+  s_7bd3ed0c591cab::t_3528c44f2c4b92 52-58
+  s_7bd3ed0c591cab::t_d4352cf24c5dd6 24
+  s_7bd3ed0c591cab::t_b9595a25a0c3fd 73-83
+  s_7bd3ed0c591cab::t_778b79efe2a960 7-9,11,13,15-23,25-51,59-72
+.github/workflows/dependencies.yml
+  s_7bd3ed0c591cab::t_0b9606ab74102d 1-31
+rust-toolchain.toml
+  s_7bd3ed0c591cab::t_7ebd73a53bd3ea 8,10
+  s_7bd3ed0c591cab::t_506b0f73bd20b1 1-7,9
+Cargo.toml
+  s_7bd3ed0c591cab::t_4c2da0b843d43e 40-45
+  s_7bd3ed0c591cab::t_87067c73e2dc8e 5-39,46-47
+.claude
+  s_7bd3ed0c591cab::t_5f6fde4d122085 1
+CLAUDE.md
+  s_7bd3ed0c591cab::t_bf15d2cf1dd8e3 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "b77052626cd65c0f3c56f101210cf2dcca2f0a76",
+  "prompts": {},
+  "sessions": {
+    "s_7bd3ed0c591cab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e303424d-b061-46bb-9af3-e69d9e7cfb96",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Tomas Tamadamas <1058433+tamadamas@users.noreply.github.com>"
+    }
+  }
+}
