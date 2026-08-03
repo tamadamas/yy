@@ -1,0 +1,160 @@
+# Triggered by RELEASING.md step 6: "the tag triggers the release workflow".
+# The tag itself is pushed with plain Git, not `jj` (RELEASING.md §5) -- the
+# push of a `v*` tag is the only thing this workflow reacts to; it never runs
+# on a branch push, so it cannot fire from an ordinary merge to main.
+#
+# Platforms: Linux and macOS, four targets, no cross-compilation. This follows
+# docs/design/architecture.md §4.1.1 ("Which platforms this commits to"), which
+# settles what used to be a workflow-comment guess:
+#   - Windows is rejected there on the access-control model, not on socket
+#     support -- Windows has had AF_UNIX since 2017, but does not apply mode
+#     `0600`/owner-only-directory permissions to it the way §6.1 of the
+#     protocol relies on, and nobody has asked for a second access-control
+#     story yet.
+#   - macOS is accepted. `$XDG_RUNTIME_DIR` is a freedesktop.org convention
+#     macOS does not set, so §4.1.1 defines the runtime directory as
+#     `$XDG_RUNTIME_DIR/yy` where the variable is set and `$TMPDIR/yy`
+#     otherwise -- a rule in the design now, not an assumption in this file.
+#     §4.1.1 itself notes nothing in CI verifies the macOS path yet; this
+#     workflow builds it but that gap in test coverage is still open.
+#   - Every target has a GitHub-hosted runner of its own architecture, so
+#     nothing here cross-compiles: no `cross`, no `rustup target add`, and no
+#     C cross-toolchain for the SQLite that `rusqlite`'s `bundled` feature
+#     compiles from source. That last point is a convenience, not a
+#     constraint: `rusqlite` ships pregenerated bindings rather than running
+#     bindgen, so its bundled C cross-compiles fine given a cross compiler.
+#     Native runners just mean no such compiler has to be installed here.
+#   - x86_64 macOS builds on `macos-15-intel`, and that label has an expiry
+#     date. GitHub retired `macos-13` on 2025-12-04, and its replacement is
+#     the last x86_64 macOS image Actions will offer: it stops in August
+#     2027, after which the architecture is unsupported. Nobody working on yy
+#     runs an Intel Mac, so when that date arrives the cheap answer is to
+#     drop the target rather than to start cross-compiling for it.
+#   - The Linux runners are pinned to `ubuntu-24.04`, not `ubuntu-latest`.
+#     The runner image decides which glibc a released binary requires, so
+#     `-latest` would silently raise that floor for users on the day GitHub
+#     moves the label -- an invisible change to a published artifact.
+#   - `aarch64-unknown-linux-gnu` covers ARM servers, Raspberry Pi, and
+#     Termux by way of `proot-distro`. It does *not* cover Termux natively:
+#     Android is bionic rather than glibc, so that would be
+#     `aarch64-linux-android`, which has no hosted runner and needs the NDK.
+#     Nobody has asked for it.
+#
+# Every `uses:` is pinned to a full commit SHA (§8.5 of the design), with the
+# version tag kept as a trailing comment.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: build (${{ matrix.target }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-24.04
+          - target: aarch64-unknown-linux-gnu
+            os: ubuntu-24.04-arm
+          - target: x86_64-apple-darwin
+            os: macos-15-intel
+          - target: aarch64-apple-darwin
+            os: macos-latest
+    # Provenance attestation needs to mint an OIDC token and write an
+    # attestation, both scoped to this job rather than the whole workflow.
+    permissions:
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
+      - run: cargo build --release --locked
+      - name: package the binary
+        run: |
+          mkdir -p dist
+          cp target/release/yy "dist/yy-${{ matrix.target }}"
+          cd dist
+          # `sha256sum` is GNU coreutils and the macOS runner images do not
+          # ship it; `shasum -a 256` comes with perl and is present on both.
+          # The two write the same "<hash>  <name>" line, so either file
+          # verifies with whichever tool the downloader happens to have.
+          if command -v sha256sum > /dev/null; then
+            sha256sum "yy-${{ matrix.target }}" > "yy-${{ matrix.target }}.sha256"
+          else
+            shasum -a 256 "yy-${{ matrix.target }}" > "yy-${{ matrix.target }}.sha256"
+          fi
+      # Attests that this binary was built by this workflow, from this source
+      # commit, on GitHub's infrastructure. Verifiable with
+      # `gh attestation verify yy-<target> -R tamadamas/yy`.
+      - uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+        with:
+          subject-path: dist/yy-${{ matrix.target }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: yy-${{ matrix.target }}
+          path: dist/*
+          if-no-files-found: error
+
+  release:
+    name: create GitHub release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          # RELEASING.md step 3's derivation needs the full tag and commit
+          # history to diff between the previous tag and this one; the
+          # default shallow, tagless clone can't do that.
+          fetch-depth: 0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          path: dist
+          merge-multiple: true
+      # Derived from commit titles rather than parsed out of CHANGELOG.md, and
+      # deliberately so: RELEASING.md step 3 says the changelog entry is itself
+      # derived by `git log --pretty=%s <last-tag>..main | grep -E
+      # '^(feat|fix)'` (only `feat`/`fix` are user-facing). Running that same
+      # command here keeps one derivation rather than making a release fail on
+      # a hand-edited section someone forgot to add.
+      - name: generate release notes from commits
+        run: |
+          current="$GITHUB_REF_NAME"
+          previous=$(git tag --sort=-creatordate --merged "$current" | grep -Fxv "$current" | head -n1 || true)
+          {
+            echo "## $current"
+            echo
+            if [ -n "$previous" ]; then
+              git log --pretty="- %s" "$previous..$current"
+            else
+              git log --pretty="- %s" "$current"
+            fi | grep -E '^- (feat|fix)' || true
+          } > release-notes.md
+          if ! grep -q '^- ' release-notes.md; then
+            echo "No user-facing changes (no \`feat\`/\`fix\` commits since ${previous:-the start of history})." >> release-notes.md
+          fi
+      - name: create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "yy $GITHUB_REF_NAME" \
+            --notes-file release-notes.md \
+            dist/*
+
+      # No crates.io publish step, by decision: releases ship binaries
+      # (RELEASING.md, "What is not published to crates.io", and §8.3 of
+      # docs/design/repository.md). yy-host cannot be published at all while it
+      # depends on Topcoat by git URL. If yy-types / yy-core / yy-store are
+      # ever published as libraries, a `cargo publish -p <crate>` step belongs
+      # here, after the GitHub release is created and before this job ends.

@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in yy behaved incorrectly.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fixes are welcome without asking first — see
+        [CONTRIBUTING.md](https://github.com/tamadamas/yy/blob/main/CONTRIBUTING.md).
+        If this is a security issue (something reachable over the Unix socket,
+        the SQLite store, or JSONL import), use
+        [SECURITY.md](https://github.com/tamadamas/yy/blob/main/SECURITY.md)
+        instead of an issue.
+
+  - type: input
+    id: version
+    attributes:
+      label: yy --version
+      description: Output of `yy --version`.
+      placeholder: yy 0.2.0
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: Distribution and version, or macOS/Windows version.
+      placeholder: Fedora 42, kernel 6.10
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Include the exact error message or output, if there was one.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: >
+        The commands you ran, in order. If it depends on existing data, say so
+        rather than attaching a database — see the note below.
+      placeholder: |
+        yy start "writing the storage layer"
+        yy stop
+        yy today
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Please do not attach your `yy` database or a JSONL export unless asked
+        for it — it is your time-tracking data.
