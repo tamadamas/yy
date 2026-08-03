@@ -1,6 +1,12 @@
 /target
 /docs/book/book
 
+# A CodeGraph index, if the contributor chose to build one. Machine-local and
+# regenerable with `codegraph init`; indexing is nobody else's decision. The
+# directory ships its own .gitignore that hides the database, so this line only
+# keeps that file out of the repository too.
+/.codegraph/
+
 # Cargo.lock is committed on purpose: yy ships binaries, and the Topcoat git
 # dependency (§8.3) makes the lockfile the only thing pinning it. Do not add it
 # here.

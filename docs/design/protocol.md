@@ -156,9 +156,11 @@ are two listeners, and they arrive in different phases because they have
 different security properties.
 
 **Phase one — Unix socket only.**
-`$XDG_RUNTIME_DIR/yy/host.sock`, mode `0600`. Access control is file
-permissions; nothing is bound to any network interface. This is the whole of
-version one, and it is the only listener that speaks JSON-RPC.
+`$XDG_RUNTIME_DIR/yy/host.sock`, mode `0600` — on macOS, in the runtime
+directory [§4.1.1](architecture.md#411-which-platforms-this-commits-to) defines
+instead. Access control is file permissions; nothing is bound to any network
+interface. This is the whole of version one, and it is the only listener that
+speaks JSON-RPC.
 
 **Browser phase — an additional loopback listener.**
 The host also binds `127.0.0.1:0` (a kernel-assigned port) and serves the

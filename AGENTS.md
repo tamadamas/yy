@@ -182,6 +182,7 @@ The [`style`](.agents/skills/style/SKILL.md) skill covers code, and
 | [`jj`](.agents/skills/jj/SKILL.md) | Any Jujutsu or Git operation |
 | [`commit`](.agents/skills/commit/SKILL.md) | Authoring a commit message |
 | [`pr`](.agents/skills/pr/SKILL.md) | Opening a pull request |
+| [`codegraph`](.agents/skills/codegraph/SKILL.md) | Locating or understanding code, once the crate split exists |
 
 ## Safety
 

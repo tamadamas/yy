@@ -1,15 +1,109 @@
-# Formatting is checked with `cargo +nightly fmt`. Every option below the first
-# two is nightly-only; a stable rustfmt ignores them silently, which is why the
-# nightly toolchain is required for formatting (but not for building or testing).
+# Formatting is checked with `cargo +nightly fmt`. The first block is stable and
+# applies to any rustfmt; everything after it is nightly-only, and a stable
+# rustfmt ignores those options silently rather than failing. That is why the
+# nightly toolchain is required to *format* -- but not to build or test. See
+# docs/design/repository.md 8.6.
+#
+# Each option links to its entry in the rustfmt reference:
+# https://rust-lang.github.io/rustfmt/?version=main
+
+# --- Stable ---------------------------------------------------------------
+
+# Parsing only, not formatting. `cargo fmt` reads it from Cargo.toml; a direct
+# `rustfmt` invocation defaults to 2015, so it is set here too.
+# https://rust-lang.github.io/rustfmt/?version=main#edition
 edition = "2024"
+
+# The Rust Style Guide edition. Inferred from `edition` under `cargo fmt`, but
+# a direct `rustfmt` falls back to 2015 -- which formats differently and makes
+# an editor-on-save disagree with CI. Set explicitly for that reason.
+# https://rust-lang.github.io/rustfmt/?version=main#style_edition
+style_edition = "2024"
+
+# 100 rather than the 80 of older Rust code, matching Topcoat and jj.
+# https://rust-lang.github.io/rustfmt/?version=main#max_width
 max_width = 100
 
+# Default is "Auto", which infers from the file's existing content and so
+# depends on repository state. This project prefers deterministic output.
+# https://rust-lang.github.io/rustfmt/?version=main#newline_style
+newline_style = "Unix"
+
+# `Foo { bar }` instead of `Foo { bar: bar }`.
+# https://rust-lang.github.io/rustfmt/?version=main#use_field_init_shorthand
+use_field_init_shorthand = true
+
+# `?` instead of the `try!` macro.
+# https://rust-lang.github.io/rustfmt/?version=main#use_try_shorthand
+use_try_shorthand = true
+
+# --- Nightly only ---------------------------------------------------------
+
+# Comments wrap at the same column as code.
+# https://rust-lang.github.io/rustfmt/?version=main#comment_width
 comment_width = 100
+
+# Actually apply `comment_width`; without this it is inert.
+# https://rust-lang.github.io/rustfmt/?version=main#wrap_comments
 wrap_comments = true
+
+# Doc examples are formatted like the code they document. The doc comments on
+# yy-types are the source of the protocol reference, so they are held to it.
+# https://rust-lang.github.io/rustfmt/?version=main#format_code_in_doc_comments
 format_code_in_doc_comments = true
+
+# Code blocks inside doc comments get the same width as the code around them.
+# https://rust-lang.github.io/rustfmt/?version=main#doc_comment_code_block_width
 doc_comment_code_block_width = 100
 
-# Imports
+# `/* */` becomes `//`. Comment syntax is then not a review topic.
+# https://rust-lang.github.io/rustfmt/?version=main#normalize_comments
+normalize_comments = true
+
+# `#[doc = "..."]` becomes `///`. One spelling for the protocol reference.
+# https://rust-lang.github.io/rustfmt/?version=main#normalize_doc_attributes
+normalize_doc_attributes = true
+
+# std, external crates, then this crate -- each its own block. With
+# `imports_granularity`, this is the reason nightly is accepted at all:
+# without them every review diff carries import churn nobody decided on.
+# https://rust-lang.github.io/rustfmt/?version=main#group_imports
 group_imports = "StdExternalCrate"
+
+# One `use` per crate. "Crate" rather than jj's "Item" because it produces
+# fewer lines and matches Topcoat, whose source this project reads a lot of.
+# https://rust-lang.github.io/rustfmt/?version=main#imports_granularity
 imports_granularity = "Crate"
-reorder_imports = true
+
+# A `use` is one line, or one item per line -- never the opportunistic packing
+# of the default "Mixed", whose output changes as a list grows.
+# https://rust-lang.github.io/rustfmt/?version=main#imports_layout
+imports_layout = "HorizontalVertical"
+
+# A trailing array, struct, or closure argument may overflow instead of forcing
+# the whole call to break. Test fixtures and JSONL literals read better for it.
+# https://rust-lang.github.io/rustfmt/?version=main#overflow_delimited_expr
+overflow_delimited_expr = true
+
+# Associated types and consts before methods, in a fixed order.
+# https://rust-lang.github.io/rustfmt/?version=main#reorder_impl_items
+reorder_impl_items = true
+
+# Deliberately not set, each for a reason:
+#
+# - `format_strings`: breaks long string literals into concatenations, which
+#   would hit SQL in yy-store and wire-format fixtures.
+# - `error_on_line_overflow`, `error_on_unformatted`: fail on things nobody can
+#   fix, such as a long URL in a doc comment. CI red with no action attached.
+# - `struct_field_align_threshold`, `enum_discrim_align_threshold`: vertical
+#   alignment makes every added field a multi-line diff.
+# - `required_version`: nightly rolls, so pinning it breaks on its own schedule.
+# - `version`: deprecated in favour of `style_edition`.
+# - `unstable_features`: gates CLI flags, not the options in this file.
+# - `brace_style`, `control_brace_style`, `trailing_comma`, `indent_style`,
+#   `binop_separator`: deviations from the Rust Style Guide, left to
+#   `style_edition`.
+# - `float_literal_trailing_zero`: moot, floats are banned project-wide.
+#
+# `reorder_imports` was removed rather than kept: it is stable and defaults to
+# true, so the line said nothing and sat under a "nightly-only" heading.
