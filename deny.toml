@@ -31,11 +31,10 @@ confidence-threshold = 0.93
 [bans]
 multiple-versions = "warn"
 wildcards = "deny"
-# The one dependency tracked from a git branch rather than a release (§8.3).
-# Cargo.lock is what pins it; see RELEASING.md before cutting a release.
-allow-git = ["https://github.com/tokio-rs/topcoat"]
 
 [sources]
 unknown-registry = "deny"
 unknown-git = "deny"
+# The one dependency tracked from a git branch rather than a release (§8.3).
+# Cargo.lock is what pins it; see RELEASING.md before cutting a release.
 allow-git = ["https://github.com/tokio-rs/topcoat"]
