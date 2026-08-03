@@ -9,7 +9,7 @@ edition = "2024"
 rust-version = "1.97"
 license = "MIT"
 description = "A time tracker you can trust."
-keywords = ["time-tracking", "cli", "tui", "productivity"]
+keywords = ["time-tracking", "cli", "tui", "web", "productivity"]
 categories = ["command-line-utilities"]
 
 # The workspace is currently a single package. Day one splits it into crates/
@@ -47,3 +47,4 @@ self_named_module_files = "deny"
 workspace = true
 
 [dependencies]
+topcoat = { git = "https://github.com/tokio-rs/topcoat", branch = "main" }
