@@ -68,14 +68,17 @@ jj log
 jj bookmark create fix-export-path -r @-
 
 # 3. push it, creating the remote bookmark and tracking it
-jj git push --allow-new
+jj git push --bookmark fix-export-path
 
 # 4. open the pull request against main
 gh pr create --fill --base main
 ```
 
-`--allow-new` is required the first time a bookmark is pushed; afterwards plain
-`jj git push` is enough. `gh` works because the workspace is colocated.
+Naming the bookmark is what makes this work: a bookmark that is not tracking
+anything yet is pushed and tracked automatically, but only when `--bookmark`
+selects it. Bare `jj git push` pushes tracking bookmarks only, so on the first
+push it does nothing and says so. Afterwards bare `jj git push` is enough. `gh`
+works because the workspace is colocated.
 
 **Git equivalent:** `git switch -c fix-export-path && git push -u origin
 fix-export-path && gh pr create --base main`.
@@ -219,25 +222,19 @@ for them. The full procedure is in [RELEASING.md](../../RELEASING.md). In short:
 3. **Then** tag the commit that landed on `main`:
 
 ```sh
-jj git fetch
-jj tag set v0.2.0 -r trunk()
-jj git push --tag v0.2.0
-```
-
-Note the command is `jj tag set`, not `create`.
-
-**One limitation:** `jj` creates lightweight tags but **not annotated tags**. If
-a release must carry an annotated, signed tag, do that one step with Git in the
-colocated repository:
-
-```sh
-git tag -a -s v0.2.0 -m "yy 0.2.0" <commit-on-main>
+git fetch origin
+git tag -a -s v0.2.0 origin/main -m "yy 0.2.0"
 git push origin v0.2.0
 ```
 
+**This is the one step where Git is not optional**, for two reasons. `jj`
+creates lightweight tags only and cannot create annotated ones (and the command
+is `jj tag set`, not `create`). It also cannot push a tag: `jj git push`
+operates on bookmarks and has no `--tag`. Both hold in `jj` 0.43.
+
 Pushing a *tag* is allowed; pushing the `main` *branch* is not. Signing commits
 works natively (`jj sign`, or automatically via `signing.behavior`), so only
-annotated tags need Git.
+tags need Git.
 
 ## A note on running Git commands
 

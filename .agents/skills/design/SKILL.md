@@ -49,6 +49,18 @@ Where a cost is mitigated, say by what, and where it is simply accepted, say
 that. See §4.6 for an example carrying an explicit "this made something weaker"
 admission.
 
+## Do not duplicate a file that exists
+
+A design document states a decision, the options rejected, the choice, and its
+cost. It does not carry a pasted copy of the file that implements it. A fenced
+block is fine for something not yet built, or for a command; once the file
+exists, the block goes and a path reference stays. The reason is not tidiness:
+a pasted copy is a second source of truth, and it goes stale exactly because
+nobody edits both places at once. `reorder_imports` is the case that happened
+here: `rustfmt.toml` and §8.6 both filed it under "nightly-only", and it is a
+stable option whose default is already the configured value — a line that said
+nothing, called something it was not, in two files at once.
+
 ## Keep the derived documents true
 
 Several files restate the design and drift silently:

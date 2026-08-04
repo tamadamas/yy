@@ -68,7 +68,7 @@ You need a Rust toolchain and a C compiler. Nothing else — no `protoc`, no
 Node.js, no `just`.
 
 ```sh
-git clone https://github.com/<owner>/yy
+git clone https://github.com/tamadamas/yy
 cd yy
 cargo build
 cargo test

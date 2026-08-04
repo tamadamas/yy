@@ -49,6 +49,40 @@ the terminal UI that the browser just stopped the timer, and the reminder logic
 would have no home. The host exists mainly so there is exactly one place where
 the rules live.
 
+### 4.1.1 Which platforms this commits to
+
+**Question:** the host listens on a Unix socket, takes an `flock`, and keys its
+runtime files off `$XDG_RUNTIME_DIR`. Which operating systems is that?
+
+**Choice: Linux and macOS. Not Windows.**
+
+Windows has had `AF_UNIX` since 2017, so the socket alone would not be the
+obstacle. The access control is:
+[§6.1](protocol.md#61-where-the-host-listens-and-what-that-exposes) grants
+access by file permission — mode `0600`, in a directory only the user can read
+— and Windows does not apply that model to `AF_UNIX` sockets. Supporting it
+therefore means designing a second access-control story for a platform nobody
+has asked about, so it is rejected until somebody does.
+
+macOS costs one rule, stated here once. `$XDG_RUNTIME_DIR` is a
+freedesktop.org convention that macOS does not set, so wherever this document
+writes `$XDG_RUNTIME_DIR/yy/...`, read *the runtime directory*:
+`$XDG_RUNTIME_DIR/yy` where the variable is set, and `$TMPDIR/yy` otherwise,
+which is the per-user directory macOS does provide. Created with mode `0700` if
+it is not there.
+
+Nothing durable lives in it. The socket, the lock, the status file
+([§7](frontends.md)) and the browser token are all recreated by the next host
+start, which is why macOS purging its temporary directory costs nothing. The
+database is `$YY_DATA/yy.db` ([§5](storage.md)) and is never in the runtime
+directory.
+
+**Cost:** a second path rule, and a second release target
+([§8.5](repository.md#releases)). Worse, nothing in CI runs on macOS today,
+so the macOS path is asserted rather than verified — a real gap, and the reason
+it is written down here rather than left implicit in whichever code first calls
+`std::env::var`.
+
 ## 4.7 Why the front-ends do *not* implement any logic
 
 **Question:** When you press a key, should the front-end update the screen

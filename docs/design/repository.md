@@ -39,17 +39,18 @@ yy/
 ├─ Cargo.toml              # workspace; dependency versions declared once
 ├─ Cargo.lock              # committed: it is what pins Topcoat (§8.3)
 ├─ rust-toolchain.toml     # the only place a compiler version is written
-├─ rustfmt.toml            # nightly-only options; see §8.6
+├─ rustfmt.toml            # stable + nightly-only options; see §8.6
 ├─ .cargo/config.toml      # build.warnings = "deny"; see §8.7
 ├─ deny.toml               # license / advisory / duplicate checks
 ├─ README.md  CHANGELOG.md  CONTRIBUTING.md  LICENSE (MIT)
-├─ CODE_OF_CONDUCT.md  SECURITY.md  RELEASING.md
+├─ CODE_OF_CONDUCT.md  SECURITY.md  RELEASING.md  CODEOWNERS
 ├─ AGENTS.md               # instructions for coding agents
 ├─ CLAUDE.md -> AGENTS.md  # symlink; one file, every agent
 ├─ .agents/skills/         # task-scoped agent instructions
 ├─ .claude -> .agents      # symlink
 ├─ justfile                # every recipe is a plain cargo command
-├─ .github/workflows/      # ci.yml, semantic-pr.yml, dependencies.yml
+├─ .github/                # workflows (ci, semantic-pr, dependencies,
+│                          #   release, pages), issue and PR templates
 ├─ schema/                 # frozen JSON Schema, one file per released
 │                          #   protocol version — rule 8's evidence (§4.6)
 ├─ crates/
@@ -115,11 +116,8 @@ bundled SQLite and is assumed present on any machine with a Rust toolchain.
 
 **Topcoat is tracked from `main`, not crates.io.** The framework is moving fast
 (0.1.0 to 0.5.0 in eleven days), fixes land upstream well before a release, and
-`yy` is small enough to absorb the churn. The dependency is therefore:
-
-```toml
-topcoat = { git = "https://github.com/tokio-rs/topcoat", branch = "main" }
-```
+`yy` is small enough to absorb the churn. `Cargo.toml` therefore declares the
+dependency as a `git` reference on branch `main`, not a version.
 
 Three consequences, all accepted deliberately:
 
@@ -129,7 +127,7 @@ Three consequences, all accepted deliberately:
   `cargo update -p topcoat`, which is a reviewable commit.
 - **`yy-host` cannot be published to crates.io** while this holds, because
   crates.io rejects git dependencies. This is fine: `yy-host` is a binary crate.
-  It does constrain [§8.5](#85-releases)'s release story, so releases ship
+  It does constrain [§8.5](#releases)'s release story, so releases ship
   binaries and `yy-core` / `yy-store` / `yy-types` are what get published, if
   anything does.
 - **CI must schedule a `main` build**, not only a lockfile build, or upstream
@@ -270,35 +268,35 @@ The schema check needs no job of its own either: it is part of `cargo test`.
 ## 8.6 Formatting, and why nightly is required for it
 
 `rustfmt.toml` is modelled on Topcoat's and jj's, because both solve the same
-problem and their choices are worth copying rather than re-deriving:
+problem and their choices are worth copying rather than re-deriving. The file
+carries a comment per option, each with a link into the
+[rustfmt reference](https://rust-lang.github.io/rustfmt/?version=main), split
+into a stable block and a nightly-only block, plus a closing list of the
+options deliberately left unset and why. The option-by-option reasoning,
+including that closing list, lives in [`rustfmt.toml`](../../rustfmt.toml)
+itself and is part of the decision; do not trim it there or restate it here.
 
-```toml
-edition = "2024"
-max_width = 100
+Two of the stable options exist only because `rustfmt` and `cargo fmt` disagree.
+`cargo fmt` infers `edition` and `style_edition` from `Cargo.toml`; a direct
+`rustfmt` — an editor formatting on save, a script — defaults both to 2015 and
+formats differently from CI. Setting them explicitly removes that failure mode.
+`newline_style` is set for the same reason its default is wrong here: `"Auto"`
+infers from the file's existing content, so the output depends on repository
+state rather than on configuration.
 
-comment_width = 100
-wrap_comments = true
-format_code_in_doc_comments = true
-doc_comment_code_block_width = 100
-
-group_imports = "StdExternalCrate"
-imports_granularity = "Crate"
-reorder_imports = true
-```
-
-**Everything below `max_width` is a nightly-only rustfmt option.** A stable
-rustfmt does not apply them; it warns and carries on, which means a
+**The nightly-only block is what makes nightly worth accepting at all.**
+`group_imports`, `imports_granularity`, and `imports_layout` are the reason:
+without them, import blocks drift in every file and a meaningful share of every
+review diff is import churn that no one decided. Granularity is `"Crate"` rather
+than jj's `"Item"`, which was the realistic alternative: it produces fewer lines
+and matches Topcoat, whose source this project reads a lot of. A stable rustfmt
+does not apply nightly-only options; it warns and carries on, which means a
 stable-formatted file and a nightly-formatted file differ and CI fails on a
 contributor who did nothing wrong. There is no way to have these options and a
-single toolchain, so the choice has to be made deliberately:
-
-- `group_imports = "StdExternalCrate"` and `imports_granularity = "Crate"` are
-  the reason to accept it. Without them, import blocks drift in every file and
-  a meaningful share of every review diff is import churn that no one decided.
-  `"Crate"` rather than jj's `"Item"` because it produces fewer lines and
-  matches Topcoat, whose source this project reads a lot of.
-- `wrap_comments` and `format_code_in_doc_comments` keep prose and doc examples
-  inside the same 100 columns as the code.
+single toolchain, so accepting the second toolchain is the deliberate choice,
+and the rest of the nightly block — comment and doc-comment normalisation and
+width, import layout, overflow, and impl-item ordering — rides along once that
+choice is made.
 
 **This does not weaken the "a fresh clone builds" promise**, and the distinction
 matters: `cargo build`, `cargo test`, and `cargo clippy` all run on the pinned
@@ -309,21 +307,8 @@ words.
 
 ## 8.7 Warnings are errors, without the usual cost
 
-Lint levels are declared in the manifest, not passed on a command line:
-
-```toml
-[workspace.lints.rust]
-unsafe_code = "deny"
-
-[workspace.lints.rustdoc]
-broken_intra_doc_links = "deny"
-private_intra_doc_links = "deny"
-invalid_html_tags = "deny"
-
-[workspace.lints.clippy]
-pedantic = { level = "warn", priority = -1 }
-self_named_module_files = "deny"
-```
+Lint levels are declared in `Cargo.toml`'s `[workspace.lints.*]` tables, not
+passed on a command line.
 
 `unsafe_code = "deny"` because nothing in a local time tracker needs it, and a
 denied lint is a better guarantee than a convention. The rustdoc lints because
@@ -344,12 +329,8 @@ enabled. Since this project reads Topcoat's source for reference, the difference
 is written into `AGENTS.md` and the `style` skill rather than left to be
 noticed.
 
-Everything else is denied wholesale, through `.cargo/config.toml`:
-
-```toml
-[build]
-warnings = "deny"
-```
+Everything else is denied wholesale, through `build.warnings = "deny"` in
+[`.cargo/config.toml`](../../.cargo/config.toml).
 
 This is the conventional `RUSTFLAGS: -D warnings` replaced by a cargo setting
 stabilised in Rust 1.97, and the difference is not cosmetic. **Setting

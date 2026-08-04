@@ -96,7 +96,7 @@ works inside it, which is exactly the wrong way round for an agent. A `jj`
 workspace is the reverse: it has `.jj` but no `.git`, because `jj workspace add`
 has no `--colocate`. If you need `gh` inside one, export
 `GIT_DIR=$(jj git root)` first. See
-[`docs/jj/setup.md`](../../../docs/jj/setup.md#parallel-work-jj-workspace-not-git-worktree).
+[`docs/jj/setup.md`](../../../docs/jj/setup.md#5-parallel-work-jj-workspace-not-git-worktree).
 
 ## When something goes wrong
 

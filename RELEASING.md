@@ -95,22 +95,20 @@ Only now, and only on the merged commit. Pushing a *tag* is allowed; pushing the
 `main` *branch* is not.
 
 ```sh
-# with jj -- note the command is `tag set`, not `tag create`
-jj git fetch
-jj tag set v0.2.0 -r trunk()
-jj git push --tag v0.2.0
-
-# with git
 git fetch origin
 git tag -a -s v0.2.0 origin/main -m "yy 0.2.0"
 git push origin v0.2.0
 ```
 
-**If the tag must be annotated or signed, use Git.** `jj` creates lightweight
-tags only, and cannot create annotated ones. This is the one place in the
-project where the Git command is not optional, and it is safe because the
-workspace is colocated. Signing *commits* works natively in `jj`
-(`jj sign`, or `signing.behavior` in the config); only annotated tags need Git.
+**Tagging is the one place in the project where Git is not optional**, for two
+independent reasons. `jj` creates lightweight tags only and cannot create
+annotated ones (`jj tag set`, not `tag create`). It also has no way to push a
+tag at all: `jj git push` operates on bookmarks, and there is no `--tag`. Both
+are safe to work around here because the workspace is colocated and the Git
+command acts on the same repository.
+
+Signing *commits* works natively in `jj` (`jj sign`, or `signing.behavior` in
+the config); only tags need Git.
 
 ### 6. Publish
 

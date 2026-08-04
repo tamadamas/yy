@@ -30,7 +30,7 @@ Part of the [design of record](../DESIGN.md).
 - **Jujutsu locally, Git as the contract** — the repository is a colocated
   `jj`/Git workspace. Anyone can clone and contribute with plain Git and never
   notice; the maintainer uses `jj`. See
-  [§8.5](repository.md#85-version-control-jujutsu-and-git) for why this costs
+  [§8.5](repository.md#version-control-jujutsu-and-git) for why this costs
   contributors nothing, and [the jj guide](../jj/index.md) for how to use it.
 - **MIT licence, held by "the yy authors"** — a copyright notice does not have
   to name a person for copyright to exist, so the licence carries no individual

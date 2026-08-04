@@ -89,7 +89,7 @@ jj git init --colocate
 so this is all you need:
 
 ```sh
-jj git clone https://github.com/<owner>/yy
+jj git clone https://github.com/tamadamas/yy
 cd yy
 ```
 
