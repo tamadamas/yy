@@ -1,0 +1,63 @@
+# Publishes docs/book/ (the guide and the specification, §8.4) to GitHub
+# Pages. ci.yml's `book` job only proves `mdbook build` succeeds on every pull
+# request; this workflow is the actual publish step, and only runs on `main`
+# so a pull request can never cause a deploy.
+#
+# This replaces the generated `mdbook.yml` starter workflow, which built from
+# the repository root rather than docs/book/, installed mdBook through rustup
+# and `cargo install`, and used floating action tags. There is one Pages
+# workflow, and this is it.
+#
+# The repository's Pages source is set to "GitHub Actions" (Settings -> Pages),
+# which is what makes this workflow the publisher rather than a branch. The
+# book is served from https://tamadamas.github.io/yy/.
+#
+# Every `uses:` is pinned to a full commit SHA (§8.5 of the design), with the
+# version tag kept as a trailing comment.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one Pages deployment may be in flight at a time, but unlike ci.yml's
+# concurrency group this one does not cancel a run that is already deploying:
+# a cancelled deploy can leave Pages serving a half-published book. A second
+# push queues behind the first instead.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      # Pinned, not floating: the published book and the book CI proves builds
+      # must come from the same mdBook, or `main` can go red on a release of a
+      # tool this repository did not change.
+      - uses: taiki-e/install-action@67729d5c413db75907f0ad1e39bb04b9c868ff60 # v2
+        with:
+          tool: mdbook@0.5.4
+      - run: mdbook build docs/book
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: docs/book/book
+
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

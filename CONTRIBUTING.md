@@ -32,7 +32,7 @@ You need a Rust toolchain and a C compiler. `rust-toolchain.toml` pins the exact
 compiler version, so rustup installs it for you on the first `cargo` command.
 
 ```sh
-git clone https://github.com/<owner>/yy
+git clone https://github.com/tamadamas/yy
 cd yy
 cargo test
 ```
@@ -146,7 +146,8 @@ before pushing.
 For a breaking change, add `!` after the type or scope and end the body with a
 `BREAKING CHANGE:` footer explaining how to migrate.
 
-There is no pull request template. Describe the whole diff rather than your last
+[The pull request template](.github/PULL_REQUEST_TEMPLATE.md) asks for the same
+things a review actually needs: describe the whole diff rather than your last
 commit, say how you verified it, and reference any issue it closes
 (`Closes #123`).
 

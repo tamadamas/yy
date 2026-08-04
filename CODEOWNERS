@@ -1,0 +1,6 @@
+# At the repository root rather than in .github/, to match the layout in
+# docs/design/repository.md §8.2.
+#
+# One owner for everything. Split this out by path only when a part of the
+# repository actually needs a different reviewer, not in advance of that.
+* @tamadamas

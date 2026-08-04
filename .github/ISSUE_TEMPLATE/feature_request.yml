@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose something yy does not do yet.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `yy` has a
+        [design of record](https://github.com/tamadamas/yy/blob/main/docs/DESIGN.md)
+        that states what it is and, more usefully, what it deliberately is not.
+        Read it first — a feature has to fit that design or change it, and
+        finding out after the code is written is the worst outcome for everyone.
+        See
+        [CONTRIBUTING.md](https://github.com/tamadamas/yy/blob/main/CONTRIBUTING.md).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to do that yy does not support?
+      description: Describe the problem, not the solution yet.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you want yy to do instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Does this fit the design as written, or change it?
+      description: >
+        If it contradicts something in docs/design/, say so explicitly and
+        expect the conversation to be about the design document rather than
+        the code.

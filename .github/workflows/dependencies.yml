@@ -24,8 +24,8 @@ jobs:
     name: build against topcoat main
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: Swatinem/rust-cache@v2
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
       - run: cargo update -p topcoat
       - run: cargo clippy --workspace --all-targets --all-features
       - run: cargo test --workspace --all-features

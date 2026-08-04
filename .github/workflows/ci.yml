@@ -12,9 +12,9 @@
 #   runner. CI and a contributor's machine cannot drift apart, because there is
 #   only one place that says which compiler this is.
 #
-# TODO before the repository goes public: pin every `uses:` to a full commit
-# SHA, as §8.5 of the design requires. They are on version tags for now, which
-# is a smaller guarantee.
+# Every `uses:` is pinned to a full commit SHA (§8.5), with the version tag kept
+# as a trailing comment for humans. A tag can be moved by whoever controls the
+# upstream repository; a commit SHA cannot.
 name: CI
 
 on:
@@ -39,11 +39,11 @@ jobs:
     name: format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       # The only nightly in this project. rustfmt.toml uses nightly-only
       # options (§8.6); nothing else -- not building, not testing, not
       # rustdoc -- needs anything but the pinned toolchain.
-      - uses: dtolnay/rust-toolchain@nightly
+      - uses: dtolnay/rust-toolchain@4fd1da8b0805d2d2e936788875a7d65dbd677dc2 # nightly
         with:
           components: rustfmt
       - run: cargo +nightly fmt --all --check
@@ -52,16 +52,16 @@ jobs:
     name: clippy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: Swatinem/rust-cache@v2
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
       - run: cargo clippy --workspace --all-targets --all-features --locked
 
   test:
     name: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: Swatinem/rust-cache@v2
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
       # The protocol schema check (rule 8) is a test in yy-types, so it runs
       # here and needs no job of its own. See docs/design/verification.md.
       - run: cargo test --workspace --all-features --locked
@@ -76,8 +76,8 @@ jobs:
     name: doc comments
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: Swatinem/rust-cache@v2
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
       - run: cargo doc --workspace --all-features --no-deps --locked
 
   # The actual documentation: the guide and the specification, published to
@@ -87,18 +87,19 @@ jobs:
     name: book
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: taiki-e/install-action@v2
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: taiki-e/install-action@67729d5c413db75907f0ad1e39bb04b9c868ff60 # v2
         with:
-          tool: mdbook
+          # Same version pages.yml publishes with. See the note there.
+          tool: mdbook@0.5.4
       - run: mdbook build docs/book
 
   deny:
     name: cargo-deny
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: EmbarkStudios/cargo-deny-action@v2
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: EmbarkStudios/cargo-deny-action@3c6349835b2b7b196a839186cb8b78e02f7b5f25 # v2
 
   git-friendly:
     name: builds from a plain git clone
@@ -106,5 +107,5 @@ jobs:
     steps:
       # Rule 11: no jj-only step may be required to build or test. This job is
       # the evidence, which is why it is a bare checkout and nothing else.
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - run: cargo build --workspace --locked
