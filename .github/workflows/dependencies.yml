@@ -26,6 +26,23 @@ jobs:
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
-      - run: cargo update -p topcoat
+        with:
+          # Restore CI's cache, save nothing. This job deliberately builds
+          # against a lockfile that is not the repository's, so anything it
+          # saved would be an entry nothing else can ever hit -- but everything
+          # that is not topcoat still compiles from the warm one.
+          shared-key: ci
+          save-if: "false"
+      # Topcoat is not a dependency yet -- the workspace is still the single
+      # `yy` package -- and `cargo update -p` on an unknown package is a hard
+      # error. Skip rather than fail, so this job starts hedging by itself on
+      # the day the dependency lands.
+      - name: update topcoat to its newest main commit
+        run: |
+          if cargo pkgid topcoat >/dev/null 2>&1; then
+            cargo update -p topcoat
+          else
+            echo "::notice::topcoat is not a dependency yet; nothing to update"
+          fi
       - run: cargo clippy --workspace --all-targets --all-features
       - run: cargo test --workspace --all-features

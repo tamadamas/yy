@@ -62,11 +62,15 @@ There is nothing else. No `protoc`, no Node.js, no `buf`, no code generation
 step. `just` is a convenience for running the checks below; every recipe in the
 `justfile` is a plain `cargo` command you can read and run by hand.
 
-One extra toolchain is needed to *format*:
+One extra toolchain is needed to *format*, a nightly pinned by date:
 
 ```sh
-rustup toolchain install nightly --component rustfmt
+just fmt-toolchain
 ```
+
+The date is in the `justfile`, on the `nightly :=` line, and that is the only
+place in the repository it is written — CI reads it from there, and so does the
+editor configuration in `.vscode/`.
 
 ## Running the checks
 
@@ -76,10 +80,11 @@ Run this before you push. It is what CI runs, so it saves you a round trip:
 just check
 ```
 
-or, by hand:
+CI runs that exact command, so it is not an approximation of the pull request
+checks; it is them. By hand, if you would rather not install `just`:
 
 ```sh
-cargo +nightly fmt --all --check
+cargo +nightly-2026-08-01 fmt --all --check   # the date the justfile pins
 cargo clippy --workspace --all-targets --all-features --locked
 cargo test --workspace --all-features --locked
 cargo doc --workspace --all-features --no-deps --locked
@@ -92,13 +97,22 @@ in `just check` and in CI instead.
 
 ### Formatting
 
-`cargo +nightly fmt`, not `cargo fmt`. `rustfmt.toml` uses options that only
-exist on nightly — import grouping in particular — and a stable rustfmt ignores
-them silently, producing a file that fails CI although you did run the
-formatter.
+`just fmt`, not `cargo fmt`. `rustfmt.toml` uses options that only exist on
+nightly — import grouping in particular — and a stable rustfmt ignores them
+silently, producing a file that fails CI although you did run the formatter.
+
+The nightly is pinned to a date rather than tracking the channel, for the same
+reason the compiler is: rustfmt changes its mind occasionally, and an unpinned
+one would reformat the workspace on a morning nobody touched it. Bumping the
+date is a deliberate commit that carries its own reformatting diff.
 
 This is the *only* thing in the project that needs nightly. Building, testing,
-linting and documentation all run on the pinned stable toolchain.
+linting and documentation all run on the pinned stable toolchain, and nothing
+here changes rustup's default: the nightly is installed beside it.
+
+If you use VS Code, `.vscode/settings.json` already points rust-analyzer at the
+right rustfmt through `just fmt-stdin`. Without that setting the editor formats
+with stable on save, which looks like it worked and fails in CI.
 
 ### Warnings are errors
 

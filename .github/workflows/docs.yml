@@ -1,0 +1,42 @@
+# The other half of ci.yml's path filter. A prose change needs the book to
+# build; it does not need clippy, the test suite, rustdoc, or cargo-deny, and
+# running them on a pull request that touches no code is seven runners' worth
+# of nothing. This workflow proves the book builds; `pages.yml` publishes it
+# from main, with the same pinned mdBook.
+#
+# A change under docs/design/ matches neither workflow and gets no check beyond
+# the pull request title. That is correct rather than an oversight: there is
+# nothing there to compile.
+name: Docs
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/book/**"
+      - ".github/workflows/docs.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/book/**"
+      - ".github/workflows/docs.yml"
+  merge_group:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  book:
+    name: book
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: taiki-e/install-action@67729d5c413db75907f0ad1e39bb04b9c868ff60 # v2
+        with:
+          # Same version pages.yml publishes with. See the note there.
+          tool: mdbook@0.5.4
+      - run: mdbook build docs/book

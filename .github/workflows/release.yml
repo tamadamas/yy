@@ -76,7 +76,11 @@ jobs:
       attestations: write
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
+      # No build cache here, deliberately. A cache saved on `refs/tags/vX.Y.Z`
+      # is visible to that tag alone, so four targets would each write an entry
+      # that the next release can never read -- and an attested artefact is
+      # worth more built from nothing than built from a restored target
+      # directory. CI already proved this commit compiles.
       - run: cargo build --release --locked
       - name: package the binary
         run: |
