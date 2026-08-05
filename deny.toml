@@ -30,7 +30,11 @@ confidence-threshold = 0.93
 
 [bans]
 multiple-versions = "warn"
-wildcards = "deny"
+# A git dependency declared without a version has the requirement `*`, so this
+# check cannot be enabled while §8.3 holds. It would flag exactly one crate --
+# Topcoat -- which `sources.allow-git` below already admits deliberately, and
+# satisfying it would mean writing a version that §8.3 says not to write.
+wildcards = "allow"
 
 [sources]
 unknown-registry = "deny"
