@@ -119,7 +119,7 @@ bundled SQLite and is assumed present on any machine with a Rust toolchain.
 `yy` is small enough to absorb the churn. `Cargo.toml` therefore declares the
 dependency as a `git` reference on branch `main`, not a version.
 
-Three consequences, all accepted deliberately:
+Four consequences, all accepted deliberately:
 
 - **`Cargo.lock` is committed and is the pin.** A git dependency without a
   lockfile is not reproducible. `yy` ships binaries, so the lockfile belongs in
@@ -134,6 +134,16 @@ Three consequences, all accepted deliberately:
   breakage is discovered at the worst possible moment. A weekly job that runs
   `cargo update -p topcoat` and the test suite turns "Topcoat broke us" into a
   failing scheduled run rather than a surprise during a release.
+- **`cargo deny`'s wildcard check is off.** A dependency declared without a
+  version carries the requirement `*`, which that check exists to forbid. The
+  two ways to keep it were to write a version beside the `git` reference —
+  which is the thing this section decided against, and which would need bumping
+  by hand at every Topcoat minor release — or to leave the build red. It is set
+  to `allow` in `deny.toml` instead. The cost is that a genuine `foo = "*"` on
+  a crates.io dependency would now pass, and the mitigation is that
+  `sources.allow-git` still names Topcoat explicitly, so a second unversioned
+  dependency fails the run anyway. Advisories, licences, and sources — the
+  checks the tool is here for — are untouched.
 
 ## 8.4 Documentation
 
