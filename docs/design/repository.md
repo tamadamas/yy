@@ -191,10 +191,18 @@ the repository asks them to do otherwise. No `jj`-only file, hook, or CI step
 may ever be required to build, test, or contribute — that is the invariant.
 
 **`main` is written only by merging a pull request.** Direct pushes are rejected
-by GitHub branch protection, for everyone including the maintainer, with force
-pushes and branch deletion disabled. Every pull request must pass the required
-checks below before the merge button unlocks, and pull requests are
-squash-merged so the title becomes the commit on `main`.
+by a GitHub ruleset, for everyone including the maintainer, with force pushes
+and branch deletion disabled. Pull requests are squash-merged, so the title
+becomes the commit on `main`.
+
+The checks below are **not** wired into that ruleset as required checks, and the
+gap between rule 12's wording and what the server enforces is worth stating
+rather than leaving to be discovered: the merge button unlocks whether or not CI
+is green, and a red pull request is stopped by whoever is merging it. Requiring
+them is not a free change, for the reason in [CI](#ci) — a job skipped by a path
+filter reports no conclusion, so a required check would leave every docs-only
+pull request waiting on a result that never arrives. Closing it properly means a
+gate job that always runs, and that is a decision nobody has needed yet.
 
 This costs nothing and buys the property that the history of `main` is exactly
 the set of things CI approved. It also removes the only realistic way a

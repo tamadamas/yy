@@ -90,3 +90,19 @@ Not here. The [`jj`](../jj/SKILL.md) skill holds the rules and points at
 [`docs/jj/github.md`](../../../docs/jj/github.md), which covers pushing,
 review rounds, and cleaning up after a squash-merge -- with the Git equivalent
 beside each command.
+
+## After opening it
+
+```
+gh pr checks <number> --watch --fail-fast
+```
+
+**Exit code 8 means checks are still pending, not that anything failed** -- 0 is
+green and 1 is a real failure. Do not report a pull request as broken on a
+non-zero exit without reading which code it was. `Analyze (rust)` and `Analyze
+(actions)` are CodeQL from the repository settings rather than from a workflow
+file, and they usually finish last.
+
+No check is required to merge; the ruleset on `main` only requires that a change
+arrives by pull request. Read the results rather than trusting the merge button
+([`docs/jj/github.md`](../../../docs/jj/github.md)).
