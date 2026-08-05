@@ -14,6 +14,11 @@ was started today and the loose ends in it.
 - [ ] **Coverage floor.** §13 promises `just coverage` and a floor; neither the
       recipe nor a CI job exists. Pick a tool (`cargo-llvm-cov`) and a number,
       or drop the promise from §13. Do not leave it as an unbacked claim.
+      Three pieces, in this order: the `just coverage` recipe, a number chosen
+      once there is enough code for one to mean anything, and a job in
+      `ci.yml` that runs it on every pull request. Until all three exist,
+      `CONTRIBUTING.md` says plainly that coverage is not measured — that
+      sentence is what has to be deleted when this is done.
 
 ## Documentation still to write
 

@@ -104,6 +104,29 @@ Match the code around you. Two conventions show up in nearly every diff:
   tests`. `yy-core` has no I/O, so its tests need no files, no terminal and no
   network; keep it that way.
 
+### Tests
+
+Send a test with the change. A bug fix gets the test that would have caught it,
+and a new behaviour gets the test that says what it does — that is what makes a
+review about the change rather than about whether it works at all. `cargo test`
+runs on every pull request and a failing test blocks the merge.
+
+What matters is which guarantee a test makes, not how many there are.
+[How it is verified](docs/design/verification.md) lists the ones the project
+depends on: the export round-trip, the journal rebuild, and the schema
+compatibility test are the load-bearing three, and a change near any of them
+should say in the pull request what it does to that guarantee.
+
+**Coverage is not measured yet.** §13 promises a `just coverage` recipe that
+fails below an agreed floor; neither the recipe, the tool choice, nor a CI job
+exists today, and the tests that exist are few because the implementation has
+barely started. It is planned, including the GitHub Actions job, and tracked in
+[TODO.md](TODO.md). Until it lands, nothing enforces a floor and a pull request
+will not be rejected for missing one — which is exactly why sending the test
+yourself matters now.
+
+### Schema
+
 If your change touches the protocol types in `yy-types`, the schema test will
 fail until you regenerate the snapshot:
 
