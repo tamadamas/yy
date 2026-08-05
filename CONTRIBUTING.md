@@ -23,8 +23,29 @@ be about the design document rather than the code.
 as your own work: read the code, read the diff, be ready to explain every line.
 Reviewing is the expensive part and it does not scale. If nobody read the change
 before it arrived, all that is left for a reviewer is work that could have been
-prompted for directly. Say in the pull request which model you used and what it
-did. Agent-specific instructions live in [AGENTS.md](AGENTS.md).
+prompted for directly. Agent-specific instructions live in [AGENTS.md](AGENTS.md).
+
+Two things belong in the pull request, and
+[the template](.github/PULL_REQUEST_TEMPLATE.md) asks for both.
+
+**What the agent did, not merely that one was used.** Name the tool and the
+model — "Claude Code, Claude Opus 5", "Codex, GPT-5.3" — and say how far it got.
+Three levels cover almost everything:
+
+| In the pull request | Claude Code | Codex |
+|---|---|---|
+| Questions only — it explained, you wrote every line | any mode, no edit accepted | read-only |
+| Plan — it produced the approach or the spec, you implemented it | plan mode | read-only, then you implement |
+| Plan and implementation — it wrote the code, you reviewed it | default or accept-edits mode | auto, or full access |
+
+Mode names drift between releases of both tools, so treat that table as a
+translation and not as a checklist. The distinction that matters is whether the
+agent could write to the repository, not what the setting was called that day.
+
+**That you understand the result.** The template has a box for it and it is not
+a formality: you are the author of this change. A reviewer's questions are ones
+you should be able to answer without going back to the agent, and if you cannot,
+the review has not started yet — it has been delegated back to the reviewer.
 
 ## Setting up
 

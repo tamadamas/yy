@@ -36,7 +36,39 @@ No template. Keep it short and high-signal:
   skill), and any new test and what it guarantees.
 - **Schema** -- if `schema/current.json` changed, confirm the change is additive
   and say what was added. Rule 8 depends on someone actually looking.
-- **Disclaimer** -- if you are an AI agent, state which model and what it did.
+- **Disclaimer** -- name the tool and the model, then say which parts of the
+  change they produced. See below; "what it did" is the load-bearing half.
+
+## The disclaimer
+
+A pull request is rarely all human or all machine, so a line that only says
+"written by AI" describes almost nothing:
+
+```
+Specification written by Claude Opus 5 via Claude Code; the implementation and
+tests are the author's.
+
+Implementation by the author. Tests and this description written by GPT-5.3 via
+Codex.
+
+Written by Claude Opus 5 via Claude Code, in full: code, tests, and this
+description.
+```
+
+Two rules decide the cases:
+
+- **Attribute what landed, not what assisted.** Text that ends up in the
+  repository or in this description gets a line. A model used to search, read,
+  or explain something does not, or the line appears under every pull request
+  and stops being read. Writing only the commit message or only this body does
+  count -- both end up in the history.
+- **Several tools, several lines.** And prefer nothing to something inaccurate:
+  a blanket "written by AI" over a change a human wrote teaches the reviewer to
+  discount the disclaimers that are true.
+
+The `Co-Authored-By` trailer on the commit says the same thing
+machine-readably, but not *which part*, which is why the prose stays here and
+is not a duplicate of it.
 
 ## Before opening
 
