@@ -120,6 +120,13 @@ a squash-merged pull request that passed CI. Never run `jj bookmark move main`,
 `trunk() | tags() | untracked_remote_bookmarks()`, so it refuses to rewrite
 anything on `main`.
 
+**A pushed commit is never rewritten. Every fix is a new commit** whose message
+says what it fixed. No `jj squash`, no `jj absorb`, no re-describing or editing
+a change that is already on a pull request, and never a force push — `jj git
+push` performs one silently after a rewrite, which is what makes this easy to do
+by accident. The maintainer squashes at merge, so a branch of small commits
+costs nothing and a rewritten one costs the reviewer their place.
+
 **Git hooks do not run**, because `jj` does not execute them. Nothing catches an
 unformatted file for you. Run the checks yourself.
 

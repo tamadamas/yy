@@ -75,6 +75,52 @@ commit on `main` or on a tag.
 **Rebase onto `trunk()`, not onto a local bookmark.** `trunk()` resolves to
 `main@origin`, which is the actual authority.
 
+**One bookmark, one subject.** A bookmark carries a single feature, bug fix,
+documentation fix, or CI fix. The moment a change is about something other than
+what the open pull request is about, it belongs on a new bookmark and a new
+pull request — not appended to the branch because the working copy happened to
+be there:
+
+```sh
+jj new trunk()                       # start from main, not from the other branch
+jj bookmark create fix-ci-wildcard -r @
+jj git push --bookmark fix-ci-wildcard
+gh pr create --fill --base main
+```
+
+A pull request title becomes the commit on `main`, and a Conventional Commit
+title can only describe one subject honestly. Two subjects on one branch also
+mean the reviewer cannot approve half of it. Fixing the design document that a
+code change contradicts is *the same* subject and stays together
+([the `design` skill](../design/SKILL.md) requires it); a `jj` rule and a
+`deny.toml` fix are not.
+
+Use [`jj workspace add`](../../../docs/jj/setup.md#5-parallel-work-jj-workspace-not-git-worktree)
+when two subjects are genuinely in flight at once, or when subagents work in
+parallel.
+
+**Never rewrite a commit that has been pushed. Add a new one.** Every fix,
+review response, and CI repair is its own commit with its own message naming
+what it fixed. These are forbidden on anything already on a pull request:
+
+```
+jj squash                    # no
+jj absorb                    # no
+jj describe <pushed change>  # no
+jj edit <pushed change>      # no, then pushing the rewrite
+git commit --amend           # no, and git is forbidden anyway
+```
+
+`jj git push` force-pushes silently when the change was rewritten, which is
+exactly the problem: the branch the reviewer read is gone and there is no record
+of what the second attempt changed. A branch of small honest commits costs
+nothing, because **the maintainer squashes at merge** and the pull request title
+is what lands on `main`. Tidying history is their call, not an agent's.
+
+`jj new @` (or `jj new <bookmark>`), describe, move the bookmark, push. If a
+push is rejected as non-fast-forward, stop and say so — do not reach for
+`--force`.
+
 **Git hooks do not run.** `jj` does not execute them, so nothing checks
 formatting for you. Run the [`check`](../check/SKILL.md) skill before pushing.
 This is also why no change may ever depend on a hook existing.
