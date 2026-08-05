@@ -125,42 +125,44 @@ gh pr checks --watch
 ## Respond to review comments
 
 Pull requests are squash-merged, so your branch history is not preserved and you
-do not need to keep it tidy. Both approaches below are fine; the second produces
-a cleaner diff for the reviewer to re-read.
+do not need to keep it tidy.
 
-### Add a change on top
+### Add a change on top — the default, and the only option for agents
 
 ```sh
 jj new fix-export-path
 $EDITOR ...
-jj describe -m "address review comments"
+jj describe -m "fix(store): use the export path from the config, not the cwd"
 jj bookmark move fix-export-path --to @
 jj git push
 ```
 
-### Fix the original change in place
+Each round of review is a commit that says what it fixed. Nothing that was
+already pushed changes, so the diff a reviewer already read stays where they
+left it, and `jj git push` fast-forwards rather than force-pushing.
 
-This is where `jj` is noticeably better than Git:
+### Fix the original change in place — humans only
+
+`jj` can rewrite a pushed change and re-push it, which Git makes painful:
 
 ```sh
 jj edit fix-export-path      # or any change in the stack
 $EDITOR ...
-jj git push                  # force-push happens automatically and safely
+jj git push                  # force-push happens automatically
+jj absorb                    # scattered fixes land in the commits they belong to
 ```
 
 No `git rebase -i`, no `--force-with-lease`. `jj` knows the remote bookmark
 moved because it rewrote the change itself, and refuses to push if the remote
 moved underneath you for any other reason.
 
-If the comments are scattered across several commits in a stack, make all the
-edits in `@` and then:
-
-```sh
-jj absorb
-jj git push
-```
-
-Each fix lands in the commit it belongs to.
+**This is a maintainer's tool, and agents must not use it**
+([the `jj` skill](../../.agents/skills/jj/SKILL.md) forbids it). The safety
+`jj` provides is against *losing* work, not against confusing a reviewer: the
+force-push is silent, the commit that was reviewed no longer exists, and what
+the second attempt actually changed is recorded nowhere. A maintainer rewriting
+their own branch knows what they replaced. Squashing happens at merge anyway, so
+the tidiness this buys was already free.
 
 ## Main moved while you were in review
 
