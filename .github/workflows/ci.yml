@@ -1,5 +1,11 @@
-# Every job here is a required check on pull requests targeting main (rule 12).
-# `just check` runs the same commands locally; keep the two in sync.
+# The code checks for a pull request targeting main (rule 12). `just check` does
+# not run the same commands as this file -- it *is* the commands this file runs,
+# so there is nothing to keep in sync.
+#
+# Note before making any job here a *required* check in the ruleset: a job the
+# path filter below skipped never reports a conclusion at all, so a required
+# check plus a docs-only pull request is a pull request that can never merge.
+# Requiring these means replacing the filter with a gate job that always runs.
 #
 # Two things are deliberately absent:
 #
@@ -15,13 +21,35 @@
 # Every `uses:` is pinned to a full commit SHA (§8.5), with the version tag kept
 # as a trailing comment for humans. A tag can be moved by whoever controls the
 # upstream repository; a commit SHA cannot.
+#
+# One cache, written once. rust-cache keys on the job name and saves from
+# whatever ref it runs on, which -- while clippy, test and doc were three jobs
+# -- produced three near-identical entries per commit on main and three more per
+# pull request, competing for a 10 GB repository budget that evicts by
+# least-recent-use. They are one job now, and it writes only from main: a cache
+# saved on `refs/pull/N/merge` is visible to that pull request alone, so it can
+# never be a hit for anything else.
 name: CI
 
+# The path filters are duplicated because GitHub Actions does not support YAML
+# anchors. A change that touches no code has nothing here to prove: the book is
+# built by `docs.yml`, which filters the other way round. `merge_group` takes no
+# path filter and always runs everything, which is the conservative direction.
 on:
   pull_request:
     branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
   push:
     branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
   merge_group:
 
 permissions:
@@ -35,64 +63,57 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  fmt:
-    name: format
+  # One job, because it is one build. The format check, clippy, the tests and
+  # rustdoc were four, each paying for its own checkout, its own toolchain and
+  # its own restore of the same cache to compile the same dependencies -- four
+  # copies of the expensive part in order to parallelise four cheap commands.
+  # GitHub also reports every job rounded up to a whole minute, so four short
+  # jobs read as four minutes and one reads as one.
+  rust:
+    name: rust
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      # The only nightly in this project. rustfmt.toml uses nightly-only
-      # options (§8.6); nothing else -- not building, not testing, not
-      # rustdoc -- needs anything but the pinned toolchain.
-      - uses: dtolnay/rust-toolchain@4fd1da8b0805d2d2e936788875a7d65dbd677dc2 # nightly
-        with:
-          components: rustfmt
-      - run: cargo +nightly fmt --all --check
 
-  clippy:
-    name: clippy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
-      - run: cargo clippy --workspace --all-targets --all-features --locked
-
-  test:
-    name: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
-      # The protocol schema check (rule 8) is a test in yy-types, so it runs
-      # here and needs no job of its own. See docs/design/verification.md.
-      - run: cargo test --workspace --all-features --locked
-
-  # rustdoc is a lint here, not a publication target: nothing about yy is read
-  # on docs.rs. Its value is that the doc comments on yy-types are the source of
-  # the protocol reference (§8.4), so a broken link here is a broken spec later.
-  # Stable is enough -- no `--cfg docsrs` feature badges -- and the rustdoc lints
-  # are denied in [workspace.lints.rustdoc] rather than via RUSTDOCFLAGS, so the
-  # rule lives in the manifest where it is reviewable.
-  doc-comments:
-    name: doc comments
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
-      - run: cargo doc --workspace --all-features --no-deps --locked
-
-  # The actual documentation: the guide and the specification, published to
-  # GitHub Pages. This job only proves it builds; publishing is a separate
-  # workflow that runs on main.
-  book:
-    name: book
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      # CI runs the justfile rather than a copy of it. This used to be forbidden
+      # -- `just` was a convenience nothing could require -- and the reason it
+      # changed is that a copy is a thing that drifts: the workflow repeated
+      # four cargo command lines and would have had to repeat the pinned
+      # rustfmt version as well, next to the justfile's copy and the editor's.
+      # Now the recipes below are the only ones that exist, and running
+      # `just check` locally is running CI rather than resembling it.
+      #
+      # This costs contributors nothing: every recipe is still a plain cargo
+      # command, readable and runnable by hand, and no rule requires anyone to
+      # install `just` to build, test, or contribute (rule 11 is about `jj`).
+      # See docs/design/repository.md.
       - uses: taiki-e/install-action@67729d5c413db75907f0ad1e39bb04b9c868ff60 # v2
         with:
-          # Same version pages.yml publishes with. See the note there.
-          tool: mdbook@0.5.4
-      - run: mdbook build docs/book
+          tool: just@1.53.0
+
+      # The project's only nightly, installed *beside* the toolchain that
+      # builds, never in front of it: `rustup toolchain install` leaves the
+      # default alone, so every cargo command still resolves through
+      # rust-toolchain.toml to the pinned stable. Only rustfmt opts in, and only
+      # by naming the version the justfile pins.
+      - run: just fmt-toolchain
+
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
+        with:
+          # Named rather than keyed on the job name, so `dependencies.yml` can
+          # restore the same entry. Saved from main only: a cache written on
+          # `refs/pull/N/merge` is visible to that one pull request, so it is a
+          # cost with no reader.
+          shared-key: ci
+          save-if: ${{ github.ref == 'refs/heads/main' }}
+
+      # Format check, clippy, tests, rustdoc -- in that order, fail-fast. A
+      # formatting failure means clippy does not report; a red pull request is
+      # red either way, and formatting is the cheapest thing to fix.
+      #
+      # The tests include the protocol schema check (rule 8), which is why it
+      # needs no job of its own; see docs/design/verification.md.
+      - run: just check
 
   deny:
     name: cargo-deny
@@ -101,11 +122,8 @@ jobs:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - uses: EmbarkStudios/cargo-deny-action@3c6349835b2b7b196a839186cb8b78e02f7b5f25 # v2
 
-  git-friendly:
-    name: builds from a plain git clone
-    runs-on: ubuntu-latest
-    steps:
-      # Rule 11: no jj-only step may be required to build or test. This job is
-      # the evidence, which is why it is a bare checkout and nothing else.
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      - run: cargo build --workspace --locked
+# There was a "builds from a plain git clone" job here, as rule 11's evidence.
+# It proved nothing the `rust` job above does not: `actions/checkout` is a plain
+# git clone, there is no `.jj` anywhere on the runner, and jj is never installed.
+# Every job in this file is that evidence; a separate one was a minute per pull
+# request spent restating it.

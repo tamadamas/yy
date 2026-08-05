@@ -5,18 +5,22 @@ description: Always use this skill to verify a change locally before committing 
 
 # Verifying a Change
 
-Keep this file in sync with `.github/workflows/ci.yml` and the `justfile`.
-
-Run these by default:
+Run this by default:
 
 ```
-cargo +nightly fmt --all             # nightly is required; stable silently ignores rustfmt.toml
-cargo clippy --workspace --all-targets --all-features --locked
-cargo test --workspace --all-features --locked
-cargo doc --workspace --all-features --no-deps --locked
+just check
 ```
 
-`just check` runs all four.
+It is the format check, clippy, the tests and rustdoc, in that order, and it is
+what CI runs — `ci.yml` installs `just` and calls this same recipe, so there is
+no second list to keep in sync. The recipes are plain cargo commands; read the
+`justfile` if you want to run one by hand.
+
+Formatting needs the nightly rustfmt pinned on the `nightly :=` line of the
+`justfile`, installed with `just fmt-toolchain`. That line is the only copy of
+the version in the repository. Never `cargo fmt`: stable ignores the
+nightly-only options in `rustfmt.toml` in silence and produces a file CI
+rejects.
 
 ## What is deliberately not here
 

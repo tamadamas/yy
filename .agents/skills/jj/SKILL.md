@@ -82,10 +82,27 @@ pull request — not appended to the branch because the working copy happened to
 be there:
 
 ```sh
-jj new trunk()                       # start from main, not from the other branch
+jj new 'trunk()'                     # start from main, not from the other branch
 jj bookmark create fix-ci-wildcard -r @
 jj git push --bookmark fix-ci-wildcard
 gh pr create --fill --base main
+```
+
+**Quote every revset.** The shell here is `fish`, where bare parentheses are
+command substitution: `jj new trunk()` does not start a change on `main`, and it
+can fail without saying much. This applies to every revset argument, and
+`trunk()` is the one short enough to look safe.
+
+**There is no `--allow-new`.** `--bookmark` creates and tracks the remote
+bookmark by itself; passing the flag other projects document fails here with a
+suggestion to use `--all`, which pushes everything.
+
+If the work is already sitting in the wrong change when you notice, move the
+files rather than starting over — this does not touch what was pushed:
+
+```sh
+jj new 'trunk()' -m "<conventional commit title>"
+jj squash --from <change-id> --into @ <paths>...
 ```
 
 A pull request title becomes the commit on `main`, and a Conventional Commit

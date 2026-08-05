@@ -64,6 +64,10 @@ version and CI honours it, so every build everywhere is already that version
 - **Git-friendliness test** — a plain `git clone` followed by `just check`
   succeeds with no `jj` installed. This is
   [rule 11](rules.md#10-rules-that-must-not-be-broken), and it is the only thing
-  standing between a personal tool preference and a contributor barrier.
+  standing between a personal tool preference and a contributor barrier. It has
+  no job of its own, and deliberately so: `actions/checkout` *is* a plain `git
+  clone`, no runner has a `.jj` directory and none installs `jj`, so every job
+  in `ci.yml` is already the evidence. A dedicated one restated that at the
+  price of a whole extra runner per pull request.
 - **The real test** — the project is tracked in `yy` from day one. Anything that
   annoys you daily gets fixed; anything you never notice was not needed.

@@ -1,0 +1,34 @@
+{
+  // Format on save with the same rustfmt CI checks with, and no other.
+  //
+  // rust-analyzer's default is the `rustfmt` of the active toolchain, which
+  // rust-toolchain.toml pins to stable. A stable rustfmt does not fail on the
+  // nightly-only options in rustfmt.toml -- it ignores them in silence -- so
+  // the editor would quietly reformat every file you save into a shape CI
+  // rejects, with nothing anywhere reporting a problem.
+  //
+  // This goes through the justfile rather than naming the toolchain, so the
+  // pinned nightly is written in exactly one place in the repository. The
+  // recipe reads the buffer rust-analyzer pipes in on stdin and prints the
+  // formatted source back; `just fmt` cannot be used here, because it rewrites
+  // the whole workspace in place and prints nothing, which would leave the
+  // editor replacing your file with an empty one.
+  //
+  // Needs the toolchain: `just fmt-toolchain`, once.
+  "rust-analyzer.rustfmt.overrideCommand": ["just", "fmt-stdin"],
+
+  "editor.formatOnSave": true,
+
+  // Clippy rather than check, so the editor reports the lints CI reports. No
+  // `-D warnings` anywhere: that is `build.warnings` in .cargo/config.toml, and
+  // setting it here would compile the workspace under different flags and cost
+  // you the shared build cache.
+  "rust-analyzer.check.command": "clippy",
+
+  // Neither directory is source. Watching target/ is what makes an editor feel
+  // slow during a build; .jj/ rewrites itself constantly in a colocated repo.
+  "files.watcherExclude": {
+    "**/target/**": true,
+    "**/.jj/**": true
+  }
+}

@@ -80,6 +80,10 @@ selects it. Bare `jj git push` pushes tracking bookmarks only, so on the first
 push it does nothing and says so. Afterwards bare `jj git push` is enough. `gh`
 works because the workspace is colocated.
 
+There is **no `--allow-new` flag**; other projects' instructions use one, and
+here it fails with a suggestion to use `--all`, which is not what you want.
+`--bookmark` alone is the whole answer.
+
 **Git equivalent:** `git switch -c fix-export-path && git push -u origin
 fix-export-path && gh pr create --base main`.
 
@@ -100,12 +104,15 @@ becomes the commit on `main`, and it must be a
 
 ## Wait for CI
 
-Every pull request runs the checks in
-[`.github/workflows/ci.yml`](../../.github/workflows/ci.yml): formatting, clippy
-with warnings denied, tests, the MSRV build, and `cargo deny`. They are required
-checks, so the merge button stays disabled until they pass.
+A pull request that touches code runs two jobs from
+[`.github/workflows/ci.yml`](../../.github/workflows/ci.yml): `rust`, which is
+the format check, clippy, the tests and rustdoc in one build, and `cargo-deny`.
+A pull request that touches `docs/book/` runs `book` from `docs.yml` instead.
+One that changes only markdown or `docs/design/` runs neither, and gets no check
+beyond the pull request title — there is nothing in it to compile.
 
-Save yourself the round trip by running the same thing locally first:
+Save yourself the round trip by running the same thing locally first. It is the
+same thing: `ci.yml` installs `just` and calls this recipe.
 
 ```sh
 just check
@@ -119,8 +126,44 @@ is exactly why the checks live in `just check` and CI rather than in a
 Watch a run without leaving the terminal:
 
 ```sh
-gh pr checks --watch
+gh pr checks <number> --watch --fail-fast
 ```
+
+**`gh pr checks` uses its exit code to report the state, so a non-zero exit is
+not a failure.** This is the trap:
+
+| Exit | Meaning |
+|---|---|
+| 0 | every check passed |
+| 8 | at least one check is still pending |
+| 1 | at least one check failed |
+
+Exit 8 is what you get for asking too early, and a script that treats any
+non-zero exit as a broken build will report a red pull request that is merely
+unfinished. `--watch` blocks until nothing is pending, which is the right tool
+in a terminal; when polling in a script, branch on the code:
+
+```sh
+gh pr checks <number>
+case $status in
+    0) echo "green" ;;
+    8) echo "still running" ;;
+    *) echo "something failed" ;;
+esac
+```
+
+That is fish syntax, `$status` rather than `$?`. Two more things will show up in
+the list and are not from this repository's workflows: `Analyze (rust)` and
+`Analyze (actions)` are CodeQL, enabled in the repository settings rather than
+by a file, and they usually finish after everything else.
+
+**No check is required to merge.** The ruleset on `main` enforces that a change
+arrives by pull request and that the branch is never force-pushed or deleted; it
+does not gate the merge button on CI. Read the checks yourself before merging.
+Making them required is not a free change either, and the reason is in
+[§8.5](../design/repository.md#ci): a job that a path filter skipped reports no
+conclusion at all, so a required check would leave every docs-only pull request
+waiting on a result that never arrives.
 
 ## Respond to review comments
 
@@ -266,3 +309,11 @@ jj op log
 ```
 
 The full syntax is in the [revset reference](https://docs.jj-vcs.dev/latest/revsets/).
+
+**Quote every revset.** The examples above are quoted for a reason that is easy
+to miss on the one revset short enough to look harmless: `trunk()`. In `fish`,
+which is what this project's maintainer and its agents run, bare parentheses are
+command substitution, so `jj new trunk()` does not create a change on `main` —
+it fails to do anything useful, and can do so without saying much. `jj new
+'trunk()'` is correct. Quoting always is cheaper than remembering which shell
+you are in.

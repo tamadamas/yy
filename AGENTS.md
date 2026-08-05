@@ -146,10 +146,13 @@ each part is needed.
 
 Two things that will surprise you:
 
-- **Formatting needs nightly.** `cargo +nightly fmt --all`, never `cargo fmt`.
-  `rustfmt.toml` uses nightly-only options and stable ignores them silently,
-  producing a file that fails CI although the formatter ran. This is the only
-  nightly in the project.
+- **Formatting needs nightly.** `just fmt`, never `cargo fmt`. `rustfmt.toml`
+  uses nightly-only options and stable ignores them silently, producing a file
+  that fails CI although the formatter ran. This is the only nightly in the
+  project, it is pinned to a date, and that date is written in exactly one
+  place: the `nightly :=` line of the `justfile`. Do not repeat the version
+  anywhere — CI and the editor configuration both reach it through that file.
+  Install it with `just fmt-toolchain`.
 - **Warnings are errors,** via `build.warnings` in `.cargo/config.toml`. Do not
   add `RUSTFLAGS: -D warnings` anywhere; that is what this setting replaced, and
   reintroducing it invalidates the build cache. To silence warnings while

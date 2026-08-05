@@ -191,10 +191,18 @@ the repository asks them to do otherwise. No `jj`-only file, hook, or CI step
 may ever be required to build, test, or contribute — that is the invariant.
 
 **`main` is written only by merging a pull request.** Direct pushes are rejected
-by GitHub branch protection, for everyone including the maintainer, with force
-pushes and branch deletion disabled. Every pull request must pass the required
-checks below before the merge button unlocks, and pull requests are
-squash-merged so the title becomes the commit on `main`.
+by a GitHub ruleset, for everyone including the maintainer, with force pushes
+and branch deletion disabled. Pull requests are squash-merged, so the title
+becomes the commit on `main`.
+
+The checks below are **not** wired into that ruleset as required checks, and the
+gap between rule 12's wording and what the server enforces is worth stating
+rather than leaving to be discovered: the merge button unlocks whether or not CI
+is green, and a red pull request is stopped by whoever is merging it. Requiring
+them is not a free change, for the reason in [CI](#ci) — a job skipped by a path
+filter reports no conclusion, so a required check would leave every docs-only
+pull request waiting on a result that never arrives. Closing it properly means a
+gate job that always runs, and that is a decision nobody has needed yet.
 
 This costs nothing and buys the property that the history of `main` is exactly
 the set of things CI approved. It also removes the only realistic way a
@@ -221,8 +229,9 @@ that the premise holds.
 Two practical constraints that follow, both already reflected above:
 
 - **Git hooks cannot be relied on.** `jj` does not run them
-  (jj-vcs/jj#405). Every check must live in CI and in `just check`, never only
-  in a `pre-commit` hook. This is good practice anyway; here it is mandatory.
+  (jj-vcs/jj#405). Every check must live in `just check`, which is what CI
+  runs, and never only in a `pre-commit` hook. This is good practice anyway;
+  here it is mandatory.
 - **`.gitattributes` is not honoured by `jj`** (jj-vcs/jj#53), so nothing in the
   build may depend on it — in particular, no line-ending normalisation. §4.3
   already requires `\n` and no BOM, enforced by the round-trip test rather than
@@ -245,23 +254,41 @@ MIT licence held by "the yy authors"
 ([§4.10](smaller-decisions.md#410-smaller-decisions)), contributing guide, code
 of conduct, security policy with private vulnerability reporting enabled, issue
 and pull request templates. `CONTRIBUTING.md` states that a clean clone needs
-only a Rust toolchain and a C compiler — plus a nightly toolchain for `cargo
-fmt` and nothing else, which §8.6 explains.
+only a Rust toolchain and a C compiler — plus a pinned nightly to *format* and
+nothing else, which §8.6 explains.
 
 ### CI
 
 Actions pinned by commit hash with minimal permissions. `.github/workflows/`
-holds three files:
+holds:
 
-- **`ci.yml`** — required on every pull request: format check (nightly), clippy,
-  tests, `cargo doc`, the mdBook build, `cargo deny`, and a "builds from a plain
-  `git clone`" job that is [rule 11](rules.md#10-rules-that-must-not-be-broken)'s
-  evidence.
+- **`ci.yml`** — the code checks on every pull request, in **two** jobs:
+  `cargo deny`, and one `rust` job that installs the pinned nightly rustfmt and
+  then runs `just check`. It was four jobs — format, clippy, test, doc — each
+  paying for its own checkout, its own toolchain and its own restore of the
+  same cache in order to parallelise four short commands, and each reported by
+  GitHub as a whole minute however long it actually took. They are one job
+  because they are one build. Both jobs are a bare `git clone` with no `jj` on
+  the runner, which is [rule 11](rules.md#10-rules-that-must-not-be-broken)'s
+  evidence — it needs no job of its own.
+- **`docs.yml`** — the mdBook build.
 - **`semantic-pr.yml`** — the pull request title must be a Conventional Commit,
   since squash-merging makes it the commit on `main`.
 - **`dependencies.yml`** — the scheduled `cargo update -p topcoat` build from
   §8.3. Named for what it is; `yy` is not a fork of anything, so "upstream"
   would have been the wrong word.
+- **`pages.yml`** and **`release.yml`** — publishing, not checking. Neither runs
+  on a pull request.
+
+The first two are one decision, not two: they split on a path filter, `ci.yml`
+ignoring `docs/**` and `**.md` while `docs.yml` matches only `docs/book/**`. A
+prose change does not need clippy and a code change does not need mdBook, and
+running everything on everything is how a pull request that changed one
+paragraph comes to occupy seven runners. The cost is a sharp edge worth writing
+down: **a job skipped by a path filter reports no conclusion at all**, so making
+any of these a required check in the ruleset would leave every docs-only pull
+request waiting forever on a check that will never arrive. Requiring them means
+first replacing the filter with a gate job that always runs.
 
 Two things CI does *not* contain, both deliberately:
 
@@ -274,6 +301,22 @@ Two things CI does *not* contain, both deliberately:
   contributor's machine cannot drift apart.
 
 The schema check needs no job of its own either: it is part of `cargo test`.
+
+That "one warm cache" is a claim the workflow has to make true, and while clippy,
+test and doc were three jobs it was false: `Swatinem/rust-cache` keys on the job
+name, so they held three near-identical copies. Merging them into one `rust` job
+made the sentence literal. What remains is *when* it is written: **only from
+`main`**, because a cache saved on `refs/pull/N/merge` is visible to that one
+pull request and nothing else, and the repository's 10 GB budget evicts by
+least-recent-use. The price is that a pull request changing `Cargo.lock` compiles
+its new dependencies on every push until it merges, which is smaller than the
+eviction it prevents.
+
+Nothing else writes a cache either. `dependencies.yml` restores that same key
+and saves nothing, because it builds against a lockfile that is not the
+repository's; `release.yml` does not cache at all, because a tag ref's cache is
+readable only by that tag, and an attested artefact is worth more built from
+nothing anyway.
 
 ## 8.6 Formatting, and why nightly is required for it
 
@@ -311,9 +354,34 @@ choice is made.
 **This does not weaken the "a fresh clone builds" promise**, and the distinction
 matters: `cargo build`, `cargo test`, and `cargo clippy` all run on the pinned
 stable toolchain from `rust-toolchain.toml`. Nightly is needed only to *format*.
-A contributor who never runs `cargo +nightly fmt` gets a CI failure with an
-exact command to fix it, not a broken build. `CONTRIBUTING.md` says so in those
-words.
+A contributor who never runs `just fmt` gets a CI failure with an exact command
+to fix it, not a broken build. `CONTRIBUTING.md` says so in those words.
+
+**The nightly is pinned to a date, and installed beside the default rather than
+over it.** Two decisions, one paragraph, because they answer the same worry —
+that the second toolchain leaks into the build:
+
+- A rolling `nightly` reformats the workspace whenever rustfmt changes its mind,
+  which is the Thursday-morning failure §8.1 pins the compiler to avoid, with
+  the added insult that the diff is not even yours. The date is bumped in a
+  commit that carries its own reformatting diff. `--allow-downgrade` therefore
+  has nothing left to do: it exists to survive a nightly that shipped without
+  rustfmt, and the pin is chosen from dates that have one.
+- `rustup toolchain install` leaves rustup's default alone.
+  `dtolnay/rust-toolchain`, the obvious action for this, runs `rustup default
+  nightly`; `rust-toolchain.toml` does override that for every cargo invocation
+  in the directory, so it would have worked — but "it works because an override
+  precedence rule happens to favour us" is a worse thing to depend on than not
+  changing the default in the first place.
+
+**The version is written in exactly one place**, the `nightly :=` line of the
+`justfile`. CI does not repeat it, and neither does `.vscode/settings.json`:
+both go through the justfile, which is why `ci.yml` installs `just` at all. The
+editor reaches it through a `fmt-stdin` recipe, because rust-analyzer formats by
+piping a buffer through a command's stdin — `just fmt` would rewrite the
+workspace in place, print nothing, and leave the editor replacing your file with
+that nothing. Without the setting an editor formats with stable on save, which
+is the silent version of the failure this whole section is about.
 
 ## 8.7 Warnings are errors, without the usual cost
 
