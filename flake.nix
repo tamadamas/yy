@@ -9,7 +9,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { fenix, nixpkgs, ... }:
+  outputs =
+    { fenix, nixpkgs, ... }:
     let
       systems = [
         "aarch64-darwin"
@@ -20,7 +21,8 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      devShells = forAllSystems (system:
+      devShells = forAllSystems (
+        system:
         let
           pkgs = import nixpkgs { inherit system; };
           rustToolchain = fenix.packages.${system}.stable.withComponents [
@@ -38,6 +40,7 @@
             hardeningDisable = [ "fortify" ];
             RUST_SRC_PATH = "${rustToolchain}/lib/rustlib/src/rust/library";
           };
-        });
+        }
+      );
     };
 }
