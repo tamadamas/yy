@@ -1,0 +1,16 @@
+[package]
+name = "yy"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.99"
+license = "MIT"
+description = "A time tracker you can trust."
+keywords = ["time-tracking", "cli", "tui", "productivity"]
+categories = ["command-line-utilities"]
+
+[workspace]
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[dependencies]
